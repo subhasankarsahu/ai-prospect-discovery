@@ -81,7 +81,15 @@ The test suite utilizes `httpx.AsyncClient` with `httpx.ASGITransport(app=app)` 
 
 ---
 
-## Architecture
+## Privacy, Data Protection & Test Fixtures
+
+### Redaction and Privacy Policy
+To respect privacy and comply with strict data protection requirements, all fixture files committed to this repository undergo automated sanitization:
+- **Private Contact Information Redacted**: All email addresses and phone numbers discovered in search snippets or metadata are strictly replaced with `REDACTED`. WhatsApp contact links containing phone numbers are likewise redacted.
+- **No Publishing of Personal Contact Data**: The repository prohibits publishing private contact information (such as personal email addresses or phone numbers) of individuals discovered via public search queries.
+- **Retention of Public Profile URLs and Names**: Public profile URLs (e.g. LinkedIn, X/Twitter, YouTube, Threads, Instagram, and canonical Facebook profile paths) and verbatim public names are retained exclusively to validate profile parsing, normalization, relevance classification, and deduplication logic during automated testing.
+- **Local Gitignored Raw Recordings**: All raw, unredacted recordings captured during live pipeline validation reside strictly in the local, gitignored `.cache/fixtures/` directory and are never committed or published.
+
 
 The project follows a clean, modular design adhering to strict separation of concerns:
 

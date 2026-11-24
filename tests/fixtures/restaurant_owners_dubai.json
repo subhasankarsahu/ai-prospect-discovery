@@ -1,0 +1,22 @@
+{
+  "slug": "restaurant_owners_dubai",
+  "query": "Restaurant owners in Dubai UAE",
+  "intent": {
+    "is_prospect_query": true,
+    "interest": "Restaurant",
+    "audience": null,
+    "location": {
+      "city": "Dubai",
+      "state": null,
+      "country": "UAE"
+    },
+    "target_type": "owner"
+  },
+  "search_calls": [],
+  "classification_calls": [
+    {
+      "candidate_count": 0,
+      "classifications": []
+    }
+  ]
+}

@@ -1,0 +1,371 @@
+{
+  "slug": "startup_founders_london",
+  "query": "Startup founders in London UK",
+  "intent": {
+    "is_prospect_query": true,
+    "interest": "startup",
+    "audience": null,
+    "location": {
+      "city": "London",
+      "state": null,
+      "country": "UK"
+    },
+    "target_type": "founder"
+  },
+  "search_calls": [
+    {
+      "query": "\"startup\" founder London UK (site:x.com OR site:twitter.com)",
+      "include_domains": [
+        "x.com",
+        "twitter.com"
+      ],
+      "results": [
+        {
+          "url": "https://x.com/NickyScanz/status/2121676611259076617",
+          "title": "NickyScanz on X: \"Oh oh oh before I forget: @SolanaEvents is hosting Solana breakpoint in London as we speak! Thousand…\"",
+          "snippet": "# NickyScanz on X: \"Oh oh oh before I forget: @SolanaEvents is hosting Solana breakpoint in London as we speak! Thousand…\"\n\nOh oh oh before I forget:\n\n@SolanaEvents is hosting Solana breakpoint in London as we speak! \n\nThousands of engineers and founders in London, together.\n\nIf you are a startup founder building in AI or blockchain reach out to our UK-based startup accelerator @SuperteamUK via dm. [...] - Author: @NickyScanz (NickyScanz)\n- Posted: 2026-11-14T18:48:17+00:00\n- In reply to: post by @NickyScanz\n- Views: 11431\n- Likes: 20\n- Reposts: 0\n- Replies: 0\n- Quotes: 1\n- Bookmarks: 2\n- Mentions: @SolanaEvents (Solana Events), @SuperteamUK (Superteam UK)\n\n## People\n\n- @NickyScanz (NickyScanz) — Lead l @SuperteamUSA"
+        },
+        {
+          "url": "https://x.com/kerryjj",
+          "title": "Kerry Jones (@kerryjj)",
+          "snippet": "# Kerry Jones (@kerryjj)\n\nFounder, Builder, Startup Advisor. \n\nBuilding:\n- \n- \n- Sideways: stealth / WIP\n- Husla: Founder Chief of Staff\n\n- Account: @kerryjj (Kerry Jones)\n- Joined: 2008-10-23T11:43:33+00:00\n- Location: London\n- Website: \n- Bio links: , \n- Account type: Creator\n- Verified: blue check, This account is verified. Learn more\n- Followers: 876\n- Following: 3513\n- Posts: 1255\n- Media posts: 25\n- Likes: 7077"
+        },
+        {
+          "url": "https://x.com/anthonyrose",
+          "title": "Anthony Rose (@anthonyrose)",
+          "snippet": "# Anthony Rose (@anthonyrose)\n\nFounder & CEO SeedLegals, the largest closer of funding rounds in the UK. Now in the US. The man behind the BBC iPlayer.\n\n- Account: @anthonyrose (Anthony Rose)\n- Joined: 2008-08-10T15:12:25+00:00\n- Location: London\n- Website: \n- Account type: Creator\n- Verified: blue check, This account is verified. Learn more\n- Followers: 6043\n- Following: 2091\n- Posts: 7515\n- Media posts: 844\n- Likes: 2310"
+        },
+        {
+          "url": "https://x.com/brenthoberman",
+          "title": "Brent Hoberman (@brenthoberman)",
+          "snippet": "# Brent Hoberman (@brenthoberman)\n\n2x unicorn founder Co-founder/investor @firstminutecap @Founders_Forum @foundersfactory Angelinvestor - backed 10 unicorns at 🌱\n\n- Account: @brenthoberman (Brent Hoberman)\n- Joined: 2008-11-07T20:31:41+00:00\n- Location: London\n- Website: \n- Category: Entrepreneur\n- Account type: Creator\n- Verified: blue check, This account is verified. Learn more\n- Followers: 54978\n- Following: 10038\n- Posts: 12518\n- Media posts: 551\n- Likes: 19476\n\n## Posts [...] ### @brenthoberman (Brent Hoberman) · 2024-06-06T21:49:31+00:00\n\nGreat news for UK tech!\n\nMike Lynch founder of Autonomy, key baker of Luminance and Darktrace and ⁦@InvokeCapital⁩ cleared.\n\nMany UK tech founders looked up to Mike and will be happy to see him cleared.\n\n@FT [...] - Links: \n- Card: Firstminute Capital launches second $111M fund, featuring a who's-who of founders as LPs | TechCr... — techcrunch.com — London HQ'd Firstminute Capital has announced its second early-stage venture fund of $111 million (£87 million). Founded and cornerstoned in 2016 by Brent"
+        },
+        {
+          "url": "https://x.com/rarefounders",
+          "title": "Vasily Alekseenko (@rarefounders)",
+          "snippet": "- Account: @rarefounders (Vasily Alekseenko)\n- Joined: 2017-12-18T10:12:36+00:00\n- Location: London, England\n- Website: \n- Category: Entrepreneur\n- Account type: Business\n- Verified: blue check, This account is verified. Learn more\n- Followers: 214\n- Following: 162\n- Posts: 1094\n- Media posts: 240\n- Likes: 747 [...] # Vasily Alekseenko (@rarefounders)\n\nBuilt one of the UK's biggest founder communities (25k+) · Angel investor · Building an engine to quantify business relationships · Blunt takes on UK vs SF + AI"
+        }
+      ]
+    },
+    {
+      "query": "\"startup\" founder London UK (site:youtube.com/@ OR site:youtube.com/c/ OR site:youtube.com/channel/)",
+      "include_domains": [
+        "youtube.com"
+      ],
+      "results": [
+        {
+          "url": "https://www.youtube.com/watch?v=8kCRdndrw4o",
+          "title": "What being a female startup founder in UK is like | London vs SF, Fundraising, Imposter Syndrome",
+          "snippet": "I spent an hour in a London cafe with two female founders who are both in their early 20s and both building things I couldn't have built. Myah is building rebeauty.app, a resale marketplace for unopened beauty products. Victoria is building Ventureship.co.uk, which replaces CV screening with real project work. We ended up talking less about their products and more about the part nobody films: raising in the UK when investors want conviction and proof at the same time, getting told no, finding [...] Here's what we cover:\nHow UK and US investors evaluate the exact same pitch differently\nWhy the UK female founder ecosystem is growing faster than its funding\nHow both of them found their first customers by physically going outside and talking to strangers\nThe headache problem vs migraine problem test for whether your idea is worth building\nInvestor horror stories, including one that made me put my coffee down [...] [10:43] Are you two both hiring right now? Since we're talking about like the job market not being so well and we're we're all founders, so we solve our own employment\n[10:51] problems. in terms of just growing the company, growing the business itself.\n[10:55] How you thinking about expanding your own team, especially growing the company here in the UK in London?"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=UNjo8y_pmCA",
+          "title": "Day in the Life of a Startup Founder in London",
+          "snippet": "He started when he was 14 years old. Let's get some noise for [cheering] [applause] you. Always highlighting the rising ballers in the game. He started at late Norian. Obviously, we're going to go into your your journey, but yeah, he's a real figurehead in this space. And then we've got Connor Malcolm, the founder and CEO of Dream Fruit. If you've not seen his stuff, then you need to see stuff. He's one of the people that makes fruit look the most desirable that I've I've ever seen. You make [...] And I I was trying to find the most exotic fruits from from the hardest to reach destinations. Was really a passion. So, it wasn't really intended to be a business, but um people started asking for the stuff that me and my brother Tyler uh were eating and we said, \"You know what? Let's make some money out of this.\" At what point for all of you did it feel real like for you dream when was it like, \"Okay, wow, we're actually establishing this.\" Um I'd say there's two significant points. The first [...] I was at work like pretty much I was working like 16 hours a day. Um it was then when I quit my job and I was like you know what like I'm going to go like fulltime doing content but I didn't have the money to do that at all. Um I had no money to do that but I was just like this is what I know I want to do. I was like, \"Okay, this is getting real, but I'm going to actually have to put my 120% into this.\" And then second time probably be like my first actual gig, like brand new gig, which was"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=t6cFsZdGeQc",
+          "title": "The London Startup Conference 2022",
+          "snippet": "and startup founder before becoming a VC um I I run a Innovation unit with innovate UK the British government's uh Innovation agency before joining uh Venture Capital I've worked at various funds um around the UK previously at octopus Ventures we actually led the rounded to Christina's company small world and then most recently had IQ Capital as I mentioned um really great to meet you all and looking forward to it is Yep this seems to work just fine I'm Travis toyna I'm the founder and CEO of [...] online and it's all over Europe you can submit your application there will be a review process but what a founder or the startup company gets out of this program is amazing and I'm talking as somebody who spent 15 years as a startup guy and spent 15 years 16 17 years in the corporate world and I have to admit I'm the first to raise my hand as a entrepreneurial founder dealing with a giant big company and getting in there and finding the past through an organization with business units and what [...] all Sam I have one I hope you can hear me yes my name is Sam I'm a principal of open ocean open ocean was founded by the creators of MySQL and Maria DB so there's a lot of Founders in here I'm sure some of you are technical it's probably the first database that anybody uses MySQL so we have a very prestigious background in open source and data infrastructure and things like that I should say that we are based in Finland actually so I'm in the UK obviously we have a partner over here but our"
+        },
+        {
+          "url": "https://m.youtube.com/watch?v=bzIUyfVmwbg&pp=0gcJCTkLAYcqIYzv",
+          "title": "Simone Martinelli Startup Meetup with Rare Founders London and Startup Pitch",
+          "snippet": "my friends, that I created Founder UK. Founder UK is a platform that um essentially gives you all of the processes, all of the ideas, all of the analyzation, and what kind of help that you need for your business plans to lift up your startup and your business. It's something that I wish I have myself like, you know, for um a last couple of years ago. I probably would have been a millionaire by now if I had it to be honest. Um, but my mission is simple. I want future entrepreneurs to be [...] # Simone Martinelli Startup Meetup with Rare Founders London and Startup Pitch\n\nRare Founders is a local London Startup Community very similar to Hi!Founders.\n\nOn November 12th, our builder Simone Martinelli co-organized an event with them and briefly introduced the Italian Startup Ecosystem.\n\nTune in to hear London early stage founders' pitches!\n\n- Author: Hi!Founders\n- Channel: \n- Published: 2025-11-13\n- View count: 46 views\n\n## Transcript [...] Um so um well uh hi everyone. It was very nice to meet you. If you see a lot of Italians tonight is my fault but we are start founders and then teams nothing else. And u I build a community in Italy with similar numbers than rare founders. Been running for three years and we I was doing an event tonight because I'm in London for a few things. I work for a business school that has a campus here in London as well. And uh I saw the event of rare founders. I get in touch with prior in Brazil and I"
+        },
+        {
+          "url": "https://www.youtube.com/watch?v=AD7K7AYoXBY",
+          "title": "UK Startup Visa 2026: How to Get Innovator Founder Visa & Move to the UK",
+          "snippet": "# UK Startup Visa 2026: How to Get Innovator Founder Visa & Move to the UK\n\nIn this video, we break down everything you need to know about the UK Innovator Founder Visa (Startup Visa) — one of the best immigration pathways for startup founders, entrepreneurs, and tech professionals who want to build and scale a business in the United Kingdom.\n\nYou can sign up for a consultation by WhatsApp number or write to us in Telegram: \n\n🔻 Our website — \n🔻 Instagram —   / relocode.agency [...] - Chapters: Why the UK is one of the best countries to grow a startup, What is the Innovator Founder (Startup) Visa, How this visa leads to permanent residence and citizenship, Startup ecosystem and investment opportunities in the UK, Tech focus: AI, fintech, machine learning, Why the UK supports global founders, Types of startup visas: Innovator Founder & Scale-up, Endorsing bodies: who approves applications, Core requirements overview, Innovation requirement: what qualifies, Scalability [...] this is the best program for people to use if you want to uh grow your startup in the probably most technologically advanced country. uh what you have to do to get this visa and how you can use this visa to first get the settlement in the United Kingdom and then become a national of the United Kingdom. Let's begin. So if you seeking for opportunities to grow your startup, uh United Kingdom has always seen and has always been seen as a country with a lot of opportunities for founders to have the"
+        }
+      ]
+    },
+    {
+      "query": "\"startup\" founder London UK site:linkedin.com/in",
+      "include_domains": [
+        "linkedin.com"
+      ],
+      "results": [
+        {
+          "url": "https://uk.linkedin.com/in/johnpierreclark",
+          "title": "John-Pierre Clark - Editor & Founder @ startupmag.co.uk",
+          "snippet": "# John-pierre Clark\n\nHeadline: Editor & Founder @ startupmag.co.uk | Mapping the UK Startup Ecosystem\nCurrent role: Founder\nSeniority: Founder, General Management\nLocation: London, England, United Kingdom\nExperience: 22 years 6 months\nLinkedIn:  · 4,415 followers\nDescription: 2026: Building Learn.London 2022: Launch StartupMag.co.uk 2018: Exit:… [...] ## Experience\n- Founder at Learn Dot London (Jul 2026 to present)\n- Editor & Founder at startupmag.co.uk (May 2022 to present)\n- Founder CEO at Top 10 Ventures LTD (May 2016 to present)\n- Founding CEO at HelloPrêt (Apr 2016 to Dec 2018)\n- Investor at Nubapp (Jan 2011 to Feb 2013)\n- Founder at Kohdao (May 2007 to present) [...] ## Recent Activity\n- John-Pierre Clark Reposted: UK founders smashing it this week! £143m raised across 14 companies with game changing tech in AI, Cyber Security, Cyber security, Edtech...\n- John-Pierre Clark Reposted: Callosum just raised £75m to make AI inference faster, cheaper and more resilient by matching each task to the right chip 🤖⚙️ Callosum’s..."
+        },
+        {
+          "url": "https://uk.linkedin.com/in/hector-campbell",
+          "title": "Hector Campbell - Software | Startup Founder | Designer & Builder",
+          "snippet": "# Hector Campbell\n\nHeadline: Software Engineer | Digital Innovation\nCurrent role: React Engineer\nSeniority: Specialist, Engineering and Technical\nLocation: London Area, United Kingdom\nExperience: 7 years 8 months\nLinkedIn:  · 3,589 followers\nDescription: I’m a high-impact builder with 10 years experience across SaaS, FinTech and eCommerce… [...] - Liked By: 🚀 At Airwallex, we took the path of max resistance ... and it's paying off. While most fintechs were building better UIs on top of legacy...\n- Liked By: Really happy to see Adclear featured on the London Startup Map - Clerkenwell is clearly the place to be! We're at 82 Clerkenwell Road, and...\n- Liked By: \"If you do something that annoys me, it's my fault.\" This was the rule Captain Charlie Plumb and his cellmates lived by during six years in... [...] ## Recent Activity\n- Liked By: In May, Bloom Nutrition - featuring their full line of nutrition, Energy & Pop beverage SKUs - launched at The Vitamin Shoppe nationwide!...\n- Liked By: Taste of London Festival 2026!! 🪩🪩🪩 Wow, what a day!! Taste of London was always an event I looked forward to each year as a consumer....\n- Liked By: Steve Jobs Returned to a Dying Apple, But His First Win Wasn’t the iPhone When Steve Jobs returned to Apple in 1997, the company was losing…"
+        },
+        {
+          "url": "https://uk.linkedin.com/in/paul-graham-899452316",
+          "title": "Paul Graham - Founder at Y Combinator",
+          "snippet": "# Paul Graham\n\nHeadline: Founder at Y Combinator\nCurrent role: Founder\nSeniority: Founder, General Management\nLocation: Greater London, England, United Kingdom\nLinkedIn:  · 1,254 followers\n\n## Experience\n- Founder at Y Combinator\n\n## Recent Activity\n- Posted: Hello LinkedIn!"
+        },
+        {
+          "url": "https://uk.linkedin.com/jobs/startup-founder-jobs-london",
+          "title": "Startup Founder Jobs in London (4,000+ Open Roles) | LinkedIn",
+          "snippet": "HartleyCo\n- Commercial Co-Founder - Healthcare AI (London) \n  \n  ### Commercial Co-Founder - Healthcare AI (London)\n  \n  Nayara.ai\n- Co-founder in Residence, Next generation insecticides and pest control \n  \n  ### Co-founder in Residence, Next generation insecticides and pest control\n  \n  Deep Science Ventures\n- Special Projects \n  \n  ### Special Projects\n  \n  Stealth Startup\n- Technical Co-Founder & CTO \n  \n  ### Technical Co-Founder & CTO\n  \n  FabricNano\n- Founder in Residence [...] Specsavers\n- Founding Product Lead at VC backed Enterprise AI startup (£60-80k) \n  \n  ### Founding Product Lead at VC backed Enterprise AI startup (£60-80k)\n  \n  Jumpstart\n- Founding GTM \n  \n  ### Founding GTM\n  \n  cinnamon.io\n- Founding Engineer - Ambient Care Startup \n  \n  ### Founding Engineer - Ambient Care Startup\n  \n  Founders Factory\n- Founding GTM \n  \n  ### Founding GTM\n  \n  Searchability®\n- General Manager (UK) \n  \n  ### General Manager (UK)\n  \n  Fresha\n- Founding Engineer [...] TYTEN\n- Founding AI Engineer | Well-Funded FinTech AI Start-Up | London | Up to £170k + Equity \n  \n  ### Founding AI Engineer | Well-Funded FinTech AI Start-Up | London | Up to £170k + Equity\n  \n  Few&Far\n- Founding Engineer (YC) \n  \n  ### Founding Engineer (YC)\n  \n  Arrows\n- Founding BDR/AE Lead at well-funded Hospitality AI startup (£50-75k) \n  \n  ### Founding BDR/AE Lead at well-funded Hospitality AI startup (£50-75k)\n  \n  Jumpstart\n- Audiology Partner \n  \n  ### Audiology Partner"
+        },
+        {
+          "url": "https://uk.linkedin.com/jobs/startup-founder-jobs-london-colney",
+          "title": "Startup Founder Jobs in London Colney (4,000+ Open Roles) | LinkedIn",
+          "snippet": "HartleyCo\n- Founder Associate - Chemistry venture \n  \n  ### Founder Associate - Chemistry venture\n  \n  A&B Smart Materials\n- Platform Engineer - Founding - AI \n  \n  ### Platform Engineer - Founding - AI\n  \n  Atarus\n- President of Puffy \n  \n  ### President of Puffy\n  \n  Puffy\n- Founding AI Research Engineer \n  \n  ### Founding AI Research Engineer\n  \n  Catapult\n- Founding Product Manager | Early-Stage AI Start-Up | London \n  \n  ### Founding Product Manager | Early-Stage AI Start-Up | London [...] HartleyCo\n- Commercial Co-Founder - Healthcare AI (London) \n  \n  ### Commercial Co-Founder - Healthcare AI (London)\n  \n  Nayara.ai\n- Co-founder in Residence, Next generation insecticides and pest control \n  \n  ### Co-founder in Residence, Next generation insecticides and pest control\n  \n  Deep Science Ventures\n- Founding Product Lead at an Awesome Startup :) \n  \n  ### Founding Product Lead at an Awesome Startup :)\n  \n  Peony\n- Special Projects \n  \n  ### Special Projects [...] - Chief Executive Officer \n  \n  ### Chief Executive Officer\n  \n  Raising Greats\n- Founder(s) to build a UK property services buy and build platform \n  \n  ### Founder(s) to build a UK property services buy and build platform\n  \n  Spire Ventures\n- Co-founder & CEO, AI for predictable drug discovery and development \n  \n  ### Co-founder & CEO, AI for predictable drug discovery and development\n  \n  Deep Science Ventures\n- Founding Product Manager \n  \n  ### Founding Product Manager\n  \n  HartleyCo"
+        }
+      ]
+    },
+    {
+      "query": "\"startup\" founder London UK site:instagram.com",
+      "include_domains": [
+        "instagram.com"
+      ],
+      "results": [
+        {
+          "url": "https://www.instagram.com/p/DeUXfxsjOZS",
+          "title": "Rushita Kaushik on Instagram: \"Back to Base 🏴󠁧󠁢󠁥󠁮󠁧󠁿🇬🇧 #london #autumn #rushita #startupfounder\"",
+          "snippet": "- Author: @russhyy (Rushita Kaushik)\n- Posted: 2026-10-10T15:06:39+00:00\n- Type: carousel_container\n- Location: Kensington, United Kingdom\n- Hashtags: #london #autumn #rushita #startupfounder\n- Likes: 50\n- Comments: 5\n- Slides: 2 [...] # Rushita Kaushik on Instagram: \"Back to Base 🏴󠁧󠁢󠁥󠁮󠁧󠁿🇬🇧 #london #autumn #rushita #startupfounder\"\n\nBack to Base 🏴󠁧󠁢󠁥󠁮󠁧󠁿🇬🇧\n#london #autumn #rushita #startupfounder\n\n[Image: Photo by Rushita Kaushik on October 10, 2026.]\n\n[Image: Photo by Rushita Kaushik on October 10, 2026. May be an image of studying, stethoscope, desk, bureau, laptop, office and text.]\n\n[Image: Photo by Rushita Kaushik on October 10, 2026. May be an image of studying, laptop, desk, office and text.]"
+        },
+        {
+          "url": "https://www.instagram.com/p/DecJtCJirHJ",
+          "title": "Cherry Ventures on Instagram: \"Think London is Europe’s founder capital? Not per capita. We tracked 10,000 early-stage European fou…\"",
+          "snippet": "# Cherry Ventures on Instagram: \"Think London is Europe’s founder capital? Not per capita. We tracked 10,000 early-stage European fou…\"\n\nThink London is Europe’s founder capital? Not per capita.\n\nWe tracked 10,000 early-stage European founders and measured them against population. Amsterdam and Zurich come out on top at 34+ founders per 100k. London lands ninth at 18.0. Berlin sits at 11.7.\n\nWant to see where your city ranks? Comment HEARTBEAT and we’ll DM you the report. [...] [Image: Photo by Cherry Ventures on October 13, 2026. May be a graphic of magazine, poster and text.]\n\n- Author: @_cherryventures (Cherry Ventures)\n- Posted: 2026-10-13T15:40:30+00:00\n- Type: feed\n- Likes: 18\n- Comments: 1"
+        },
+        {
+          "url": "https://www.instagram.com/p/DeHzRSvo0wR",
+          "title": "Entrepreneur UK on Instagram: \"Entrepreneur UK is putting together a London100, spotlighting some of the most exciting, ambitious a…\"",
+          "snippet": "Get in touch with features editor Patricia Cullen - REDACTED. \n\nThis is about putting London’s founders and the businesses they’re building in the spotlight. Tag a founder who deserves to be on the list.\n\n #EntrepreneurUK #LondonStartups #Startups\n\n[Image: Photo by Entrepreneur UK on October 05, 2026. May be a graphic of one or more people, magazine, poster and text.] [...] # Entrepreneur UK on Instagram: \"Entrepreneur UK is putting together a London100, spotlighting some of the most exciting, ambitious a…\"\n\nEntrepreneur UK is putting together a London100, spotlighting some of the most exciting, ambitious and entrepreneurial start-ups across the city. \n\nWhether you’re scaling fast, disrupting an industry or building something brilliant, you could be one of them.\n\nWant your company considered for the Entrepreneur UK list? [...] - Author: @entrepreneurmedia.uk (Entrepreneur UK)\n- Posted: 2026-10-05T18:00:51+00:00\n- Type: feed\n- Hashtags: #entrepreneuruk #londonstartups #startups\n- Likes: 3\n- Comments: 1"
+        },
+        {
+          "url": "https://www.instagram.com/p/DXJ7WhEiIh3",
+          "title": "Readers_Cult_Books on Instagram: \"London founders — this one’s for you. YOU ARE a Startup Founder is an interactive simulation about p…\"",
+          "snippet": "- Author: @readers_cult_books (Readers_Cult_Books)\n- Posted: 2026-04-15T14:08:33+00:00\n- Type: feed\n- Location: London, England\n- Hashtags: #londonstartups #londonentrepreneurs #startuplondon #ukstartups #founderlife #startupfounder #entrepreneurship101 #businessbooks #readerscult #amazonbooks\n- Likes: 2\n- Comments: 2 [...] #londonstartups #londonentrepreneurs #startuplondon #ukstartups #founderlife #startupfounder #entrepreneurship101 #businessbooks #readerscult #amazonbooks\n\n[Image: Photo by Readers_Cult_Books on April 15, 2026.] [...] # Readers_Cult_Books on Instagram: \"London founders — this one’s for you. YOU ARE a Startup Founder is an interactive simulation about p…\"\n\nLondon founders — this one’s for you.\n\nYOU ARE a Startup Founder is an interactive simulation about pressure, consequence, and the cost of real decisions.\n\nSeek funding.\nFind a partner.\nGo solo.\n\nAvailable now on Amazon."
+        },
+        {
+          "url": "https://www.instagram.com/rarefounders",
+          "title": "Rare Founders (@rarefounders)",
+          "snippet": "### @rarefounders\n\nIt's back 🎄 The Legendary Startup Christmas Party.\nTue 8 Dec, 6pm to midnight, The Ministry, Borough.\nFounder DJs, Secret Santa and a room full of London's founders. Last year sold out, so register early.\nLink in bio or scan the QR.\n\n#startupparty #londonstartups #founders #christmasparty #rarefounders\n\n[Image: Photo by Rare Founders on November 07, 2026. May be an image of text.] [...] With foundermatcha. Entry is by approval, so register early. Scan the QR on the last slide, tap the link in bio, or comment MATCH and we'll DM you the link.\n\n#startups #founders #engineers #cofounder #London\n\n[Image: Photo by Rare Founders on November 11, 2026. May be an image of text.]\n\n- Author: @rarefounders\n- Type: carousel_container\n- Hashtags: #startups #founders #engineers #cofounder #london\n\n### @rarefounders [...] - Author: @rarefounders\n- Type: carousel_container\n- Hashtags: #startups #founders #london #christmasparty\n\n### @rarefounders\n\nGreat partnerships rarely start with a cold message. They start with a conversation. 👀\n\nTue 24 Nov, 6pm to 10pm, The Ministry, Borough.\nFounders with a business: 60 seconds on what you're building and who you're looking for.\nEngineers, from students to tech leads: 60 seconds on what you do and what you want to build.\nGo over time? Meet the water guns. 💦"
+        }
+      ]
+    },
+    {
+      "query": "\"startup\" founder London UK site:threads.net/@",
+      "include_domains": [
+        "threads.net"
+      ],
+      "results": [
+        {
+          "url": "https://www.threads.net/@thenashvilleblondie",
+          "title": "Tally Bevis • The Nashville Blondie (@thenashvilleblondie) • Threads, Say more",
+          "snippet": "Home New thread Search Messages Activity Profile Insights Log in More thenashvilleblondie Tally Bevis • The Nashville Blondie thenashvilleblondie ☆ Nashville & London startup founder ☆ MSc Entrepreneurship, UCL ☆ owner of Electrofy marketing agency instagram.com/electrofyagency.com +1 922 followers Follow Mention Threads Replies Media Reposts thenashvilleblondie 09/17/26 Heritage Ball supporting williamsonheritage ✨ With @charlottefleming24 💌 1 thenashvilleblondie 08/12/26 In a season of just [...] In a season of just saying yes Yes to good people Yes to new opportunities Yes to trying new things Yes to being a novice so I can become an expert Yes to the startup I’ve been dreaming up for 18 months Yes to the agency clients I’m excited about Yes to liiiiife 🤍 In the most annoying founder bro voice you can conjure: WaTcH tHiS sPaCe 😂😮💨 1 thenashvilleblondie 06/03/26 London, my muse, my moon, my love! 🌙 This chapter has been the best yet. UCL School of Management MSc Entrepreneurship with"
+        },
+        {
+          "url": "https://www.threads.net/@mikebutcher",
+          "title": "Mike Butcher (@mikebutcher) • Threads, Say more",
+          "snippet": "and meet founders! mikebutcher 10/29/26 1 mikebutcher 10/28/26 London-based startup Nous, led by Greg Marsh has raised $17m to expand internationally, as nearly 250,000 UK households now use its AI agent to manage bills, switch providers and automate household admin. Listen or watch more on the @pathfounders podcast pathfounders.com/podca… Log in to see more from mikebutcher. Log in Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username [...] Home New thread Search Messages Activity Profile Insights Log in More mikebutcher Mike Butcher mikebutcher Founder & Editor, @pathfounders | Formerly @techcrunch | REDACTED | Signal: mikebutcher.04 | Pathfounders.com pathfounders.com 3,395 followers Follow Mention Threads Replies Media Reposts mikebutcher 4d Some big news breaking tomorrow around startups+europe. Watch this space. 43 7 1 mikebutcher 10/31/26 Good to to Vienna to hang with Sigma Squared Society and meet founders!"
+        },
+        {
+          "url": "https://www.threads.net/@actmembers?hl=af",
+          "title": "Association for Competitive Technology (@actmembers) • Threads, Sê meer",
+          "snippet": "the DevelopedUKTour took us from Belfast to Glasgow, Manchester, London, Milton Keynes, Leeds, Durham, and Newcastle 🚀 📍 along the way, we met with members, founders, investors, developers, policymakers, and ecosystem leaders to talk about what it takes to build and grow a tech company in the UK today. tysm to every partner, speaker, member, founder, and community leader who welcomed us along the way! Meld aan om meer van actmemberste sien. Meld aan Meld aan by of teken in op Threads Sien [...] Jr., and Dylan McKee join ACT founder Mike Sax at the WSIS forum for a panel on competition policy and fair opportunities for small developers. proud to spotlight these three incredible businesses for MemberMonday ❇️ register or tune in virtually: loom.ly/oGihd… actmembers Tech Policy 2026/06/29 ⚖️ the 28th regime could be the biggest win for european smes in years. act member company rize is exactly the kind of company fair competition policy is built for: small team, sharp product, no room [...] Tuisblad Nuwe stroom Soek Boodskappe Aktiwiteit Profiel Insigte Meld aan Meer actmembers Association for Competitive Technology actmembers Amplifying the voice and needs of small-medium size tech companies in the U.S., EU, and UK 📱 🗣 lnk.bio/Ctko 75 volgers Volg Noem Strome Antwoorde Media Herplasings actmembers Member Monday 2026/07/06 🌍 platform rules are being rewritten right now, and small tech needs to be in the room. tomorrow, on july 7, ACT members Jason Culloty, Musa Hakim Jr., and Dylan"
+        },
+        {
+          "url": "https://www.threads.net/@beingmeshweta?hl=bn",
+          "title": "Dr. Shweta Singh (@beingmeshweta) • Threads, Say more",
+          "snippet": "Home New thread Search Messages Activity Profile Insights Log in More beingmeshweta Dr. Shweta Singh beingmeshweta Founder @ennoble\\_ip @sherealtherealshe Recipient of Times 40Under40 & Exceptional Women of Excellence by WEF II Economic Time women leader award 2022 ipjagruti.com 7,151 followers Follow Mention Threads Replies Media Reposts beingmeshweta 07/26/26 POV: Every few seconds… a new London story and a new memory. 🇬🇧✨ One city. Endless vibes. 📍London, you made every frame worth it. ( [...] ✨🇬🇧 POV: You’re living your Bollywood moment in London. 🇬🇧🎬❤️ (London travel reel, Bollywood vibes, London aesthetic, UK tourism) #LondonDiaries #LondonVibes #TravelReel #SRKVoice #IndianInLondon beingmeshweta 04/27/26 Koi baat nahi… hum ‘gande’ bache hi theek hain 😌 Kyuki yehi gande bache bade hoke entrepreneur bante hain 💼🔥 ( entrepreneur mindset, startup motivation, risk taking mindset, business journey, hustle life, founder story, success mindset, indian startup, growth mindset, leadership, [...] leadership, dream big, breaking rules, self made) #EntrepreneurMindset #StartupLife #FounderLife #reels #trending Log in to see more from beingmeshweta. Log in Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username instead"
+        },
+        {
+          "url": "https://www.threads.net/@startupsmagazine",
+          "title": "Startups Magazine (@startupsmagazine) • Threads, Say more",
+          "snippet": "growth, as a judge for the #HustleAwards 2026🎉 She designs and delivers high-impact startup and scaleup programmes, mentoring and innovation initiatives, supporting founders to build resilient, investable businesses. 🏆 Find out more here: lnkd.in/e9dME… startupsmagazine 03/13/26 🚨 JUDGE ANNOUNCEMENT 🚨 We're excited to have Paulette Watson MBE, Founder and CEO of Academy Achievers and the global #BeMeDigitalInclusion initiative, as a judge for the #HustleAwards 2026🎉 She advocates for greater [...] a mission to stop startups failing because of poor communication and is frustrated to see so many founders struggle to raise the capital they need because they’re unable to convince investors their business is the one to back. 🏆 Find out more here: thehustleawards.co.uk/judgi… startupsmagazine 03/13/26 🚨 JUDGE ANNOUNCEMENT 🚨 We're excited to have Samantha Harland, Innovation & Entrepreneurship Consultant specialising in early-stage businesses, startup ecosystems and founder-led growth, as a [...] Home New thread Search Messages Activity Profile Insights Log in More startupsmagazine Startups Magazine startupsmagazine A magazine helping tech startups connect the dots on their entrepreneurial journeys ⚡️ feedlink.io/startupsmagazine 2,211 followers Follow Mention Threads Replies Media Reposts startupsmagazine 03/13/26 🚨 SPONSOR ANNOUNCED 🚨 We're happy to announce London Venture Capital Network as our Game-Changing Investor category sponsor for the Hustle Awards 2026🤩 LVCN brings together"
+        }
+      ]
+    },
+    {
+      "query": "\"startup\" founder London UK site:facebook.com",
+      "include_domains": [
+        "facebook.com"
+      ],
+      "results": [
+        {
+          "url": "https://www.facebook.com/groups/UKEntrepreneursandStartups/posts/1940033363396130",
+          "title": "Olga Rusakova on Facebook: \"Hi everyone, I’m Olga, I’m from London, and I’m a part of the team at Foundermatcha, an early-stage …\"",
+          "snippet": "# Olga Rusakova on Facebook: \"Hi everyone, I’m Olga, I’m from London, and I’m a part of the team at Foundermatcha, an early-stage …\"\n\nHi everyone, I’m Olga, I’m from London, and I’m a part of the team at Foundermatcha, an early-stage startup helping UK founders solve one of the toughest early problems: finding the right tech co-founder.\n\nBeyond the platform, we run hackathons and founder-engineer speed-dating events to help people connect in person (our next event is in London on November 6). [...] Looking forward to learning from this community.\n\n- Author: Olga Rusakova\n- Group: UK Entrepreneurs & Start-ups\n- Posted: 2025-10-21T14:02:10+00:00\n- Reactions: 12\n- Comment count: 6\n- Shares: 0\n- Privacy: Public group\n\n## Comments [...] - Leycorn Abiona: Hello Olga, this sounds absolutely wonderful. I truly appreciate the efforts Foundermatcha is making to connect founders and engineers. I am currently leading an impact-driven platform, CareersBar, which is focused on AI-powered recruitment and digital inclusion within the UK. Identifying the ideal tech co-founder is a significant priority for us at the moment, and I would be very interested in exploring how Foundermatcha might be able to assist us in this endeavor."
+        },
+        {
+          "url": "https://www.facebook.com/groups/startupeventslondon",
+          "title": "Startup Events London 🇬🇧",
+          "snippet": "•  Caroline Macdonald, Ardian Preçi, Matt Thomas and Campbell Williams,\nhelping founders from London, Leicester, Plymouth and Bristol, with AI tools for growth, #FOMO and social-proof, marketing messaging and tests, early-adoption and client-acquisition digital-channels, campaign measurements, etc… [...] •  Diana Matei, Eugenio Galioto, Adrian Burden and Martin Wilks,\nhelping founders in London, Hereford, Birmingham, Cambridge and Bolton decide between custom and off the shelf API, low-code & no-code MVP, securing data to build trust, Machine Learning, etc… [...] •  Ishita Luthra, Natalie Salunke, Jessica Coventry and Andrew Pannell, \nhelping founders from London, Scotland, Northampton and Liverpool, with trading/selling to the EU, data protection and AI in from UK to EU, insolvency, bankruptcy, equity-reallocation, trustees, IP, trademarks, due-diligence, ESOP, how to properly close down a business, etc…"
+        },
+        {
+          "url": "https://www.facebook.com/groups/londonstartupclub",
+          "title": "London Start-Up Club",
+          "snippet": "First post here 👋 I’ve been following along for a bit and just wanted to say - credit to the admins for setting the tone. It’s rare to find a group where the conversations are actually helpful. \n\nQuick background on me: I’m a former founder who raised capital for my own startup. These days, I work alongside other founders to help them through the same procecss - because it is such a tough process. [...] Hi Everyone, I’m Ben, I’m new to the group and thought I’d introduce myself.\nI’m a pitch coach specialising in helping startup founders get set up for success in pitching for seed and pre-seed investment. I joined this group to network with and learn from other entrepreneurs, as well as to connect with and help anyone who may be struggling with pitching and nailing down their business messaging. [...] Hey fantastic founders! 👋 As part of Dream Factory, a dedicated content creation house exclusively for startups, I'm here to shout out to all the visionary minds shaping the future! 🌐💡\n\nDrop a \"content\" in the comments, and let's talk about how we can elevate your startup journey. From crafting content strategy to hands-on shooting, we've got you covered. 📸✨ At Dream Factory, we offer unlimited content for our members – because we know every startup deserves a stellar story. 🚀🌈"
+        },
+        {
+          "url": "https://www.facebook.com/groups/Founder.CEOs/posts/3705758689699701",
+          "title": "Julius Akuffo on Facebook: \"Hello Admins, I hope this finds you well. I had engaged with a few founders and CEOs in this group p…\"",
+          "snippet": "I am based in London, UK and made an attempt to create a subgroup for London Founders and CEOs to connect, hoping that we could even end up organising an in-person meeting sometime. However, my request for setting up this sub-group has still not been approved. \n\nJust curious, is there any reason for that? Or perhaps this idea isn’t ideal for the purpose of the group? \n\nThank you, and would be great to get some feedback."
+        },
+        {
+          "url": "https://www.facebook.com/RichardBranson/posts/great-to-see-virgin-startup-continuing-to-back-uk-founders-and-help-widen-access/1626204382203034",
+          "title": "Richard Branson on Facebook: \"Great to see Virgin StartUp continuing to back UK founders and help widen access to entrepreneurship…\"",
+          "snippet": "Great to see Virgin StartUp continuing to back UK founders and help widen access to entrepreneurship. The best way to understand the support founders need is to listen to the people trying to build businesses today. It’s important because entrepreneurs aren't just building businesses. They are solving problems, driving innovation, creating jobs, and making a difference in the world. Read Virgin StartUp’s annual Founder Barometer report here: \n\n#entrepreneurship #founders #growth [...] - Harry Lee: Access to capital and knowledge is the real gap in UK entrepreneurship, not ambition — most founders already have the drive, they're missing the on-ramp. Widen that, and the return isn't charity, it's jobs and innovation compounding back into the economy.\n- Kristin Wells: \"Talent is everywhere. Opportunity is not\" so true. wow 😳 Great Pack'd story !!! Virgin Shark Tank 🙌👏👏👏👏 [...] [Image: May be an image of one or more people and people studying]\n\n- Author: Richard Branson\n- Posted: 2026-09-08T10:07:48+00:00\n- Shared link: \n- Links: , \n- Reactions: 1277\n- Comment count: 156\n- Shares: 48\n- Privacy: Public\n\n## Comments"
+        }
+      ]
+    },
+    {
+      "query": "\"startup\" founder London UK",
+      "include_domains": null,
+      "results": [
+        {
+          "url": "https://scytale.ai/resources/top-tech-startup-founders-uk",
+          "title": "Top 10 Tech Startup Founders in the UK for 2025 | Scytale",
+          "snippet": "AI entrepreneur and enthusiast Alex Kendall is shaking up the world of autonomous driving. As co-founder and CEO of Wayve, he is transforming transportation with AV2.0, a next-generation AI-driven autonomous driving system that adapts to new environments through data-driven learning. Since founding Wayve in 2017, Alex has raised over £1 billion from investors including SoftBank, Nvidia, and Microsoft and built a world-class team across London, Silicon Valley, and Vancouver. [...] With a background in computer science and a passion for emerging technology, Victor has driven innovation in AI, machine learning, and immersive media. Before founding Synthesia in 2017, he co-led Immersive Futures, shaping the UK’s VR/AR industry and working with the UK government to establish London’s first high-quality volumetric capture studio, Dimension. He also co-founded Coincall, a privacy-focused crypto portfolio tracker, later selling it in 2019. With expertise spanning AI, [...] In this article, we highlight the top 10 tech startup founders in the UK for 2025 (who you should be following if you aren’t already!), exploring their achievements and the impact they’re making within the prospering UK tech sector.\n\n## Top UK Tech Startup Founders: Our Must-Follow List\n\n### 1. Rishi Khosla"
+        },
+        {
+          "url": "https://www.meetup.com/london-startup-founder-101",
+          "title": "London Startup Founder 101 | Meetup",
+          "snippet": "\\\n\nThis group hosts numerous free events throughout the year where you can learn the best practices of starting a company from people who have been there and done that. You’ll have the opportunity to meet local founders and investors, exchange ideas with experts, get feedback on your idea, participate in startup workshops, and more.\\\n\n\\\n\nTypical startup event topics include:\\\n\n• Coming up with a strong startup idea\\\n\n• Startup legal basics\\\n\n• How to pitch your startup\\ [...] When you are the whole team, every lead you don't qualify and every customer email you answer at 11pm comes out of the hours you should spend building. You can't hire yet. An AI agent can take one of those jobs now. In this live session, Seth Ward, Founder & CEO of 4142, builds an AI agent from start to finish: connected to a real model, doing a single real job like qualifying a lead or drafting a follow-up, and deployed where it actually runs. No slides, and questions are open throughout. [...] London Startup Founder 101 cover photo\nLondon Startup Founder 101 cover photo\n\nPart of Startup Founder 101 - 61 groups\n\n# London Startup Founder 101\n\n11,501 members\n\nsparkle icon\ncalendar icon\npeople2 icon\nphoto icon\nchat icon\n\n## About us\n\nStartup Founder 101 brings together aspiring and experienced tech entrepreneurs to discuss, meet, and collaborate to build great new startups, and to push the local startup ecosystem forward.\\\n\n\\"
+        },
+        {
+          "url": "https://www.cnbc.com/video/2025/09/30/vc-founder-london-best-place-for-ai-startups-outside-san-francisco.html",
+          "title": "VC Founder: London best place for AI startups outside San Francisco",
+          "snippet": "Matt Miller, Founder of Evantic Capital touts the strengths of the UK as a tech startup destination, comparing it to cities around the world.\n\n03:33\n\nTue, Sep 30 202510:17 AM EDT [...] Livestream\n\n Make It\n select\n\n USA\n INTL\n\n Livestream\n\n Livestream\n\nWatchlist\n\nSIGN IN\n\nCreate free account\n\nMarkets\n\nBusiness\n\nInvesting\n\nTech\n\nPolitics & Policy\n\nVideo\n\nWatchlist\n\nInvesting Club\n\nJoin IC\n\nPRO\n\nJoin Pro\n\nLivestream\n\nMonday - Friday, 08:00 - 11:00 CET | 14:00 - 17:00 HK/SIN\n\nVC Founder: London best place for AI startups outside San Francisco\n\nwatch now\n\nShare\n\nSquawk Box Europe\n\n# VC Founder: London best place for AI startups outside San Francisco"
+        },
+        {
+          "url": "https://foundersnetwork.com/mentoring-programs/london-startup-community",
+          "title": "London Startup Community, Mentorship and Events - FN",
+          "snippet": "Founders Network’smission is to connect London Founders and startups with a global support network. The fact is that on average, Silicon Valley startups raise2-3 times more moneyin the first stages of development compared to London. Based in Silicon Valley,Founders Network providesLondon’s Founders the opportunity to access resources from the tech capital.\n\nLondon Header\n\nImage\n\n## Learn, Network, and Engage with entrepreneurs from London [...] Image\n\nFounders Network, understands the needs and aspirations of startup founders in this dynamic city. We recognize the value of a supportive community and have cultivated a global network of experienced mentors and like-minded entrepreneurs to empower our members. Whether it’s through our mentorship program, networking events, or access to investors, we are dedicated to fostering the growth of London’s startup ecosystem and helping founders thrive in this exciting entrepreneurial landscape. [...] Our local leadership team consists of a dedicated group of London-based founders who volunteer their time and expertise to support the growth and success of the chapter.\n\n## Founders Network Global Stats\n\n#### $5B+\n\nCOLLECTIVELY RAISED\n\n#### $1.1M\n\nAverage Funding\n\n#### 600+\n\nTech Founders\n\n#### 55%\n\nSERIAL ENTREPRENEURS\n\n#### 4.6\n\nSTARTUPS PER MEMBER\n\n#### 100+\n\nGlobal Events\n\n## How You Can Join Our Startup Community\n\n1\n\n#### Request an invitation"
+        },
+        {
+          "url": "https://finance.yahoo.com/news/london-ranked-second-best-startup-080825222.html?guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&amp%3Bguce_referrer_sig=AQAAAFtDBw-jWl6vP-AB-121o3bK3wpznaR3m4eJW0MkTJ4mBGaupgl36jQQh-uLPp3gQWD4bRiND5pGNhcUX2h2aY4qgrItEa6enD1r3zvxA1XekCQbBZ8K1tn2-QjfnSfMtrmWeJ_0ZvLD7IIBKolQqj83WsTyATgeuh3KIQnh7ccC",
+          "title": "London ranked second best startup hub in the world for tech",
+          "snippet": "Russ Shaw, Founder of Tech London Advocates, said: \"It's particularly impressive to see how high London ranks with reference to early-stage investment - I hope that this sends a distinct message to aspiring tech entrepreneurs that the capital is the number one destination to start their business.\" [...] London also ranked among the highest for access to early-stage funding, while the capital beat New York on the report's 'connectedness' metric, the ability for a startup to increase its global reach.\n\nHowever, London lagged behind the Big Apple on 'performance' – the economic impact of the ecosystem and the growth of investor exits from startups."
+        }
+      ]
+    }
+  ],
+  "classification_calls": [
+    {
+      "candidate_count": 13,
+      "classifications": [
+        {
+          "candidate_index": 0,
+          "is_individual_person": true,
+          "name_as_written": "John-Pierre Clark",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "John-Pierre Clark is a startup founder based in London, UK."
+        },
+        {
+          "candidate_index": 1,
+          "is_individual_person": true,
+          "name_as_written": "Hector Campbell",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Hector Campbell is a startup founder and software builder based in the London area."
+        },
+        {
+          "candidate_index": 2,
+          "is_individual_person": true,
+          "name_as_written": "Paul Graham",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Paul Graham is a startup accelerator founder listed in Greater London."
+        },
+        {
+          "candidate_index": 3,
+          "is_individual_person": true,
+          "name_as_written": "Kerry Jones",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Kerry Jones is a startup founder and advisor based in London."
+        },
+        {
+          "candidate_index": 4,
+          "is_individual_person": true,
+          "name_as_written": "Anthony Rose",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Anthony Rose is the founder & CEO of SeedLegals located in London."
+        },
+        {
+          "candidate_index": 5,
+          "is_individual_person": true,
+          "name_as_written": "Brent Hoberman",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Brent Hoberman is a multi-time tech startup founder and investor based in London."
+        },
+        {
+          "candidate_index": 6,
+          "is_individual_person": true,
+          "name_as_written": "Vasily Alekseenko",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Vasily Alekseenko is an entrepreneur and startup community founder based in London."
+        },
+        {
+          "candidate_index": 7,
+          "is_individual_person": false,
+          "name_as_written": "Rare Founders",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Rare Founders represents an organization/event host account rather than an individual person."
+        },
+        {
+          "candidate_index": 8,
+          "is_individual_person": true,
+          "name_as_written": "Tally Bevis",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Tally Bevis is a startup founder affiliated with London and UCL."
+        },
+        {
+          "candidate_index": 9,
+          "is_individual_person": true,
+          "name_as_written": "Mike Butcher",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "medium",
+          "reason": "Mike Butcher is the founder of Pathfounders covering London-based startups."
+        },
+        {
+          "candidate_index": 10,
+          "is_individual_person": false,
+          "name_as_written": "Association for Competitive Technology",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "The candidate is an trade association organization rather than an individual person."
+        },
+        {
+          "candidate_index": 11,
+          "is_individual_person": true,
+          "name_as_written": "Dr. Shweta Singh",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Dr. Shweta Singh is a startup founder visiting and active in London."
+        },
+        {
+          "candidate_index": 12,
+          "is_individual_person": false,
+          "name_as_written": "Startups Magazine",
+          "interest_supported": true,
+          "location_supported": true,
+          "confidence": "high",
+          "reason": "Startups Magazine is a publication brand rather than an individual person."
+        }
+      ]
+    }
+  ]
+}
