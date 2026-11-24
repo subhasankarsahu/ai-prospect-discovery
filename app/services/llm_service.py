@@ -327,13 +327,30 @@ class GeminiLLMService:
                         logger.error("Gemini server error %d after retries", response.status_code)
                         raise LLMServiceError(f"Gemini server error: {response.status_code}")
 
+                    retry_after_header = response.headers.get("Retry-After")
+                    sleep_time = backoff_seconds
+                    if retry_after_header:
+                        try:
+                            retry_after_val = float(retry_after_header)
+                            if retry_after_val > 10.0:
+                                logger.warning(
+                                    "Gemini 5xx Retry-After is %.2fs (exceeds 10s cap); aborting retry",
+                                    retry_after_val,
+                                )
+                                raise LLMServiceError(
+                                    f"Gemini server error Retry-After ({retry_after_val}s) exceeds maximum allowed wait (10s)"
+                                )
+                            sleep_time = max(retry_after_val, 0.0)
+                        except ValueError:
+                            sleep_time = backoff_seconds
+
                     logger.info(
                         "Gemini server error %d; retrying attempt %d in %.2fs",
                         response.status_code,
                         attempt,
-                        backoff_seconds,
+                        sleep_time,
                     )
-                    await asyncio.sleep(backoff_seconds)
+                    await asyncio.sleep(sleep_time)
                     backoff_seconds *= 2.0
                     continue
 

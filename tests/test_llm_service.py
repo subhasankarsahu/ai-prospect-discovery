@@ -14,6 +14,7 @@ from app.services.llm_service import (
     LLMConfigurationError,
     LLMRateLimitError,
     LLMResponseParsingError,
+    LLMServiceError,
     LLMTimeoutError,
 )
 
@@ -228,6 +229,58 @@ async def test_extract_query_intent_rate_limit_retry_success(mock_settings: Sett
         assert intent.is_prospect_query is True
         assert intent.interest == "FinTech founders"
         assert mock_post.await_count == 2
+
+
+@pytest.mark.asyncio
+async def test_extract_query_intent_5xx_retry_success(mock_settings: Settings) -> None:
+    """Verify recovery after an initial 503 response when retry succeeds."""
+    intent_data = {
+        "is_prospect_query": True,
+        "interest": "Cloud architects",
+        "target_type": "individual",
+    }
+    mock_503 = httpx.Response(
+        status_code=503,
+        headers={"Retry-After": "1"},
+        request=httpx.Request("POST", "https://test"),
+    )
+    mock_200 = httpx.Response(
+        status_code=200,
+        json=build_gemini_candidate_payload(json.dumps(intent_data)),
+        request=httpx.Request("POST", "https://test"),
+    )
+
+    with patch("httpx.AsyncClient.post", new_callable=AsyncMock) as mock_post, \
+         patch("asyncio.sleep", new_callable=AsyncMock):
+        mock_post.side_effect = [mock_503, mock_200]
+        service = GeminiLLMService(settings=mock_settings)
+
+        intent = await service.extract_query_intent("Cloud architects")
+        assert intent.is_prospect_query is True
+        assert intent.interest == "Cloud architects"
+        assert mock_post.await_count == 2
+
+
+@pytest.mark.asyncio
+async def test_extract_query_intent_5xx_retry_after_exceeds_cap(mock_settings: Settings) -> None:
+    """Verify LLMServiceError raised immediately when 5xx Retry-After exceeds 10s."""
+    mock_503 = httpx.Response(
+        status_code=503,
+        headers={"Retry-After": "30"},
+        request=httpx.Request("POST", "https://test"),
+    )
+
+    with patch("httpx.AsyncClient.post", new_callable=AsyncMock) as mock_post, \
+         patch("asyncio.sleep", new_callable=AsyncMock) as mock_sleep:
+        mock_post.return_value = mock_503
+        service = GeminiLLMService(settings=mock_settings)
+
+        with pytest.raises(LLMServiceError, match="exceeds maximum allowed wait"):
+            await service.extract_query_intent("Cloud architects")
+
+        mock_sleep.assert_not_called()
+        assert mock_post.await_count == 1
+
 
 
 @pytest.mark.asyncio
