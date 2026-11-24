@@ -172,7 +172,7 @@ class GeminiLLMService:
         self,
         client: httpx.AsyncClient,
         url: str,
-        params: dict[str, str],
+        headers: dict[str, str],
         payload: dict[str, Any],
         max_retries: int = 2,
     ) -> httpx.Response:
@@ -181,7 +181,7 @@ class GeminiLLMService:
         Args:
             client: Active HTTPX client.
             url: Target Gemini API endpoint URL.
-            params: Query parameters including API key.
+            headers: HTTP request headers including API key.
             payload: JSON request body.
             max_retries: Maximum number of retry attempts.
 
@@ -200,7 +200,7 @@ class GeminiLLMService:
             try:
                 response = await client.post(
                     url,
-                    params=params,
+                    headers=headers,
                     json=payload,
                     timeout=float(self.settings.request_timeout_seconds),
                 )
@@ -284,14 +284,17 @@ class GeminiLLMService:
             raise LLMConfigurationError("GEMINI_API_KEY is not configured in settings")
 
         url = f"{GEMINI_API_BASE_URL}/{self.settings.gemini_model}:generateContent"
-        params = {"key": api_key}
+        headers = {
+            "x-goog-api-key": api_key,
+            "Content-Type": "application/json",
+        }
         payload = self._build_payload(query)
 
         if self._external_client is not None:
             response = await self._execute_with_retry(
                 client=self._external_client,
                 url=url,
-                params=params,
+                headers=headers,
                 payload=payload,
             )
             return self._parse_candidate_response(response.json())
@@ -300,7 +303,7 @@ class GeminiLLMService:
             response = await self._execute_with_retry(
                 client=client,
                 url=url,
-                params=params,
+                headers=headers,
                 payload=payload,
             )
             return self._parse_candidate_response(response.json())
