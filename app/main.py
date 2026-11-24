@@ -18,6 +18,12 @@ app = FastAPI(
     tags=["Health"],
     summary="Service health check",
 )
+@app.get(
+    "/healthz",
+    response_model=HealthResponse,
+    tags=["Health"],
+    include_in_schema=False,
+)
 def health_check() -> HealthResponse:
     """Return application operational health status."""
     return HealthResponse(status="healthy")
