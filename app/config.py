@@ -25,7 +25,7 @@ class Settings(BaseSettings):
         description="Google Gemini API key for discovery and extraction",
     )
     gemini_model: str = Field(
-        default="gemini-3.5-flash-lite",
+        default="gemini-flash-lite-latest",
         description="Model identifier to use with the Gemini provider",
     )
     tavily_api_key: str = Field(

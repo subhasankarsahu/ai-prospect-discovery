@@ -13,7 +13,7 @@ services:
       - key: LLM_PROVIDER
         value: gemini
       - key: GEMINI_MODEL
-        value: gemini-3.5-flash-lite
+        value: gemini-flash-lite-latest
       - key: REQUEST_TIMEOUT_SECONDS
         value: 30
       - key: PHONE_DEFAULT_REGION
