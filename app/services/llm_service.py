@@ -215,11 +215,22 @@ class GeminiLLMService:
                         raise LLMRateLimitError("Gemini API rate limit exceeded (429)")
 
                     retry_after_header = response.headers.get("Retry-After")
-                    sleep_time = (
-                        min(float(retry_after_header), 5.0)
-                        if retry_after_header and retry_after_header.isdigit()
-                        else backoff_seconds
-                    )
+                    sleep_time = backoff_seconds
+                    if retry_after_header:
+                        try:
+                            retry_after_val = float(retry_after_header)
+                            if retry_after_val > 10.0:
+                                logger.warning(
+                                    "Gemini Retry-After is %.2fs (exceeds 10s cap); aborting retry",
+                                    retry_after_val,
+                                )
+                                raise LLMRateLimitError(
+                                    f"Gemini API rate limit Retry-After ({retry_after_val}s) exceeds maximum allowed wait (10s)"
+                                )
+                            sleep_time = max(retry_after_val, 0.0)
+                        except ValueError:
+                            sleep_time = backoff_seconds
+
                     logger.info(
                         "Gemini rate limit hit; retrying attempt %d in %.2fs",
                         attempt,

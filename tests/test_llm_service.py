@@ -159,6 +159,28 @@ async def test_extract_query_intent_timeout(mock_settings: Settings) -> None:
 
 
 @pytest.mark.asyncio
+async def test_extract_query_intent_rate_limit_exceeds_cap(mock_settings: Settings) -> None:
+    """Verify LLMRateLimitError is raised immediately when Retry-After exceeds 10s."""
+    mock_429 = httpx.Response(
+        status_code=429,
+        headers={"Retry-After": "60"},
+        request=httpx.Request("POST", "https://test"),
+    )
+
+    with patch("httpx.AsyncClient.post", new_callable=AsyncMock) as mock_post, \
+         patch("asyncio.sleep", new_callable=AsyncMock) as mock_sleep:
+        mock_post.return_value = mock_429
+        service = GeminiLLMService(settings=mock_settings)
+
+        with pytest.raises(LLMRateLimitError, match="exceeds maximum allowed wait"):
+            await service.extract_query_intent("test query")
+
+        # Must not sleep for 60s
+        mock_sleep.assert_not_called()
+        assert mock_post.await_count == 1
+
+
+@pytest.mark.asyncio
 async def test_extract_query_intent_rate_limit_exhausted(mock_settings: Settings) -> None:
     """Verify LLMRateLimitError is raised when rate limits persist across retries."""
     mock_429 = httpx.Response(
