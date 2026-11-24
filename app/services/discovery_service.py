@@ -10,6 +10,7 @@ from app.platforms import get_all_platform_sources
 from app.platforms.base import PlatformSource
 from app.schemas import DiscoveryRequest, DiscoveryResponse, QueryIntent
 from app.schemas_internal import PlatformOutcome, RawCandidate
+from app.services.deduplication_service import deduplicate_candidates
 from app.services.llm_service import (
     BaseLLMService,
     LLMConfigurationError,
@@ -19,6 +20,9 @@ from app.services.llm_service import (
     LLMTimeoutError,
     get_llm_service,
 )
+from app.services.profile_extractor import enrich_candidate_contacts
+from app.services.prospect_service import assemble_discovery_response
+from app.services.relevance_service import classify_and_verify_candidates
 from app.services.search_service import (
     SearchConfigurationError,
     SearchRateLimitError,
@@ -387,14 +391,69 @@ async def discover_prospects(
 
     raw_candidates = await discover_raw_candidates(intent, search_service=search_service)
     logger.info(
-        "Phase 2 discovery retrieved %d raw candidate profiles; awaiting Phase 3 entity verification and resolution",
+        "Platform discovery retrieved %d raw candidate profiles for query %r",
         len(raw_candidates),
+        request.query,
     )
 
-    # Phase 2 boundary: raw search candidates are NOT converted into verified Prospect entities yet.
-    return DiscoveryResponse(
-        success=True,
+    if not raw_candidates:
+        return DiscoveryResponse(
+            success=True,
+            query=request.query,
+            total_prospects=0,
+            prospects=[],
+        )
+
+    try:
+        verified_candidates = await classify_and_verify_candidates(
+            intent=intent,
+            candidates=raw_candidates,
+            llm_service=service,
+        )
+    except LLMRateLimitError as exc:
+        logger.warning("LLM rate limit encountered during candidate classification")
+        raise HTTPException(
+            status_code=status.HTTP_429_TOO_MANY_REQUESTS,
+            detail="LLM provider rate limit exceeded",
+        ) from exc
+    except LLMTimeoutError as exc:
+        logger.error("LLM timeout encountered during candidate classification")
+        raise HTTPException(
+            status_code=status.HTTP_504_GATEWAY_TIMEOUT,
+            detail="LLM provider request timed out",
+        ) from exc
+    except LLMResponseParsingError as exc:
+        logger.error("LLM response parsing failed during candidate classification")
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail="Failed to parse LLM candidate classification response",
+        ) from exc
+    except LLMConfigurationError as exc:
+        logger.error("LLM service is not properly configured")
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="LLM provider service is not properly configured",
+        ) from exc
+    except LLMServiceError as exc:
+        logger.error("Upstream LLM service error during classification: %s", type(exc).__name__)
+        raise HTTPException(
+            status_code=status.HTTP_502_BAD_GATEWAY,
+            detail="Upstream LLM provider error",
+        ) from exc
+
+    if not verified_candidates:
+        logger.info("No candidates passed verification for query %r", request.query)
+        return DiscoveryResponse(
+            success=True,
+            query=request.query,
+            total_prospects=0,
+            prospects=[],
+        )
+
+    enriched_candidates = enrich_candidate_contacts(verified_candidates)
+    prospect_groups = deduplicate_candidates(enriched_candidates)
+
+    return assemble_discovery_response(
         query=request.query,
-        total_prospects=0,
-        prospects=[],
+        prospect_groups=prospect_groups,
     )
