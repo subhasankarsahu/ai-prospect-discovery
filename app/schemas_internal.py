@@ -67,3 +67,18 @@ class VerifiedCandidate(BaseModel):
     confidence: str = Field(default="medium", description="Relevance confidence level")
     reason: str = Field(default="", description="Classification reason")
     contacts: list[SocialLink] = Field(default_factory=list, description="Page-scoped contact details")
+
+
+class DeduplicatedProspect(BaseModel):
+    """An internal merged prospect group representing a single verified individual."""
+
+    primary_name: str = Field(description="Evidence-backed primary display name with original casing")
+    location: str | None = Field(default=None, description="Verified location string if present")
+    verified_candidates: list[VerifiedCandidate] = Field(
+        default_factory=list,
+        description="All verified candidates grouped or merged into this prospect",
+    )
+    merge_reasons: list[str] = Field(
+        default_factory=list,
+        description="Internal audit trail of merge rationales",
+    )

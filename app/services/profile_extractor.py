@@ -6,7 +6,7 @@ from urllib.parse import parse_qsl, urlsplit
 
 from app.schemas import SocialLink
 from app.schemas_internal import VerifiedCandidate
-from app.utils.validators import validate_email
+from app.utils.validators import validate_email, validate_phone
 
 logger = logging.getLogger(__name__)
 
@@ -18,6 +18,11 @@ EMAIL_PATTERN = re.compile(
 # Pattern to find potential WhatsApp URLs in snippet text
 WHATSAPP_URL_PATTERN = re.compile(
     r"(?:https?://)?(?:www\.)?(?:wa\.me|api\.whatsapp\.com)/[^\s,;\"'<>]+"
+)
+
+# Pattern for potential phone numbers in snippet text
+PHONE_PATTERN = re.compile(
+    r"(?:\+?\d{1,4}[-.\s]?)?(?:\(?\d{2,4}\)?[-.\s]?)?\d{3,4}[-.\s]?\d{3,4}\b"
 )
 
 
@@ -90,6 +95,35 @@ def _extract_valid_whatsapp_links(text: str) -> list[str]:
     return valid_links
 
 
+def _extract_valid_phones(text: str, default_region: str = "US") -> list[str]:
+    """Find, validate, and format standalone phone numbers in text.
+
+    Excludes digits embedded within URLs or email addresses.
+
+    Args:
+        text: Raw text string (title and snippet).
+        default_region: Two-letter ISO region code to interpret national numbers.
+
+    Returns:
+        List of formatted E.164 phone numbers (e.g. '+14155552671').
+    """
+    # Strip URLs and emails so digits inside links (e.g. wa.me/14155552671) are not matched
+    cleaned = WHATSAPP_URL_PATTERN.sub(" ", text)
+    cleaned = re.sub(r"https?://\S+", " ", cleaned)
+    cleaned = EMAIL_PATTERN.sub(" ", cleaned)
+
+    seen: set[str] = set()
+    valid_phones: list[str] = []
+
+    for match in PHONE_PATTERN.findall(cleaned):
+        e164 = validate_phone(match, default_region=default_region)
+        if e164 and e164 not in seen:
+            seen.add(e164)
+            valid_phones.append(e164)
+
+    return valid_phones
+
+
 def extract_page_scoped_contacts(candidate: VerifiedCandidate) -> list[SocialLink]:
     """Extract validated contacts found strictly on this candidate's own page.
 
@@ -100,7 +134,7 @@ def extract_page_scoped_contacts(candidate: VerifiedCandidate) -> list[SocialLin
         candidate: VerifiedCandidate whose snippet and title are scanned.
 
     Returns:
-        List of SocialLink objects for email and WhatsApp.
+        List of SocialLink objects for email, WhatsApp, and standalone phone numbers.
     """
     evidence_text = f"{candidate.raw_candidate.title} {candidate.raw_candidate.snippet}"
     contacts: list[SocialLink] = []
@@ -120,6 +154,14 @@ def extract_page_scoped_contacts(candidate: VerifiedCandidate) -> list[SocialLin
         if key not in seen_contacts:
             seen_contacts.add(key)
             contacts.append(SocialLink(platform="WhatsApp", link=wa_url))
+
+    # 3. Standalone phone numbers (formatted as tel:<E.164>)
+    for phone_e164 in _extract_valid_phones(evidence_text):
+        link = f"tel:{phone_e164}"
+        key = ("Phone", link)
+        if key not in seen_contacts:
+            seen_contacts.add(key)
+            contacts.append(SocialLink(platform="Phone", link=link))
 
     return contacts
 

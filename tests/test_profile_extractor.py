@@ -140,3 +140,30 @@ def test_strict_page_ownership_distinct_contacts_per_page() -> None:
 
     assert len(enriched[1].contacts) == 1
     assert enriched[1].contacts[0].link == "mailto:founder2@startup-two.io"
+
+
+def test_extract_valid_standalone_phone() -> None:
+    """Verify valid standalone phone numbers are extracted as tel: links with E.164 formatting."""
+    cand = _make_verified_candidate(
+        1,
+        title="CEO Profile",
+        snippet="Call our office at 415-555-2671 or international at +44 20 7946 0991.",
+    )
+    contacts = extract_page_scoped_contacts(cand)
+
+    phone_contacts = [c for c in contacts if c.platform == "Phone"]
+    assert len(phone_contacts) == 2
+    phone_links = {c.link for c in phone_contacts}
+    assert "tel:+14155552671" in phone_links
+    assert "tel:+442079460991" in phone_links
+
+
+def test_reject_invalid_standalone_phone() -> None:
+    """Verify invalid number sequences are not extracted as phone contacts."""
+    cand = _make_verified_candidate(
+        1,
+        title="Researcher Profile",
+        snippet="Order id 12345 or code 999999.",
+    )
+    contacts = extract_page_scoped_contacts(cand)
+    assert not any(c.platform == "Phone" for c in contacts)
