@@ -29,6 +29,6 @@ def health_check() -> HealthResponse:
     tags=["Discovery"],
     summary="Discover prospects matching search query",
 )
-def prospect_discovery(request: DiscoveryRequest) -> DiscoveryResponse:
+async def prospect_discovery(request: DiscoveryRequest) -> DiscoveryResponse:
     """Handle prospect discovery query and return matching prospects."""
-    return discover_prospects(request)
+    return await discover_prospects(request)
