@@ -1,0 +1,902 @@
+[
+  {
+    "example_id": "cand_001",
+    "split": "development",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/abcl-ahmedabad-box-cricket-league-414848226",
+    "input": {
+      "title": "Abcl Ahmedabad Box Cricket League",
+      "snippet": "# Abcl Ahmedabad Box Cricket League\n\nHeadline: Cricket league at ASDM - India's Fastest Growing Digital Marketing Institute\nCurrent role: Cricket League\nSeniority: Specialist, Other\nLocation: Ahmedabad, Gujarat, India\nLinkedIn:  · 0 followers\n\n## Experience\n- Cricket league at ASDM - India's Fastest Growing Digital Marketing Institute"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Abcl Ahmedabad Box Cricket League",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Organization: Ahmedabad Box Cricket League entity, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_002",
+    "split": "development",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@viv_2212?hl=el",
+    "input": {
+      "title": "Vivek Parikh (@viv_2212) • Threads, πείτε περισσότερα",
+      "snippet": "jaspritb1 JESA KOI NAHI. Proud to have been a part of the beginning of this extraordinary story! 🙌 A journey of belief, hard work, and perseverance — from local cricket to the pinnacle of world cricket. Today, the world knows you as one of the greatest bowlers, but I still see the same young hardworking jaspritb1 I first met at the Under-19 Ahmedabad District cricket team selections. #boomboombumrah #cricketlegends #championsaremade #fromday1 #proudtowitness viv\\_2212 19/10/2026 Navratri 2026 3 [...] Αρχική σελίδα Νέο νήμα Αναζήτηση Μηνύματα Δραστηριότητα Προφίλ Στατιστικά Σύνδεση Περισσότερα viv\\_2212 Vivek Parikh viv\\_2212 Be what you are! Franchise Owner at RE/MAX Metro, Real Estate Consultant Cricketer- Represented Gujarat and played club cricket in Leicester, UK. linktr.ee/vivekparikh 425 ακόλουθοι Ακολουθήστε Ονομαστική αναφορά Νήματα Απαντήσεις Μέσα Αναδημοσιεύσεις viv\\_2212 9/11/2026 ननूतन वर्ष अभिनंदन 🙏 #दिवाली #newyeae2026 #ahmedabad #realtor viv\\_2212 31/10/2026 jaspritb1 JESA KOI [...] Navratri 2026 3 viv\\_2212 11/10/2026 One more beautiful visitor at our society gardens. #wildlifephotography #ahmedabad #birdwatching Συνδεθείτε για να βλέπετε περισσότερα από τον χρήστη viv\\_2212. Σύνδεση Συνδεθείτε ή εγγραφείτε στο Threads Δείτε για ποια θέματα μιλάνε οι άλλοι και μπείτε στη συζήτηση. Σύνδεση με όνομα χρήστη"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Vivek Parikh",
+      "interest": "cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual personal Threads profile of Vivek Parikh located in Ahmedabad."
+    }
+  },
+  {
+    "example_id": "cand_003",
+    "split": "development",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@msdian.army7",
+    "input": {
+      "title": "MSDFC Ahmedabad TM (@msdian.army7) • Threads, Say more",
+      "snippet": "at the wedding reception of Anirudh Ravichander and Kaviya Kalanithi Maran. A rare crossover that fans could only dream of! Cricket royalty meets cinema royalty, bringing three massive fanbases together. Some pictures are special, but THIS ONE IS HISTORY! 🥶🐐 #MSDhoni #ThalaAjith #Rajinikanth #Anirudh #explore 9 msdian.army7 1d So cute Dhoni - Sakshi 🤩❤️ The way she looks at him says more than words ever could. ❤️🧿 \\[ MSDhoni , SakshiDhoni , MahiSakshi , Explore ] #msdhoni #sakshidhoni [...] #sakshidhoni #mahisakshi #explore #dhoni 33 msdian.army7 2d First love was never about a girl. It was about a man wearing jersey number 7 and a team dressed in Yellove. 💛 MS Dhoni wasn’t just a cricketer; he became an emotion for millions. CSK wasn’t just an IPL franchise; it became a family. Growing up watching Thala, celebrating his victories, and standing by him through every moment — that’s a love story we’ll never get tired of telling. Some first loves never fade. THALA & CSK FOREVER! 🦁💛 [...] Home New thread Search Messages Activity Profile Insights Log in More msdian.army7 MSDFC Ahmedabad TM msdian.army7 Official Account Of MSDFC Ahmedabad ,We are Here For Spread #Dhonism , Super Fan Of #CSK From Ahmedabad. 4,471 followers Follow Mention Threads Replies Media Reposts msdian.army7 14h THALA × THALAIVAR × THALA 👑🔥 Three legends, three different worlds, but one frame that has taken the internet by storm! ❤️ Thala Ajith Kumar, Superstar Rajinikanth and MS Dhoni together at the wedding"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "MSDFC Ahmedabad",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Fan club community or sports tech brand page."
+    }
+  },
+  {
+    "example_id": "cand_004",
+    "split": "development",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@vtrakit.official",
+    "input": {
+      "title": "Vtrakit Cricket (@vtrakit.official) • Threads, Say more",
+      "snippet": "and students caught watching India vs New Zealand during school hours. Cricket fever hits everyone! 😂❤️ 5 1 vtrakit.official 9h New Zealand move up to third, while India slip to fourth in the WTC 2027 standings after the first Test in Wellington ends in a draw. #INDvNZ #NZvIND #WTC #Test #vtrakit 4 vtrakit.official 12h KL Rahul now has 13 Test centuries! 💯 The first Indian opener to score Test centuries in all four SENA countries: South Africa, England, New Zealand and Australia!🔥 #INDvNZ [...] Australia!🔥 #INDvNZ #NZvIND #KLRahul #TestCricket #vtrakit 164 5 vtrakit.official 14h India’s only Test victory at Wellington’s Basin Reserve came back in 1968 Since then, India have played eight Tests at the venue, losing five and drawing three, including today’s draw. Still searching for their next victory!👀 #NZvIND #INDvNZ 133 Log in to see more from vtrakit.official. Log in Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username [...] Home New thread Search Messages Activity Profile Insights Log in More vtrakit.official Vtrakit Cricket vtrakit.official 🏏 Mobile based Cricket App 💻 Quality Cricket Content 👥 200K App Downloads & Counting 📲 Download our app from the following Link onelink.to/2vd2jr 60.9K followers · 5,876 threads Follow Mention Threads Replies Media Reposts vtrakit.official 6h Cricket is not just a sport, it’s an emotion!🫶🏻 Office workers caught watching SA vs Australia during working hours, and students caught"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Vtrakit Cricket",
+      "interest": "Cricket",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Fan club community or sports tech brand page."
+    }
+  },
+  {
+    "example_id": "cand_005",
+    "split": "development",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/ahmedabad_cricket_center",
+    "input": {
+      "title": "AHMEDABAD CRICKET CENTER (@ahmedabad_cricket_center)",
+      "snippet": "### @ahmedabad_cricket_center\n\nLEVEL 1 ICC CRICKET COACH CERTIFY  Our head coach @patankarpankaj .\n\n[Image: Photo by AHMEDABAD CRICKET CENTER on April 09, 2022.]\n\n- Author: @ahmedabad_cricket_center\n- Type: feed\n- Mentions: @patankarpankaj\n\n### @ahmedabad_cricket_center\n\nAHMEDABAD CRICKET CENTER  JOINTVENTURE  UNIVERSAL CRICKET ACADEMY\n\n#sciencecityahmedabad #bhadaj #ahmedabad #bopal #supercity #solasciencecity #cricket #cricketlovers #cringememes #cricketfans #cricketmerijaan [...] ✨one more biggest archivement for our Academy\n@utsav.s_  Selected to MRF PACE FOUNDETION ✨ Congratulation utasav Sharma, @patankarpankaj & whole coaching staff . @universalcricketacademy @ahmedabad_cricket_center \n\n#cricketclubs #cricketahmedabad #cricketacademy #cricketlover #cricketmemes #cricketindia #teamindia #iplauction #ipl2020 #gujrattitans\n\n[Image: Photo by AHMEDABAD CRICKET CENTER on February 11, 2022.] [...] Our Academy Head Coach Pankaj Patankar Sir After Clear ICC LEVEL-1 , Appoint in Canada  VICTORIA CRICKET CLUB team Head Coach .\n🍁Irfan bhai\n🍁Harshal Patel\n🍁 Sheldon Jackson\nsend him well wishes thanks for us well wishes it's mean a lot of us .❤️🏏\n\n#cricket\n#ahmedabad #ahmedabad_instagram #cricketlovers #cricketvideos #cricketworld #cricketreels #cricketnews #ahmedabad_diaries #bopal #sciencecityahmedabad #southbopal #cricketacademy #ahmdabad #ipl"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "AHMEDABAD CRICKET CENTER",
+      "interest": "CRICKET",
+      "location": "AHMEDABAD"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Organization: Cricket training facility / commercial academy."
+    }
+  },
+  {
+    "example_id": "cand_006",
+    "split": "development",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=2gRnfzeOFBs",
+    "input": {
+      "title": "ICC Cricket World Cup 2023 Final: India takes on Australia in Ahmedabad",
+      "snippet": "Hosts India takes on five-time World Champions Australia in the final of the 2023 ICC Cricket World Cup at the Narendra Modi Stadium, Ahmedabad on November 19. Skipper Rohit Sharma and coach Rahul Dravid will look to win India’s third World Cup and equal Australia’s record of most consecutive wins,11, in a single edition of the World Cup. Senior players, Virat Kohli and Ravichandran Ashwin were also part of India’s 2011 triumph. [...] but uh when you look at India and Australia they've you know in terms of winning they've almost had a similar kind of a tournament Australia lost their first two matches but then went not convincingly disseminating their opponents but they've had inspiring matches and they've had an unbeaten eight eight eight uh win run so how do you see their approach when they uh meet India again and you know they are the host it's Ahmedabad a massive packed Stadium it's a no-brainer how do you see their [...] at Ahad we'll get into the pitch and uh you know the conditions in aabad the average scores have been 250 around 260 and this uh except Chennai this has been one ground where 300 runs haven't been scored so you know but then again it's the finals anything can happen and uh I feel that India will stick to their Pace attack and wouldn't want to change make a change and traditionally as we as we know how India functions if they're winning they you know want to continue the winning combinations so"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_007",
+    "split": "development",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=fiAUhVBCSX0",
+    "input": {
+      "title": "India Overcome The Kiwi Jinx | Finals At Ahmedabad On November 19 | Cricket World Cup 2023",
+      "snippet": "NOW\n1980000 subscribers\n\n135 views\n16 Nov 2023\nIndia breaks the Kiwi jinx, securing a spot in the Cricket World Cup 2023 finals set to take place in Ahmedabad on November 19. The victory marks a significant achievement, overcoming historical challenges against the New Zealand cricket team. Cricket enthusiasts are eagerly anticipating the high-stakes clash, as India strives to claim the coveted World Cup title. The match in Ahmedabad promises intense competition and thrilling moments as two cricket powerhouses vie for supremacy. The nation is rallying behind its team, fostering an atmosphere of excitement and anticipation as the cricketing world turns its attention to this decisive championship encounter. \n#India #newzealand #worldcup2023 #ahmedabad #latestnews #englishnews\n\n"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_008",
+    "split": "development",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=yBeTMVmcQEw",
+    "input": {
+      "title": "Indian cricket team reaches Ahmedabad ahead of their 5th and ...",
+      "snippet": "The Indian Cricket Team arrives at Ahmedabad ahead of their fifth T20 match against South Africa, to be played on 19th December."
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_021",
+    "split": "development",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/suebookhout",
+    "input": {
+      "title": "Sue Bookhout - Digital Marketing Agency Owner - LinkedIn",
+      "snippet": "Headline: Digital Marketing Agency Owner\nCurrent role: Digital Marketing Specialist\nSeniority: Specialist, Marketing\nLocation: Cazenovia, New York, United States\nExperience: 29 years 8 months\nLinkedIn:  · 2,613 followers [...] Description: Digital Media Buying Conduct market research, audience targeting, campaign setup on the Facebook/ Instagram and Google/ YouTube platforms, set up tracking, Google Tag Manager and Google Analytics, as well as follow-through with campaign reporting and optimization. Content Marketing: We don't just write blogs or create social media posts. We can help your company craft a content marketing plan that will help you convert cold traffic into warm leads, then turn those warm leads into [...] ## Skills\ntraffic management, consulting, operations, strategic planning, get, funnels, google shopping, media liaison, website development, pr, strategy, support plans, seo, management, marketing management\n\n## Certifications\n- Certified Professional Dog Trainer, Animal Behavior College (2011)\n- ReviewLead Certified Partner, ReviewLead (2020)\n- AdSkills Junior Ad Buyer Certification, AdSkills.com (2020)\n- Ad Buying Masters Certification, AdSkills.com (2021)"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Sue Bookhout",
+      "interest": "Digital Marketing",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual owner of digital marketing agency in New York."
+    }
+  },
+  {
+    "example_id": "cand_022",
+    "split": "development",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/philfrost",
+    "input": {
+      "title": "Phil Frost - Founder & CEO | Acquiring Digital Marketing Agencies",
+      "snippet": "Headline: Digital Marketing Agency Founder\nCurrent role: Co-Founder & Chief Executive Officer\nSeniority: C-Level, General Management\nLocation: New York, New York, United States\nExperience: 20 years 5 months\nLinkedIn:  · 6,518 followers [...] Description: I’m a husband, father, and entrepreneur with a passion for helping small businesses grow. In 2010, I co-founded Main Street ROI to provide digital marketing services directly to small businesses. A few years later, we launched Main Street Agency Partners, a white-label division serving other agencies. This expansion allowed us to cast a wider net and help even more small businesses access high-quality digital marketing. In 2025, I co-founded Agency Capital Partners (ACP) to give [...] ## Experience\n- Co-Founder & Chief Executive Officer at Main Street ROI (Jan 2010 to present)\n- Co-Founder & Managing Partner at Agency Capital Partners (Aug 2025 to present)\n- Marketing & Advertising Manager at Growthink (Nov 2007 to Sep 2017)\n- Pay Per Click Advertising & Optimization | Lead Generation | Affiliate Marketing Manager at The Kisco Group (Mar 2006 to Nov 2008)"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Phil Frost",
+      "interest": "Digital Marketing",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual Founder & CEO of Main Street ROI marketing agency in New York."
+    }
+  },
+  {
+    "example_id": "cand_023",
+    "split": "development",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/ericlituchy",
+    "input": {
+      "title": "Eric Lituchy - Founder & CEO, Hunter Digital - LinkedIn",
+      "snippet": "# Eric Lituchy\n\nHeadline: Digital Marketing Leader passionate about helping DTC Brands & Ecommerce Retailers improve their marketing, grow sales, and boost profits.\nCurrent role: CEO & Founder\nSeniority: Founder, General Management\nLocation: New York, New York, United States\nExperience: 34 years 9 months\nLinkedIn:  · 18,007 followers\nDescription: Founder & CEO, HUNTER Digital | Google & Meta Paid Media for Ecommerce and… [...] ## Recent Activity\n- Posted: Vote for Hunter Digital! Best Social Media Agency Category in The City's Best 2026.  #bestinthecity #socialmedia\n- Shared: I'm proud represent HUNTER Digital and to be featured in the Clutch \"The State of Marketing in 2026\" report. It's going to be a very...\n- Shared: Wispr Flow is now on Android. Definitely one of my favorite apps. Check it out at [...] ## Experience\n- CEO & Founder at HUNTER (Dec 2010 to present)\n- Partner at Theoremx Solutions (Jul 2015 to present)\n- Founder & CEO at LeadZeppelin (Jan 2019 to Feb 2026)\n- Membership Committee at BNI (Business Network International) (Apr 2018 to Feb 2024)\n- Alumni at Goldman Sachs 10,000 Small Businesses - NYC (Jul 2019 to Oct 2019)\n- Director Marketing Services at ECommerce Partners (Nov 2016 to Nov 2017)"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Eric Lituchy",
+      "interest": "Digital Marketing",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual Founder & CEO of Hunter Digital in New York."
+    }
+  },
+  {
+    "example_id": "cand_024",
+    "split": "development",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/mattweitzman",
+    "input": {
+      "title": "Matthew W. - Founder & CEO @ Aergos | Independent AI-native ...",
+      "snippet": "## Experience\n- Founder & CEO at Aergos (Mar 2026 to present)\n- Co-Founder at Swarm Digital Marketing (Jan 2019 to present)\n- Digital Marketing Consultant at MJW Media (Mar 2010 to present)\n- Board Member at City Living NY (Aug 2020 to Oct 2023)\n- Marketing Advisor at DonorSaver (Jan 2017 to Mar 2020)\n- Sr. Project Manager at Zaah (Feb 2012 to Apr 2014)\n\n## Education\n- Queens College, Communications, Media Studies [...] # Matthew W\n\nHeadline: Co-founder @ Swarm Digital Marketing | Digital Consultant: Web & SEO Specialist\nCurrent role: Founder & CEO\nSeniority: C-Level, General Management\nLocation: New York, New York, United States\nExperience: 17 years 8 months\nLinkedIn:  · 6,160 followers\nDescription: SEO expert and digital strategist with 16+ years of experience driving organic growth for…"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Matthew W.",
+      "interest": "Digital Marketing",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual Founder & CEO of Aergos marketing agency in Greater New York."
+    }
+  },
+  {
+    "example_id": "cand_025",
+    "split": "development",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "X",
+    "url": "https://x.com/startechseo",
+    "input": {
+      "title": "Star Tech SEO - Digital Marketing Agency New York (@startechseo)",
+      "snippet": "- Account: @startechseo (Star Tech SEO - Digital Marketing Agency New York)\n- Joined: 2025-01-18T10:35:18+00:00\n- Location: New York, United States\n- Website: \n- Category: Digital Marketing Agency\n- Account type: Business\n- Followers: 9\n- Following: 1\n- Posts: 78\n- Media posts: 78\n- Likes: 0 [...] # Star Tech SEO - Digital Marketing Agency New York (@startechseo)\n\nStar Tech SEO helps businesses grow with expert SEO, PPC, and web design. Driving traffic, increasing sales, and enhancing your digital presence."
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Star Tech SEO",
+      "interest": "Digital Marketing",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency / corporate social page, not an individual person."
+    }
+  },
+  {
+    "example_id": "cand_026",
+    "split": "development",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "X",
+    "url": "https://x.com/nikijonesagency",
+    "input": {
+      "title": "Niki Jones Agency (@nikijonesagency)",
+      "snippet": "# Niki Jones Agency (@nikijonesagency)\n\nPublic Relations | Marketing | Advertising\nBringing a global approach to branding, design, and marketing\n\n- Account: @nikijonesagency (Niki Jones Agency)\n- Joined: 2010-10-20T02:29:08+00:00\n- Location: Port Jervis, New York\n- Website: \n- Category: Digital Marketing Agency\n- Account type: Business\n- Verified: blue check, This account is verified. Learn more\n- Followers: 824\n- Following: 830\n- Posts: 2289\n- Media posts: 1354\n- Likes: 1124"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Niki Jones Agency",
+      "interest": "Digital Marketing",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency / corporate social page, not an individual person."
+    }
+  },
+  {
+    "example_id": "cand_027",
+    "split": "development",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "X",
+    "url": "https://x.com/SoftwarePro6",
+    "input": {
+      "title": "Software Pro Digital (@SoftwarePro6)",
+      "snippet": "# Software Pro Digital (@SoftwarePro6)\n\nAward-winning performance-based digital marketing agency helping construction, eCommerce, healthcare, pet/vet, home service, and niche brands grow to 7–8 figure\n\n- Account: @SoftwarePro6 (Software Pro Digital)\n- Joined: 2021-01-03T21:08:12+00:00\n- Location: 420 Lexington Ave, New York\n- Website: \n- Category: Technology Solutions Company\n- Account type: Business\n- Followers: 59\n- Following: 27\n- Posts: 496\n- Media posts: 349\n- Likes: 9"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "digital marketing",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_041",
+    "split": "development",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "X",
+    "url": "https://x.com/DC_Irons",
+    "input": {
+      "title": "Washington D.C. Irons (@DC_Irons)",
+      "snippet": "# Washington D.C. Irons (@DC_Irons)\n\nOfficial West Ham United FC supporters group of Washington, DC, USA. Email: REDACTED \n\n- Account: @DC_Irons (Washington D.C. Irons)\n- Joined: 2015-02-08T19:05:52+00:00\n- Location: Washington, D.C.\n- Website: \n- Bio links: \n- Followers: 3155\n- Following: 2392\n- Posts: 3762\n- Media posts: 970\n- Likes: 14082"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "negative",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "",
+      "location": "Washington"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Media article, Wikipedia entry, team stats page, or non-profile web link."
+    }
+  },
+  {
+    "example_id": "cand_042",
+    "split": "development",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "LinkedIn",
+    "url": "https://www.linkedin.com/in/daniel-levy-",
+    "input": {
+      "title": "Daniel Levy - Builder of High-Impact Youth Programs At The Washington ...",
+      "snippet": "# Daniel Levy\n\nHeadline: Director, Youth Football at the Washington Commanders\nCurrent role: Director, Youth Football\nSeniority: Director, Education\nLocation: Washington DC-Baltimore Area United States\nExperience: 11 years 4 months\nLinkedIn:  · 3,307 followers\nDescription: I am a strategic leader in youth sports development, community impact, and partnership… [...] - Reposted: The next round of the Grassroots Field Grant Program is now accepting applications! LISC and the National Football League (NFL) Foundation...\n- Shared: Another amazing opportunity to highlight these trailblazers! The first at their schools, the first in their counties to play Girls Flag...\n- Reposted: Today, the Washington Commanders are proud to make a meaningful investment in girls flag football by supporting 127 teams across the DMV....\n- Commented On A Post: It was a great day! [...] ## Recent Activity\n- Reposted: Growth is exciting! One of the biggest signs of growth? Expanding the team behind the work. The Washington Commanders Foundation team is...\n- Shared: Another 51 schools playing Girls Flag in VA, marking our total at 102 teams across the state.... And every player on each of those 102...\n- Shared: Come join our team and be a part of the meaningful impact we are making across the youth football community of the DMV!..."
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Daniel Levy",
+      "interest": "Football",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual Director of Youth Football with Washington Commanders in DC."
+    }
+  },
+  {
+    "example_id": "cand_043",
+    "split": "development",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@rowonebrand?hl=af",
+    "input": {
+      "title": "Row One (@rowonebrand) • Threads, Sê meer",
+      "snippet": "Illinois | Detroit, Michigan | Indy, Indiana | NYC | Philadelphia | Atlanta Scene Generated by AI rowonebrand.com rowonebrand Sports 4 d. Row One Brand | 22,896 Sports Art Prints Football | Baseball | Basketball | Hockey | Golf | Tennis | Boxing | Vintage Game Day Ads | Retro 1980s Sneaker Posters | Unique Holiday Gifts for Sports Fans Buffalo | NYC, New York City | Philadelphia | Boston | Chicago | Cleveland, Ohio | Detroit, Michigan | Washington, DC | Baltimore | Atlanta, Georgia | Miami, [...] | San Antonio | Houston, Texas | Denver Scene Generated by AI rowonebrand.com 1 rowonebrand Sports 2 u. Row One | 22,907 Sports Art Prints Football | Baseball | Basketball | Holiday Gifts | Black Friday Week Sale Seattle | Portland, Oregon | San Francisco | Oakland | LA | Los Angeles | San Diego | Las Vegas | Phoenix, Arizona | Denver, Colorado | Dallas | Austin | Houston, Texas | OKC, Oklahoma City | Kansas, City | KC | Wichita | Des Moines | Ames | Iowa City | Chicago, Illinois | Detroit, [...] Antwoorde Media Herplasings Is vasgespeld rowonebrand Sports 2026/11/07 Row One Brand | 22,815 Sports Art Prints Football | Baseball | Basketball | Birthday Gifts NYC, New York City | NJ | Philadelphia | Boston | Chicago | Cleveland, Ohio | Detroit, Michigan | Atlanta, Georgia | Tampa Bay | Miami, Florida | Minneapolis, Minnesota | Chicago, Illinois | Milwaukee | Madison | Green Bay, Wisconsin | Indy, Indiana | Birmingham | Auburn | Mobile, Alabama | OKC, Oklahoma City | Dallas | San Antonio |"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Row One",
+      "interest": "Football",
+      "location": "Washington"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Commercial brand, stadium showcase, or sports bar venue page."
+    }
+  },
+  {
+    "example_id": "cand_044",
+    "split": "development",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@thedailywsports",
+    "input": {
+      "title": "The Daily W (@thedailywsports)",
+      "snippet": "Today, we officially launch The Daily W Sports Network. A community that shares a vision, passion for the game, and love of competition."
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "negative",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "The Daily W",
+      "interest": "",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Community group, sports league organization, or fan media page."
+    }
+  },
+  {
+    "example_id": "cand_045",
+    "split": "development",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@washingtondc.travels",
+    "input": {
+      "title": "Washington DC 🇺🇸 Travel | Hotels | Food (@washingtondc.travels) • Threads, Say more",
+      "snippet": "🎶 Soundtrack of the city: Jazz in Washington, DC, or grunge in Seattle? Which musical scene resonates with your soul? 🎵 1 1 Log in to see more from washingtondc.travels. Log in Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username instead [...] Home New thread Search Messages Activity Profile Insights Log in More washingtondc.travels Washington DC 🇺🇸 Travel | Hotels | Food washingtondc.travels 🇺🇸 Exploring DC, MD, VA with local experts. 👇 Book now, save big: 30-70% off hotels in Washington DC today! athotel.com/l/washington-exclusive-deals 38.2K followers Follow Mention Threads Replies Media Reposts washingtondc.travels 08/16/23 🛩 Attention travel nomads! Have you ever embarked on a trip and encountered challenges during your planning [...] your planning or while exploring a new destination? Share your travel anecdotes and let us know how having knowledgeable guides could have made your journey smoother. Join the conversation and help fellow nomads create unforgettable travel experiences! #NomadAdventures #TravelTales #SmoothTravels 48 3 1 washingtondc.travels 08/16/23 Agreee😂😂😂😂 10 washingtondc.travels 08/16/23 How many countries have you visited? Let us know in the replies! ✈️🌍 washingtondc.travels 08/15/23 🎶 Soundtrack of the"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "negative",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Media article, Wikipedia entry, team stats page, or non-profile web link."
+    }
+  },
+  {
+    "example_id": "cand_046",
+    "split": "development",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@epwashingtondc?hl=bg",
+    "input": {
+      "title": "European Parliament office in Washington DC (@epwashingtondc) • Threads, кажете още",
+      "snippet": "we are proud of the relationships which have been built and the work we have done with the US Congress. From the Transatlantic Legislators Dialogue to joint meetings, to site visits, we are very thankful to get to work with the United States and are even more excited for the work to come. epwashingtondc 09.11.2026 г. Interested in the work connecting the European Parliament and the US Congress? Applications for our paid Spring/Summer 2027 internships in Washington, DC, are now open. Join our [...] now open. Join our team to contribute to policy research, parliamentary visits and outreach, and gain firsthand experience in transatlantic relations. Application deadline: November 16 Check the eligibility requirements and how to apply: lnkd.in/eBsfe… (link in bio and stories) 2 1 epwashingtondc 03.11.2026 г. The results are still coming in, but election night has already brought us together. 🇪🇺🇺🇸 We welcomed our American friends and diplomatic colleagues for a nonpartisan evening of following [...] Начало Нова кореспонденция Търсене Съобщения Дейност Профил Анализи Влизане Още epwashingtondc European Parliament office in Washington DC epwashingtondc We're the office of the European Parliament in Washington DC 🇪🇺 🇺🇸 washington.europarl.europa.eu/en 192 последователи · 279 threads Следване Споменаване Нишки Отговори Мултимедия Препубликации epwashingtondc 4 д This year the European Parliament Liaison Office in DC is celebrating its sweet 16! Over 16 years later, we are proud of the"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "negative",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Media article, Wikipedia entry, team stats page, or non-profile web link."
+    }
+  },
+  {
+    "example_id": "cand_047",
+    "split": "development",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@seanicus_max",
+    "input": {
+      "title": "Sean Christopher Bartel (@seanicus_max) • Threads, Say more",
+      "snippet": "Home New thread Search Messages Activity Profile Insights Log in More seanicus\\_max Sean Christopher Bartel seanicus\\_max • 🏳️🌈 Washington DC • 53 countries • Follow and win a free oven mitt. Hiking Threads Travel Threads Nature Photography Photographers of Threads Tennis Threads History Threads EDM Threads Audiobook Threads Sneaker Threads Podcast Threads Architecture Threads Skin Care Threads Fashion Threads Bodybuilding Film Photography Investing Fitness Threads Film Threads Hiking Threads [...] Hiking Threads Travel Threads Nature Photography Photographers of Threads Tennis Threads History Threads EDM Threads Audiobook Threads Sneaker Threads Podcast Threads Architecture Threads Skin Care Threads Fashion Threads Bodybuilding Film Photography Investing Fitness Threads Film Threads + 1 1,686 followers Follow Mention Threads Replies Media Reposts Pinned seanicus\\_max 01/09/26 Everything you ever wanted to know about Indiana University's losing football history, then stunning turnaround, [...] Log in Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username instead"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Sean Christopher Bartel",
+      "interest": "football",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual Threads profile active in DC sports culture."
+    }
+  },
+  {
+    "example_id": "cand_048",
+    "split": "development",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Facebook",
+    "url": "https://www.facebook.com/dcunited",
+    "input": {
+      "title": "D.C. United",
+      "snippet": "Bring it home tonight Washington Spirit! 🖤♥️🌸\n\n[Image: May be an image of football and text]\n\n- Author: D.C. United\n- Posted: 2026-11-21T23:35:42+00:00\n- Shared link: \n- Links: \n- Reactions: 93\n- Comment count: 2\n- Shares: 9\n\n### D.C. United · 2026-11-21T19:42:38+00:00\n\nFirst appearance. First goal. Homegrown. 🔥🔥\n\nCongratulations to Walter Castillo and Selección Dominicana Fútbol on their first performance for the FIFA U-17 World Cup in Qatar! [...] [Image: May be an image of American football, football and text]\n\n[Image: May be an image of American football, football and text]\n\n[Image: May be an image of football, American football, studded shoes and text]\n\n[Image: May be an image of football, American football and text]\n\n[Image: May be an image of football, American football and text]\n\n- Author: D.C. United\n- Posted: 2026-11-21T19:42:38+00:00\n- Reactions: 11\n- Comment count: 0\n- Shares: 8\n\n### D.C. United · 2026-11-20T20:30:00+00:00 [...] - Author: D.C. United\n- Posted: 2026-11-23T18:41:05+00:00\n- Reactions: 3\n- Comment count: 0\n- Shares: 0\n\n### D.C. United · 2026-11-22T01:39:45+00:00\n\nThe Black-and-Red are out at Audi Field tonight aupporting the Washington Spirit at the NWSL Championship!\n\n[Image: May be an image of hat and text]\n\n- Author: D.C. United\n- Posted: 2026-11-22T01:39:45+00:00\n- Shared link: \n- Links: \n- Reactions: 81\n- Comment count: 8\n- Shares: 2\n\n### D.C. United · 2026-11-21T23:35:42+00:00"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Audi Field",
+      "interest": "football",
+      "location": "Washington"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Commercial brand, stadium showcase, or sports bar venue page."
+    }
+  },
+  {
+    "example_id": "cand_061",
+    "split": "development",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "X",
+    "url": "https://x.com/kerryjj",
+    "input": {
+      "title": "Kerry Jones (@kerryjj)",
+      "snippet": "# Kerry Jones (@kerryjj)\n\nFounder, Builder, Startup Advisor. \n\nBuilding:\n- \n- \n- Sideways: stealth / WIP\n- Husla: Founder Chief of Staff\n\n- Account: @kerryjj (Kerry Jones)\n- Joined: 2008-10-23T11:43:33+00:00\n- Location: London\n- Website: \n- Bio links: , \n- Account type: Creator\n- Verified: blue check, This account is verified. Learn more\n- Followers: 876\n- Following: 3513\n- Posts: 1255\n- Media posts: 25\n- Likes: 7077"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Kerry Jones",
+      "interest": "Startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual startup leader / VP in London."
+    }
+  },
+  {
+    "example_id": "cand_062",
+    "split": "development",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "X",
+    "url": "https://x.com/anthonyrose",
+    "input": {
+      "title": "Anthony Rose (@anthonyrose)",
+      "snippet": "# Anthony Rose (@anthonyrose)\n\nFounder & CEO SeedLegals, the largest closer of funding rounds in the UK. Now in the US. The man behind the BBC iPlayer.\n\n- Account: @anthonyrose (Anthony Rose)\n- Joined: 2008-08-10T15:12:25+00:00\n- Location: London\n- Website: \n- Account type: Creator\n- Verified: blue check, This account is verified. Learn more\n- Followers: 6043\n- Following: 2091\n- Posts: 7515\n- Media posts: 844\n- Likes: 2310"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Anthony Rose",
+      "interest": "Founder",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual startup founder (SeedLegals) in London."
+    }
+  },
+  {
+    "example_id": "cand_063",
+    "split": "development",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "X",
+    "url": "https://x.com/brenthoberman",
+    "input": {
+      "title": "Brent Hoberman (@brenthoberman)",
+      "snippet": "# Brent Hoberman (@brenthoberman)\n\n2x unicorn founder Co-founder/investor @firstminutecap @Founders_Forum @foundersfactory Angelinvestor - backed 10 unicorns at 🌱\n\n- Account: @brenthoberman (Brent Hoberman)\n- Joined: 2008-11-07T20:31:41+00:00\n- Location: London\n- Website: \n- Category: Entrepreneur\n- Account type: Creator\n- Verified: blue check, This account is verified. Learn more\n- Followers: 54978\n- Following: 10038\n- Posts: 12518\n- Media posts: 551\n- Likes: 19476\n\n## Posts [...] ### @brenthoberman (Brent Hoberman) · 2024-06-06T21:49:31+00:00\n\nGreat news for UK tech!\n\nMike Lynch founder of Autonomy, key baker of Luminance and Darktrace and ⁦@InvokeCapital⁩ cleared.\n\nMany UK tech founders looked up to Mike and will be happy to see him cleared.\n\n@FT [...] - Links: \n- Card: Firstminute Capital launches second $111M fund, featuring a who's-who of founders as LPs | TechCr... — techcrunch.com — London HQ'd Firstminute Capital has announced its second early-stage venture fund of $111 million (£87 million). Founded and cornerstoned in 2016 by Brent"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Brent Hoberman",
+      "interest": "founder",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual entrepreneur and investor (Founders Forum) in London."
+    }
+  },
+  {
+    "example_id": "cand_064",
+    "split": "development",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "X",
+    "url": "https://x.com/rarefounders",
+    "input": {
+      "title": "Vasily Alekseenko (@rarefounders)",
+      "snippet": "- Account: @rarefounders (Vasily Alekseenko)\n- Joined: 2017-12-18T10:12:36+00:00\n- Location: London, England\n- Website: \n- Category: Entrepreneur\n- Account type: Business\n- Verified: blue check, This account is verified. Learn more\n- Followers: 214\n- Following: 162\n- Posts: 1094\n- Media posts: 240\n- Likes: 747 [...] # Vasily Alekseenko (@rarefounders)\n\nBuilt one of the UK's biggest founder communities (25k+) · Angel investor · Building an engine to quantify business relationships · Blunt takes on UK vs SF + AI"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "founder",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Resource article, jobs board, meetup directory, or company website."
+    }
+  },
+  {
+    "example_id": "cand_065",
+    "split": "development",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "LinkedIn",
+    "url": "https://uk.linkedin.com/in/johnpierreclark",
+    "input": {
+      "title": "John-Pierre Clark - Editor & Founder @ startupmag.co.uk",
+      "snippet": "# John-pierre Clark\n\nHeadline: Editor & Founder @ startupmag.co.uk | Mapping the UK Startup Ecosystem\nCurrent role: Founder\nSeniority: Founder, General Management\nLocation: London, England, United Kingdom\nExperience: 22 years 6 months\nLinkedIn:  · 4,415 followers\nDescription: 2026: Building Learn.London 2022: Launch StartupMag.co.uk 2018: Exit:… [...] ## Experience\n- Founder at Learn Dot London (Jul 2026 to present)\n- Editor & Founder at startupmag.co.uk (May 2022 to present)\n- Founder CEO at Top 10 Ventures LTD (May 2016 to present)\n- Founding CEO at HelloPrêt (Apr 2016 to Dec 2018)\n- Investor at Nubapp (Jan 2011 to Feb 2013)\n- Founder at Kohdao (May 2007 to present) [...] ## Recent Activity\n- John-Pierre Clark Reposted: UK founders smashing it this week! £143m raised across 14 companies with game changing tech in AI, Cyber Security, Cyber security, Edtech...\n- John-Pierre Clark Reposted: Callosum just raised £75m to make AI inference faster, cheaper and more resilient by matching each task to the right chip 🤖⚙️ Callosum’s..."
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "John-Pierre Clark",
+      "interest": "startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual founder and editor based in London."
+    }
+  },
+  {
+    "example_id": "cand_066",
+    "split": "development",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "LinkedIn",
+    "url": "https://uk.linkedin.com/in/hector-campbell",
+    "input": {
+      "title": "Hector Campbell - Software | Startup Founder | Designer & Builder",
+      "snippet": "# Hector Campbell\n\nHeadline: Software Engineer | Digital Innovation\nCurrent role: React Engineer\nSeniority: Specialist, Engineering and Technical\nLocation: London Area, United Kingdom\nExperience: 7 years 8 months\nLinkedIn:  · 3,589 followers\nDescription: I’m a high-impact builder with 10 years experience across SaaS, FinTech and eCommerce… [...] - Liked By: 🚀 At Airwallex, we took the path of max resistance ... and it's paying off. While most fintechs were building better UIs on top of legacy...\n- Liked By: Really happy to see Adclear featured on the London Startup Map - Clerkenwell is clearly the place to be! We're at 82 Clerkenwell Road, and...\n- Liked By: \"If you do something that annoys me, it's my fault.\" This was the rule Captain Charlie Plumb and his cellmates lived by during six years in... [...] ## Recent Activity\n- Liked By: In May, Bloom Nutrition - featuring their full line of nutrition, Energy & Pop beverage SKUs - launched at The Vitamin Shoppe nationwide!...\n- Liked By: Taste of London Festival 2026!! 🪩🪩🪩 Wow, what a day!! Taste of London was always an event I looked forward to each year as a consumer....\n- Liked By: Steve Jobs Returned to a Dying Apple, But His First Win Wasn’t the iPhone When Steve Jobs returned to Apple in 1997, the company was losing…"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Hector Campbell",
+      "interest": "Startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual software startup founder based in London UK."
+    }
+  },
+  {
+    "example_id": "cand_067",
+    "split": "development",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "LinkedIn",
+    "url": "https://uk.linkedin.com/in/paul-graham-899452316",
+    "input": {
+      "title": "Paul Graham - Founder at Y Combinator",
+      "snippet": "# Paul Graham\n\nHeadline: Founder at Y Combinator\nCurrent role: Founder\nSeniority: Founder, General Management\nLocation: Greater London, England, United Kingdom\nLinkedIn:  · 1,254 followers\n\n## Experience\n- Founder at Y Combinator\n\n## Recent Activity\n- Posted: Hello LinkedIn!"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Paul Graham",
+      "interest": "Founder",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Prominent startup founder (Y Combinator), UK connection in snippet."
+    }
+  }
+]

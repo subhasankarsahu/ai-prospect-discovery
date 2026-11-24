@@ -1,0 +1,1545 @@
+[
+  {
+    "example_id": "intent_001",
+    "split": "development",
+    "input_query": "Startup founders in London UK",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "startup",
+      "audience": "founders",
+      "location": {
+        "city": "London",
+        "state": null,
+        "country": "UK"
+      },
+      "target_type": "founder"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "startup",
+        "startups",
+        "tech startup",
+        "entrepreneurship"
+      ],
+      "audience": [
+        "founders",
+        "founder",
+        "startup founders",
+        "entrepreneurs"
+      ],
+      "location": {
+        "city": [
+          "London"
+        ],
+        "country": [
+          "UK",
+          "United Kingdom",
+          "Great Britain",
+          "England"
+        ]
+      },
+      "target_type": [
+        "founder",
+        "individual",
+        "entrepreneur"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Canonical prospect query from startup_founders_london fixture."
+    }
+  },
+  {
+    "example_id": "intent_002",
+    "split": "development",
+    "input_query": "Digital marketing agency owners in New York USA",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "digital marketing",
+      "audience": "agency owners",
+      "location": {
+        "city": "New York",
+        "state": "NY",
+        "country": "USA"
+      },
+      "target_type": "agency owner"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "digital marketing",
+        "online marketing",
+        "digital advertising"
+      ],
+      "audience": [
+        "agency owners",
+        "business owners",
+        "marketing agency owners"
+      ],
+      "location": {
+        "city": [
+          "New York",
+          "New York City",
+          "NYC"
+        ],
+        "state": [
+          "NY",
+          "New York",
+          "New York State"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "agency owner",
+        "owner",
+        "founder",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Canonical query from digital_marketing_owners_new_york. Note Gemini previously hallucinated verbose reasoning into state."
+    }
+  },
+  {
+    "example_id": "intent_003",
+    "split": "development",
+    "input_query": "Football lovers in Washington DC in USA",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "Football",
+      "audience": null,
+      "location": {
+        "city": "Washington DC",
+        "state": null,
+        "country": "USA"
+      },
+      "target_type": "individual"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "Football",
+        "American football",
+        "soccer"
+      ],
+      "audience": [
+        "football lovers",
+        "fans",
+        null
+      ],
+      "location": {
+        "city": [
+          "Washington DC",
+          "Washington D.C.",
+          "Washington"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "individual",
+        "fan",
+        "person"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Canonical query from football_lovers_washington_dc fixture."
+    }
+  },
+  {
+    "example_id": "intent_004",
+    "split": "development",
+    "input_query": "Cricket lovers in Ahmedabad India",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "Cricket",
+      "audience": null,
+      "location": {
+        "city": "Ahmedabad",
+        "state": null,
+        "country": "India"
+      },
+      "target_type": "individual"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "Cricket",
+        "cricket sport"
+      ],
+      "audience": [
+        "cricket lovers",
+        "fans",
+        null
+      ],
+      "location": {
+        "city": [
+          "Ahmedabad"
+        ],
+        "country": [
+          "India"
+        ]
+      },
+      "target_type": [
+        "individual",
+        "fan",
+        "person"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Canonical query from cricket_lovers_ahmedabad fixture."
+    }
+  },
+  {
+    "example_id": "intent_005",
+    "split": "development",
+    "input_query": "Python backend engineers in Berlin Germany",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "Python backend engineering",
+      "audience": "software engineers",
+      "location": {
+        "city": "Berlin",
+        "state": null,
+        "country": "Germany"
+      },
+      "target_type": "engineer"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "Python backend engineering",
+        "Python",
+        "backend engineering",
+        "Python development"
+      ],
+      "audience": [
+        "software engineers",
+        "backend engineers",
+        "developers"
+      ],
+      "location": {
+        "city": [
+          "Berlin"
+        ],
+        "country": [
+          "Germany",
+          "DE"
+        ]
+      },
+      "target_type": [
+        "engineer",
+        "developer",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Standard tech engineering recruitment query."
+    }
+  },
+  {
+    "example_id": "intent_006",
+    "split": "development",
+    "input_query": "Graphic designers specializing in brand identity",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "brand identity design",
+      "audience": "graphic designers",
+      "location": null,
+      "target_type": "designer"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "brand identity design",
+        "graphic design",
+        "branding",
+        "identity design"
+      ],
+      "audience": [
+        "graphic designers",
+        "designers",
+        "freelancers"
+      ],
+      "location": [
+        null
+      ],
+      "target_type": [
+        "designer",
+        "individual",
+        "creator"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Location-free query. Model must return null location rather than hallucinating a city."
+    }
+  },
+  {
+    "example_id": "intent_007",
+    "split": "development",
+    "input_query": "Venture capital investors in San Francisco CA",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "venture capital",
+      "audience": "investors",
+      "location": {
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "USA"
+      },
+      "target_type": "investor"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "venture capital",
+        "VC",
+        "venture investing"
+      ],
+      "audience": [
+        "investors",
+        "VCs",
+        "venture capitalists"
+      ],
+      "location": {
+        "city": [
+          "San Francisco",
+          "SF"
+        ],
+        "state": [
+          "CA",
+          "California"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "investor",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Finance and investment domain query with standard US city and state abbreviation."
+    }
+  },
+  {
+    "example_id": "intent_008",
+    "split": "development",
+    "input_query": "Commercial real estate brokers in Toronto",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "commercial real estate",
+      "audience": "brokers",
+      "location": {
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "Canada"
+      },
+      "target_type": "broker"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "commercial real estate",
+        "real estate",
+        "CRE"
+      ],
+      "audience": [
+        "brokers",
+        "agents",
+        "real estate brokers"
+      ],
+      "location": {
+        "city": [
+          "Toronto"
+        ],
+        "state": [
+          "Ontario",
+          "ON",
+          null
+        ],
+        "country": [
+          "Canada",
+          "CA"
+        ]
+      },
+      "target_type": [
+        "broker",
+        "agent",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Real estate domain with Canadian city where country or province is implied."
+    }
+  },
+  {
+    "example_id": "intent_009",
+    "split": "development",
+    "input_query": "What is the capital of France?",
+    "machine_suggestion": {
+      "is_prospect_query": false,
+      "interest": "geography",
+      "audience": null,
+      "location": {
+        "city": "Paris",
+        "state": null,
+        "country": "France"
+      },
+      "target_type": "other"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "geography",
+        "factual query",
+        "capital of France",
+        "general knowledge"
+      ],
+      "target_type": [
+        "other",
+        "none",
+        "location"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Negative test: non-prospect factual question. is_prospect_query must be false."
+    }
+  },
+  {
+    "example_id": "intent_010",
+    "split": "development",
+    "input_query": "How to configure FastAPI with async HTTPX?",
+    "machine_suggestion": {
+      "is_prospect_query": false,
+      "interest": "software development",
+      "audience": null,
+      "location": null,
+      "target_type": "other"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "software development",
+        "FastAPI",
+        "HTTPX",
+        "programming"
+      ],
+      "target_type": [
+        "other",
+        "none",
+        "technical"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Negative test: technical programming query. is_prospect_query must be false."
+    }
+  },
+  {
+    "example_id": "intent_011",
+    "split": "test",
+    "input_query": "AI research scientists in Cambridge UK",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "AI research",
+      "audience": "research scientists",
+      "location": {
+        "city": "Cambridge",
+        "state": null,
+        "country": "UK"
+      },
+      "target_type": "scientist"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "AI research",
+        "artificial intelligence",
+        "machine learning research"
+      ],
+      "audience": [
+        "research scientists",
+        "researchers",
+        "scientists"
+      ],
+      "location": {
+        "city": [
+          "Cambridge"
+        ],
+        "country": [
+          "UK",
+          "United Kingdom",
+          "England"
+        ]
+      },
+      "target_type": [
+        "scientist",
+        "researcher",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Academic / deep tech prospect query in UK."
+    }
+  },
+  {
+    "example_id": "intent_012",
+    "split": "test",
+    "input_query": "Pediatric cardiologists in Chicago Illinois",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "pediatric cardiology",
+      "audience": "doctors",
+      "location": {
+        "city": "Chicago",
+        "state": "Illinois",
+        "country": "USA"
+      },
+      "target_type": "doctor"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "pediatric cardiology",
+        "cardiology",
+        "medicine"
+      ],
+      "audience": [
+        "doctors",
+        "physicians",
+        "cardiologists"
+      ],
+      "location": {
+        "city": [
+          "Chicago"
+        ],
+        "state": [
+          "Illinois",
+          "IL"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "doctor",
+        "physician",
+        "specialist",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Healthcare specialist query with explicit city and state spelled out."
+    }
+  },
+  {
+    "example_id": "intent_013",
+    "split": "test",
+    "input_query": "B2B SaaS account executives in Austin Texas",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "B2B SaaS sales",
+      "audience": "account executives",
+      "location": {
+        "city": "Austin",
+        "state": "Texas",
+        "country": "USA"
+      },
+      "target_type": "sales"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "B2B SaaS sales",
+        "SaaS sales",
+        "B2B SaaS",
+        "software sales"
+      ],
+      "audience": [
+        "account executives",
+        "sales representatives",
+        "AEs"
+      ],
+      "location": {
+        "city": [
+          "Austin"
+        ],
+        "state": [
+          "Texas",
+          "TX"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "sales",
+        "account executive",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Enterprise tech sales recruiting query."
+    }
+  },
+  {
+    "example_id": "intent_014",
+    "split": "test",
+    "input_query": "Restaurant owners in Dubai UAE",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "Restaurant",
+      "audience": null,
+      "location": {
+        "city": "Dubai",
+        "state": null,
+        "country": "UAE"
+      },
+      "target_type": "owner"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "Restaurant",
+        "hospitality",
+        "food and beverage"
+      ],
+      "audience": [
+        "restaurant owners",
+        "restaurateurs",
+        null
+      ],
+      "location": {
+        "city": [
+          "Dubai"
+        ],
+        "country": [
+          "UAE",
+          "United Arab Emirates"
+        ]
+      },
+      "target_type": [
+        "owner",
+        "business owner",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Hospitality business query matching restaurant_owners_dubai fixture query."
+    }
+  },
+  {
+    "example_id": "intent_015",
+    "split": "test",
+    "input_query": "Cybersecurity consultants in Singapore",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "cybersecurity",
+      "audience": "consultants",
+      "location": {
+        "city": "Singapore",
+        "state": null,
+        "country": "Singapore"
+      },
+      "target_type": "consultant"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "cybersecurity",
+        "information security",
+        "infosec"
+      ],
+      "audience": [
+        "consultants",
+        "security consultants",
+        "advisors"
+      ],
+      "location": {
+        "city": [
+          "Singapore"
+        ],
+        "country": [
+          "Singapore",
+          "SG"
+        ]
+      },
+      "target_type": [
+        "consultant",
+        "specialist",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "City-state geographic entity test (Singapore city & country)."
+    }
+  },
+  {
+    "example_id": "intent_016",
+    "split": "test",
+    "input_query": "Fashion photographers in Paris France",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "fashion photography",
+      "audience": "photographers",
+      "location": {
+        "city": "Paris",
+        "state": null,
+        "country": "France"
+      },
+      "target_type": "photographer"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "fashion photography",
+        "photography",
+        "fashion"
+      ],
+      "audience": [
+        "photographers",
+        "fashion photographers",
+        "creatives"
+      ],
+      "location": {
+        "city": [
+          "Paris"
+        ],
+        "country": [
+          "France",
+          "FR"
+        ]
+      },
+      "target_type": [
+        "photographer",
+        "creator",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Creative arts domain query with international European location."
+    }
+  },
+  {
+    "example_id": "intent_017",
+    "split": "test",
+    "input_query": "Biotech CEOs in Boston Massachusetts",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "biotechnology",
+      "audience": "CEOs",
+      "location": {
+        "city": "Boston",
+        "state": "Massachusetts",
+        "country": "USA"
+      },
+      "target_type": "executive"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "biotechnology",
+        "biotech",
+        "life sciences"
+      ],
+      "audience": [
+        "CEOs",
+        "chief executive officers",
+        "executives"
+      ],
+      "location": {
+        "city": [
+          "Boston"
+        ],
+        "state": [
+          "Massachusetts",
+          "MA"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "executive",
+        "CEO",
+        "founder",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Executive search query in major US biotechnology hub."
+    }
+  },
+  {
+    "example_id": "intent_018",
+    "split": "test",
+    "input_query": "Civil litigation attorneys in Los Angeles",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "civil litigation",
+      "audience": "attorneys",
+      "location": {
+        "city": "Los Angeles",
+        "state": "CA",
+        "country": "USA"
+      },
+      "target_type": "lawyer"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "civil litigation",
+        "litigation law",
+        "legal services"
+      ],
+      "audience": [
+        "attorneys",
+        "lawyers",
+        "litigators"
+      ],
+      "location": {
+        "city": [
+          "Los Angeles",
+          "LA"
+        ],
+        "state": [
+          "CA",
+          "California",
+          null
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "lawyer",
+        "attorney",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Legal profession query where state and country are implied by Los Angeles."
+    }
+  },
+  {
+    "example_id": "intent_019",
+    "split": "test",
+    "input_query": "E-commerce store owners in Germany",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "e-commerce",
+      "audience": "store owners",
+      "location": {
+        "city": null,
+        "state": null,
+        "country": "Germany"
+      },
+      "target_type": "owner"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "e-commerce",
+        "online retail",
+        "ecommerce"
+      ],
+      "audience": [
+        "store owners",
+        "shop owners",
+        "merchants"
+      ],
+      "location": {
+        "city": [
+          null
+        ],
+        "country": [
+          "Germany",
+          "DE"
+        ]
+      },
+      "target_type": [
+        "owner",
+        "business owner",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Country-level geographic constraint with no city specified."
+    }
+  },
+  {
+    "example_id": "intent_020",
+    "split": "test",
+    "input_query": "Looking for renewable energy project managers in Oslo Norway",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "renewable energy",
+      "audience": "project managers",
+      "location": {
+        "city": "Oslo",
+        "state": null,
+        "country": "Norway"
+      },
+      "target_type": "project manager"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "renewable energy",
+        "clean energy",
+        "sustainability"
+      ],
+      "audience": [
+        "project managers",
+        "managers"
+      ],
+      "location": {
+        "city": [
+          "Oslo"
+        ],
+        "country": [
+          "Norway",
+          "NO"
+        ]
+      },
+      "target_type": [
+        "project manager",
+        "manager",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Conversational phrasing prefix ('Looking for ...') test."
+    }
+  },
+  {
+    "example_id": "intent_021",
+    "split": "test",
+    "input_query": "Freelance UX UI designers",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "UX UI design",
+      "audience": "freelancers",
+      "location": null,
+      "target_type": "designer"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "UX UI design",
+        "product design",
+        "user experience design"
+      ],
+      "audience": [
+        "freelancers",
+        "contractors",
+        "designers"
+      ],
+      "location": [
+        null
+      ],
+      "target_type": [
+        "designer",
+        "freelancer",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Completely location-free prospect query test."
+    }
+  },
+  {
+    "example_id": "intent_022",
+    "split": "test",
+    "input_query": "Angel investors in Seattle Washington",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "angel investing",
+      "audience": "angel investors",
+      "location": {
+        "city": "Seattle",
+        "state": "Washington",
+        "country": "USA"
+      },
+      "target_type": "investor"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "angel investing",
+        "early stage investing",
+        "angel investment"
+      ],
+      "audience": [
+        "angel investors",
+        "investors",
+        "angels"
+      ],
+      "location": {
+        "city": [
+          "Seattle"
+        ],
+        "state": [
+          "Washington",
+          "WA"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "investor",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Angel investor query with state spelled out."
+    }
+  },
+  {
+    "example_id": "intent_023",
+    "split": "test",
+    "input_query": "Data scientists in NYC",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "data science",
+      "audience": "data scientists",
+      "location": {
+        "city": "New York",
+        "state": "NY",
+        "country": "USA"
+      },
+      "target_type": "data scientist"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "data science",
+        "machine learning",
+        "analytics"
+      ],
+      "audience": [
+        "data scientists",
+        "analysts"
+      ],
+      "location": {
+        "city": [
+          "New York",
+          "NYC",
+          "New York City"
+        ],
+        "state": [
+          "NY",
+          "New York",
+          null
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "data scientist",
+        "specialist",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Colloquial acronym location ('NYC') canonicalization test."
+    }
+  },
+  {
+    "example_id": "intent_024",
+    "split": "test",
+    "input_query": "Supply chain logistics directors in Tokyo Japan",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "supply chain logistics",
+      "audience": "directors",
+      "location": {
+        "city": "Tokyo",
+        "state": null,
+        "country": "Japan"
+      },
+      "target_type": "director"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "supply chain logistics",
+        "supply chain",
+        "logistics"
+      ],
+      "audience": [
+        "directors",
+        "executives",
+        "managers"
+      ],
+      "location": {
+        "city": [
+          "Tokyo"
+        ],
+        "country": [
+          "Japan",
+          "JP"
+        ]
+      },
+      "target_type": [
+        "director",
+        "executive",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Asia-Pacific enterprise corporate leadership query."
+    }
+  },
+  {
+    "example_id": "intent_025",
+    "split": "test",
+    "input_query": "Fitness coaches in Sydney Australia",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "fitness coaching",
+      "audience": "coaches",
+      "location": {
+        "city": "Sydney",
+        "state": "NSW",
+        "country": "Australia"
+      },
+      "target_type": "coach"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "fitness coaching",
+        "fitness",
+        "personal training"
+      ],
+      "audience": [
+        "coaches",
+        "trainers",
+        "fitness coaches"
+      ],
+      "location": {
+        "city": [
+          "Sydney"
+        ],
+        "state": [
+          "NSW",
+          "New South Wales",
+          null
+        ],
+        "country": [
+          "Australia",
+          "AU"
+        ]
+      },
+      "target_type": [
+        "coach",
+        "trainer",
+        "individual"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Sports / fitness service provider query in Australia."
+    }
+  },
+  {
+    "example_id": "intent_026",
+    "split": "test",
+    "input_query": "Software engineering companies in Dublin",
+    "machine_suggestion": {
+      "is_prospect_query": true,
+      "interest": "software engineering",
+      "audience": "companies",
+      "location": {
+        "city": "Dublin",
+        "state": null,
+        "country": "Ireland"
+      },
+      "target_type": "company"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "software engineering",
+        "software development",
+        "tech"
+      ],
+      "audience": [
+        "companies",
+        "businesses",
+        "agencies"
+      ],
+      "location": {
+        "city": [
+          "Dublin"
+        ],
+        "country": [
+          "Ireland",
+          "IE"
+        ]
+      },
+      "target_type": [
+        "company",
+        "organization",
+        "agency"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Explicit organization target type ('company') test."
+    }
+  },
+  {
+    "example_id": "intent_027",
+    "split": "test",
+    "input_query": "Best pizza restaurants near Central Park",
+    "machine_suggestion": {
+      "is_prospect_query": false,
+      "interest": "food dining",
+      "audience": null,
+      "location": {
+        "city": "New York",
+        "state": "NY",
+        "country": "USA"
+      },
+      "target_type": "other"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "food dining",
+        "restaurants",
+        "pizza",
+        "dining"
+      ],
+      "target_type": [
+        "other",
+        "restaurant",
+        "none"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Negative test: consumer recommendation query, not people prospect discovery."
+    }
+  },
+  {
+    "example_id": "intent_028",
+    "split": "test",
+    "input_query": "Weather forecast for Seattle this weekend",
+    "machine_suggestion": {
+      "is_prospect_query": false,
+      "interest": "weather forecast",
+      "audience": null,
+      "location": {
+        "city": "Seattle",
+        "state": "WA",
+        "country": "USA"
+      },
+      "target_type": "other"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "weather forecast",
+        "weather",
+        "meteorology"
+      ],
+      "target_type": [
+        "other",
+        "none"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Negative test: utility weather request. is_prospect_query must be false."
+    }
+  },
+  {
+    "example_id": "intent_029",
+    "split": "test",
+    "input_query": "Latest stock price of Apple AAPL",
+    "machine_suggestion": {
+      "is_prospect_query": false,
+      "interest": "financial market data",
+      "audience": null,
+      "location": null,
+      "target_type": "other"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "financial market data",
+        "stock price",
+        "finance",
+        "AAPL"
+      ],
+      "target_type": [
+        "other",
+        "none"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Negative test: financial stock data query. is_prospect_query must be false."
+    }
+  },
+  {
+    "example_id": "intent_030",
+    "split": "test",
+    "input_query": "History of the Olympic games",
+    "machine_suggestion": {
+      "is_prospect_query": false,
+      "interest": "history sports",
+      "audience": null,
+      "location": null,
+      "target_type": "other"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "history sports",
+        "Olympic games",
+        "history",
+        "general knowledge"
+      ],
+      "target_type": [
+        "other",
+        "none"
+      ]
+    },
+    "human_review": {
+      "status": "needs_human_review",
+      "approved_is_prospect_query": null,
+      "approved_interest": null,
+      "approved_audience": null,
+      "approved_location": null,
+      "approved_target_type": null,
+      "reviewer_name": null,
+      "reviewed_at": null,
+      "notes": "Negative test: educational history query. is_prospect_query must be false."
+    }
+  }
+]

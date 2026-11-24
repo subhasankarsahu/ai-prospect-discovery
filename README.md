@@ -90,23 +90,36 @@ To respect privacy and comply with strict data protection requirements, all fixt
 - **Retention of Public Profile URLs and Names**: Public profile URLs (e.g. LinkedIn, X/Twitter, YouTube, Threads, Instagram, and canonical Facebook profile paths) and verbatim public names are retained exclusively to validate profile parsing, normalization, relevance classification, and deduplication logic during automated testing.
 - **Local Gitignored Raw Recordings**: All raw, unredacted recordings captured during live pipeline validation reside strictly in the local, gitignored `.cache/fixtures/` directory and are never committed or published.
 
+---
+
+## Architecture & Project Structure
 
 The project follows a clean, modular design adhering to strict separation of concerns:
 
 ```
 ai-prospect-discovery/
-â”œâ”€â”€ app/
-â”‚   â”œâ”€â”€ config.py           # Environment config loaded via pydantic-settings
-â”‚   â”œâ”€â”€ main.py             # Route handlers and FastAPI application assembly
-â”‚   â”œâ”€â”€ schemas.py          # Pydantic models for requests, responses, and domain entities
-â”‚   â”œâ”€â”€ platforms/          # Independent platform adapters implementing a shared base interface
-â”‚   â”œâ”€â”€ services/           # Business logic and external service orchestrators (LLM, discovery)
-â”‚   â””â”€â”€ utils/              # Common validators, HTTP helpers, and deduplication utilities
-â”œâ”€â”€ tests/                  # Pytest unit and integration test suite
-â”œâ”€â”€ .env.example            # Environment configuration template
-â”œâ”€â”€ requirements.txt       # Production dependencies
-â”œâ”€â”€ requirements-dev.txt   # Development, testing, and linting dependencies
-â””â”€â”€ AGENTS.md               # Mandatory architectural and code quality rules
+├── app/
+│   ├── config.py           # Environment config loaded via pydantic-settings
+│   ├── main.py             # Route handlers and FastAPI application assembly
+│   ├── schemas.py          # Pydantic models for requests, responses, and domain entities
+│   ├── schemas_internal.py # Internal candidate classification & pipeline schemas
+│   ├── platforms/          # Independent platform adapters implementing a shared base interface
+│   ├── services/           # Business logic and external service orchestrators (LLM, discovery)
+│   └── utils/              # Common validators, HTTP helpers, and deduplication utilities
+├── evaluation/             # Independent offline LLM evaluation framework & datasets
+│   ├── datasets/           # Curated ground-truth datasets (intents & candidates)
+│   ├── ground_truth/       # Annotation guides & ambiguity classification policies
+│   ├── metrics/            # Intent, candidate, and Wilson score statistical metrics
+│   ├── providers/          # Model providers (offline mock double and Google Gemini)
+│   ├── review/             # Review export, CSV/JSON tabular viewers, and review application
+│   ├── runner/             # Offline CLI evaluation runner and configuration
+│   └── reports/            # Model comparison report templates and evaluation outputs
+├── tests/                  # Pytest unit, integration, and offline evaluation test suite
+├── tests/fixtures/         # Sanitized offline fixture recordings for pipeline replay
+├── .env.example            # Environment configuration template
+├── requirements.txt       # Production dependencies
+├── requirements-dev.txt   # Development, testing, and linting dependencies
+└── AGENTS.md               # Mandatory architectural and code quality rules
 ```
 
 ### Request Lifecycle
@@ -119,20 +132,66 @@ ai-prospect-discovery/
 
 ## Supported Platforms
 
-*(Placeholder)*
+The discovery pipeline integrates with six major public platforms through modular platform adapters implementing `PlatformSource`:
 
-Upcoming platform integrations will be documented here:
-- **Platform A:** Interface definition and search capabilities.
-- **Platform B:** Public profile extraction and link validation.
-- **Platform C:** Entity enrichment and cross-referencing.
+1. **LinkedIn (`app/platforms/linkedin.py`)**:
+   - Discovers public `linkedin.com/in/...` profiles.
+   - Normalizes vanity and canonical profile URLs.
+   - Extracts public professional headlines, names, and titles from public snippets.
+2. **X / Twitter (`app/platforms/x.py`)**:
+   - Identifies public user profile pages (`x.com/...` and `twitter.com/...`).
+   - Distinguishes profile URLs from status tweets and media paths.
+   - Extracts public display names, screen handles, and bio descriptions.
+3. **YouTube (`app/platforms/youtube.py`)**:
+   - Extracts YouTube channel pages, custom handles (`youtube.com/@...`), and canonical channel IDs (`youtube.com/channel/...`).
+   - Extracts public channel titles and descriptions.
+4. **Instagram (`app/platforms/instagram.py`)**:
+   - Discovers public Instagram user profiles (`instagram.com/...`).
+   - Filters non-profile paths (explore, reels, p/) and normalizes profile handles.
+5. **Threads (`app/platforms/threads.py`)**:
+   - Targets public Threads profiles (`threads.net/@...`).
+   - Parses public handles and bio snippets.
+6. **Facebook (`app/platforms/facebook.py`)**:
+   - Canonicalizes public Facebook profiles and pages (`facebook.com/...` and `facebook.com/profile.php?id=...`).
+   - Preserves identity-defining numeric ID parameters for verified profile cross-referencing.
 
 ---
 
-## LLM Comparison
+## LLM Evaluation Suite (Phase 5)
 
-*(Placeholder)*
+An independent offline evaluation framework is provided in `evaluation/` to benchmark and compare Large Language Models across the two primary AI tasks in the pipeline:
+1. **Query Intent Extraction**: Translating natural language queries into structured `QueryIntent` instances (`is_prospect_query`, `interest`, `audience`, `location`, `target_type`).
+2. **Candidate Relevance Classification**: Classifying whether search result candidates represent individual human persons matching the requested interest and geography.
 
-Benchmarking and comparison across supported LLM providers will be detailed here:
-- Provider accuracy on intent classification and entity extraction.
-- Output token constraints and structured JSON adherence.
-- Response latencies, cost per 1k discovery operations, and rate-limit considerations.
+### Curated Ground-Truth Datasets
+- **Intent Queries (30 total)**:
+  - `development.json`: 10 queries (8 prospect queries, 2 non-prospect queries).
+  - `test.json`: 20 held-out queries (16 prospect queries, 4 non-prospect queries).
+- **Candidate Profiles (80 total across 7 platforms)**:
+  - Sourced from 140 raw search results across 4 populated Phase 4 fixtures (`cricket_lovers_ahmedabad`, `digital_marketing_owners_new_york`, `football_lovers_washington_dc`, `startup_founders_london`).
+  - `development.json`: 30 candidate profiles.
+  - `test.json`: 50 held-out candidate profiles.
+
+### Key Evaluation Features
+- **Strict $0 Budget Guard**: Default configuration enforces `budget_cap_usd = 0.0`. Live inference is blocked unless explicitly authorized, protecting against accidental API usage.
+- **Ambiguity Policy**: Ambiguous candidates are strictly excluded from primary binary metrics (precision, recall, F1) to prevent metric distortion, and are tracked separately in an uncertainty report.
+- **Wilson Score Confidence Intervals**: All accuracy and rate metrics compute 95% Wilson score confidence intervals, with automated small-sample warnings when $N < 30$.
+- **Human Review Tools**: Scripts (`evaluation/review/export_review.py` and `apply_review.py`) support tabular CSV and JSON review workflows while strictly preserving original machine suggestions.
+
+### Running Offline Evaluation
+To execute an offline evaluation run using deterministic mock doubles:
+
+```bash
+python -m evaluation.runner.run_evaluation
+```
+
+Detailed framework documentation and annotation guides are available in [evaluation/README.md](file:///c:/Users/subha/Downloads/ai-prospect-discovery/evaluation/README.md) and [model_comparison_template.md](file:///c:/Users/subha/Downloads/ai-prospect-discovery/evaluation/reports/model_comparison_template.md).
+
+---
+
+## Known Limitations
+
+- **Search Engine & LLM Rate Limits**: Downstream search engine (Tavily) and LLM endpoints have rate limits and per-minute quotas. The service implements backoff, retries, and local disk caching to mitigate transient throttling.
+- **Search Snippet Text Density**: Candidate relevance classification relies on public search engine snippets. When a search snippet lacks explicit geographic or persona markers, the pipeline relies on conservative heuristics or marks attributes unverified.
+- **Zero-Budget Default**: No live LLM calls or Tavily API calls are executed during development and testing unless API credentials are provided and live execution is explicitly enabled. Offline replay fixtures provide complete test coverage without network calls.
+- **Search Result Variance**: Search engine results for broad natural language queries may evolve as web crawlers update their indices over time.

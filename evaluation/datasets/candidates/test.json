@@ -1,0 +1,1502 @@
+[
+  {
+    "example_id": "cand_009",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=sW5uf_ZmGKY",
+    "input": {
+      "title": "Australia wins toss, chose to bowl against India in ICC Cricket World Cup 2023 final in Ahmedabad",
+      "snippet": "Title: Australia wins toss, chose to bowl against India in ICC Cricket World Cup 2023 final in Ahmedabad\n# Australia wins toss, chose to bowl against India in ICC Cricket World Cup 2023 final in Ahmedabad. ## Channel: The Tribune (verified). ### Description. #worldcupfinal #ahemdabad #indiaaustralia #india #australia #worldcup2023. The Tribune, now published from Chandigarh, started publication on February 2, 1881, in Lahore (now in Pakistan). It was started by Sardar Dyal Singh Majithia, a public-spirited philanthropist, and is run by a trust comprising five eminent persons as trustees. Read latest stories here: https://www.tribuneindia.com. Subscribe for more videos:    / thetribunechd. Like us on Facebook:   / thetribunechd. Follow us on Twitter:   / thetribunechd. Download The Tribune App: https://goo.gl/YyBCw9."
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_010",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=b95NN9AGY3I",
+    "input": {
+      "title": "Live From Narendra Modi Stadium | IND vs NZ Final का जबरदस्त क्रेज",
+      "snippet": "Live From Narendra Modi Stadium | IND vs NZ Final का जबरदस्त क्रेज | Fans Reation | T20 World Cup #live #indvsnz"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "negative",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_011",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.linkedin.com/company/gujarattitans",
+    "input": {
+      "title": "Gujarat Titans",
+      "snippet": "Description: Gujarat Titans is a cricket franchise headquartered in Ahmedabad, India. Founded in 2021, we are members and the coveted Indian Premier League — Champions of 2022, Runners-up of 2023. Known for our explosive play and sportsmanship, Gujarat Titans is made up of talented players from across the globe, who strive for excellence both on and off the field.\nLinkedIn:  · 14,165 followers\nIndustry: Spectator Sports\nType: Privately Held\nHeadquarters: Ahmedabad, Gujarat, India"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Gujarat Titans",
+      "interest": "cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Organization: Official sports franchise or association, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_012",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://in.linkedin.com/company/narendra-modi-stadium",
+    "input": {
+      "title": "Gujarat Cricket Association",
+      "snippet": "River for the construction of the World’s Largest Stadium, Ahmedabad, the home ground for Gujarat Cricket Association located in Ahmedabad, Gujarat. Several memorable tests and one-day internationals have been played in the stadium so far including ICC Champions Trophy and ICC World Cup. [...] Description: Gujarat Cricket Association (GCA) is the governing body for the development and organisation of cricket in Gujarat state with 10 districts and a union territory under its wing which comprises of Ahmedabad, Kheda, Anand, Bharuch, Surat, Valsad (Bulsar), Gandhinagar, Banaskantha, Panchmahals, Daman and Dadra Nagar Haveli. GCA is a permanent member of the Board of Control for Cricket in India (BCCI). Just like any other part of the country, the people of Gujarat were introduced to [...] LinkedIn:  · 529 followers\nIndustry: Sports Teams and Clubs\nType: Government Agency\nHeadquarters: Ahmedabad, Gujarat, India\nSocial Profiles:"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Gujarat Cricket Association",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Organization: Official sports franchise or association, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_013",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.linkedin.com/posts/rushabhms_ahmedabad-activity-7436309439479013378-Tg80",
+    "input": {
+      "title": "Ahmedabad's Cricket Ticket Frenzy: A Systemic Issue | Rushabh Shah posted on the topic | LinkedIn",
+      "snippet": "For a true cricket fan, the real World Cup final happens before the match: getting a ticket. #Ahmedabad has now hosted some of the biggest matches in world cricket - World Cup clashes, IPL finals, and now the 2026 T20 World Cup Final. But there is one pattern that keeps repeating. > Tickets open. > Tickets disappear within minutes. > And soon after, they appear in the black market at multiples of the original price. This has been happening repeatedly. ▶️ 2023 ODI World Cup Final – India vs [...] reaching 4 - 6x At this point, calling it “mismanagement” feels too simplistic. It looks more like a structural flaw in ticket distribution. I do not know what is holding it back, but it seems like ICC, BCCI, or BookMyShow wants to keep on doing it. Because when a 132,000-seat stadium sells out instantly every single time, the obvious question becomes: \"How many tickets actually reach genuine fans?\" If Ahmedabad is positioning itself as a global destination for marquee cricket events, the [...] Final – India vs Australia Probably the biggest cricket match India has hosted in decades. And the ticket frenzy was unprecedented. • Tickets originally priced in the ₹2,000 – ₹10,000 range • Black market quotes reportedly reaching ₹50,000 to ₹2 lakh • Multiple incidents of fake and duplicate tickets being circulated For a stadium that can hold 132,000 people, thousands of genuine fans couldn’t get access. ▶️ India vs Pakistan – World Cup 2023 The same pattern emerged. • Tickets resold at 10x"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_014",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://x.com/ANI/status/2030491689782059365",
+    "input": {
+      "title": "ANI on X: \"#WATCH | Ahmedabad, Gujarat: On the #ICCT20WorldCup final match between India and New Zealand today,…\"",
+      "snippet": "#WATCH | Ahmedabad, Gujarat: On the #ICCT20WorldCup final match between India and New Zealand today, Deputy Chief Minister Harsh Sanghvi says, \"Today, the final match will be held at the world's largest cricket stadium in Ahmedabad. I extend a warm welcome to the cricket fans from India and around the world who are coming to watch this historic match... I have full confidence that the Indian cricket team will create history with its excellent performance today. The administration, the Gujarat [...] the Gujarat Cricket Association, and the BCCI have been working tirelessly for the past several days to ensure all cricket fans have the best possible facilities. More than 1 lakh 35 thousand people will arrive at the Narendra Modi Stadium today. Arrangements have been made to ensure everyone can watch this match well, enjoy it, and create new history together...\" [...] [Video 1]\n\n- Author: @ANI (ANI)\n- Posted: 2026-03-08T03:51:58+00:00\n- Views: 26276\n- Likes: 434\n- Reposts: 21\n- Replies: 2\n- Quotes: 0\n- Bookmarks: 10\n- Hashtags: #WATCH #ICCT20WorldCup\n\n## People\n\n- @ANI (ANI) — Asian News International. Multi-media news agency, content for information platforms: TV, Internet, broadband,newspapers, mobiles"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Gujarat Cricket Association",
+      "interest": "cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Organization: Official sports franchise or association, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_015",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://x.com/CricketopiaCom/status/2025628106405613812",
+    "input": {
+      "title": "Cricketopia on X: \"At Narendra Modi Stadium, Ahmedabad: India lost to Australia in the ICC Cricket World Cup 2023 final…\"",
+      "snippet": "# Cricketopia on X: \"At Narendra Modi Stadium, Ahmedabad: India lost to Australia in the ICC Cricket World Cup 2023 final…\"\n\nAt Narendra Modi Stadium, Ahmedabad:\n\nIndia lost to Australia in the ICC Cricket World Cup 2023 final.\n\nIndia also lost to South Africa in the Super 8 of the ICC Men’s T20 World Cup 2026.\n\nBetween these two matches, India won 17 consecutive games in ICC white-ball tournaments.\n\n[Image 1] [...] [Image 1]\n\n- Author: @CricketopiaCom (Cricketopia)\n- Posted: 2026-02-22T17:45:49+00:00\n- Views: 3823\n- Likes: 100\n- Reposts: 10\n- Replies: 5\n- Quotes: 2\n- Bookmarks: 5\n\n## People\n\n- @CricketopiaCom (Cricketopia) — Cricket lives here! Nostalgia Merchant! Capturing Cricket Moments During Weekends. Cricket Photographer. Open for Collab!"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_016",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://x.com/imVkohli/status/2030694104628363607",
+    "input": {
+      "title": "Virat Kohli on X: \"Champions ⭐️⭐️⭐️ Phenomenal win for Team India in Ahmedabad. Absolutely no match for the explosive c…\"",
+      "snippet": "# Virat Kohli on X: \"Champions ⭐️⭐️⭐️ Phenomenal win for Team India in Ahmedabad. Absolutely no match for the explosive c…\"\n\nChampions ⭐️⭐️⭐️ Phenomenal win for Team India in Ahmedabad. Absolutely no match for the explosive cricket played by us throughout the tournament. Brilliant character shown by the boys to keep fighting in tough situations and become world champions once again. Congratulations to all the players and all the members of the management for achieving this feat. Jai Hind 🇮🇳❤️ [...] - Author: @imVkohli (Virat Kohli)\n- Posted: 2026-03-08T17:16:17+00:00\n- Views: 4663507\n- Likes: 404819\n- Reposts: 55577\n- Replies: 6017\n- Quotes: 1463\n- Bookmarks: 2926\n\n## People\n\n- @imVkohli (Virat Kohli) — A proud husband and father ❤️"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_017",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://x.com/ians_india/status/2030466328499573242",
+    "input": {
+      "title": "IANS on X: \"Ahmedabad, Gujarat: Ahead of the match between the India national cricket team and the New Zealand n…\"",
+      "snippet": "# IANS on X: \"Ahmedabad, Gujarat: Ahead of the match between the India national cricket team and the New Zealand n…\"\n\nAhmedabad, Gujarat: Ahead of the match between the India national cricket team and the New Zealand national cricket team, large numbers of cricket fans from different cities arrived at railway stations.\n\n[Video 1]\n\n- Author: @ians_india (IANS)\n- Posted: 2026-03-08T02:11:11+00:00\n- Views: 567\n- Likes: 7\n- Reposts: 1\n- Replies: 1\n- Quotes: 0\n- Bookmarks: 0\n\n## People [...] ## People\n\n- @ians_india (IANS) — India's largest Independent News Agency"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_018",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://x.com/ANI/status/1713050143275315563",
+    "input": {
+      "title": "ANI on X: \"#WATCH | Ahmedabad, Gujarat: Cricket fans cheer for team India ahead of the ICC World Cup match agai…\"",
+      "snippet": "# ANI on X: \"#WATCH | Ahmedabad, Gujarat: Cricket fans cheer for team India ahead of the ICC World Cup match agai…\"\n\n#WATCH |  Ahmedabad, Gujarat: Cricket fans cheer for team India ahead of the ICC World Cup match against Pakistan today. Visuals from outside the Narendra Modi stadium\n\n[Video 1]\n\n- Author: @ANI (ANI)\n- Posted: 2023-10-14T04:32:35+00:00\n- Views: 37661\n- Likes: 306\n- Reposts: 17\n- Replies: 22\n- Quotes: 1\n- Bookmarks: 0\n- Hashtags: #WATCH\n\n## People [...] ## People\n\n- @ANI (ANI) — Asian News International. Multi-media news agency, content for information platforms: TV, Internet, broadband,newspapers, mobiles"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_019",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.threads.net/@sarcastic_us/post/DHDsZOWI1F0/-ten-big-stadiums-are-to-be-built-next-to-the-narendra-modi-cricket-stadium-in-a",
+    "input": {
+      "title": "🚨 Ten big stadiums are to be built next to the Narendra Modi Cricket Stadium in Ahmedabad for India to host the 2036 Olympics, says Amit Shah. #sarcasm #ahmedabad #olympics #india #gujarat #sports",
+      "snippet": "Home New thread Search Messages Activity Profile Insights Log in More Thread 38.1K views sarcastic\\_us 03/11/25 🚨 Ten big stadiums are to be built next to the Narendra Modi Cricket Stadium in Ahmedabad for India to host the 2036 Olympics, says Amit Shah. #sarcasm #ahmedabad #olympics #india #gujarat #sports 71 4 Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username instead"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_020",
+    "split": "test",
+    "source_fixture": "cricket_lovers_ahmedabad",
+    "source_query": "Cricket lovers in Ahmedabad India",
+    "platform": "Web",
+    "url": "https://www.threads.net/@sportskeedacricket/post/DHzGpf4oMfo/rohit-sharma-was-never-the-same-after-this-hug-top-10-funny-memes-after-mis-dism",
+    "input": {
+      "title": "\"Rohit Sharma was never the same after this hug\"- Top 10 funny memes after MI's dismal loss vs GT in IPL 2025 match in Ahmedabad https://www.sportskeeda.com/cricket/news-rohit-sharma-never-hug-top-10-funny-memes-mi-s-dismal-loss-vs-gt-ipl-2025-match-ahmedabad?key4=skcthreads&utm_Source=threadsautofeed&utm_medium=threads&utm_source=dlvr.it",
+      "snippet": "about and join the conversation. Log in with username instead [...] Home New thread Search Messages Activity Profile Insights Log in More Thread 1.7K views sportskeedacricket 03/29/25 \"Rohit Sharma was never the same after this hug\"- Top 10 funny memes after MI's dismal loss vs GT in IPL 2025 match in Ahmedabad sportskeeda.com/crick… sportskeeda.com \"Rohit Sharma was never the same after this hug\"- Top 10 funny memes after MI's dismal loss vs GT in IPL 2025 match in Ahmedabad 3 Log in or sign up for Threads See what people are talking about and join the"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "cricket",
+      "location": "Ahmedabad"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Non-profile media link, tournament news, venue page, or ticket booking listing."
+    }
+  },
+  {
+    "example_id": "cand_028",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "X",
+    "url": "https://x.com/Tinuiti",
+    "input": {
+      "title": "Tinuiti (@Tinuiti)",
+      "snippet": "# Tinuiti (@Tinuiti)\n\nTinuiti is a media agency that not only builds brands, but architects business outcomes, creating immediate and lasting growth for clients.\n\n- Account: @Tinuiti (Tinuiti)\n- Joined: 2009-05-26T16:22:47+00:00\n- Location: New York, New York\n- Website: \n- Followers: 3647\n- Following: 721\n- Posts: 11569\n- Media posts: 3856\n- Likes: 843"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "negative",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Tinuiti",
+      "interest": "",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency / corporate social page, not an individual person."
+    }
+  },
+  {
+    "example_id": "cand_029",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "X",
+    "url": "https://x.com/SmartSitesNJ",
+    "input": {
+      "title": "SmartSites (@SmartSitesNJ)",
+      "snippet": "# SmartSites (@SmartSitesNJ)\n\nOutsmart the competition with best-in-class digital marketing services. With over 1,000 ⭐⭐⭐⭐⭐ reviews, SmartSites 💡 is America's #1 digital marketing agency.\n\n- Account: @SmartSitesNJ (SmartSites)\n- Joined: 2014-06-30T16:17:49+00:00\n- Website: \n- Category: Advertising & Marketing Agency\n- Account type: Business\n- Followers: 23261\n- Following: 19006\n- Posts: 3460\n- Media posts: 2110\n- Likes: 363"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "SmartSites",
+      "interest": "digital marketing",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency / corporate social page, not an individual person."
+    }
+  },
+  {
+    "example_id": "cand_030",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/dupronline_",
+    "input": {
+      "title": "Digital Marketing Agency (@dupronline_)",
+      "snippet": "If you’re a business owner, founder, or creator who wants content that converts, builds trust, and actually drives growth (not just likes)… welcome.\n\nFollow DU | PR for:\n• Social media strategy\n• Content marketing tips\n• Brand growth insights\n• Realistic, data-driven results in 2026\n\n#DigitalMarketingAgency #SocialMediaStrategy #ContentMarketing #SocialMediaManager #SmallBusinessMarketing\n\n[Image: Photo by Digital Marketing Agency on January 30, 2026.] [...] ### @dupronline_\n\n2026 TRENDWATCH WILL MATTER!!! \n \nSocial media INs vs OUTs 📱✨\n \n(and yes, the Notes app screenshot is intentional)\n\nHere’s what we’re leaning into—and what we’re leaving behind.\n\nThese 2026 social media trends and predictions are designed to help brands grow with purpose, not noise.\n\nThis year is about intentional engagement, clear innovation, and human-first content not posting just to post or running your brand like a content farm. [...] Comment “GROWTH” if you're ready to create a business that runs (and earns) without you.\n\n#businessownernyc #businesswomen #businessowner #smallbusinesssupportingsmallbusiness #smallbusinessowner #smallbusinesstips #digitalmarketing #marketingdigital #digitalmarketingtips #socialmedia #socialmediamanager #socialmediamarketing #socialmediatips #carousel #trending\n\n[Image: Photo by Digital Marketing Agency on June 26, 2025.]"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": "nyc"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency / corporate social page, not an individual person."
+    }
+  },
+  {
+    "example_id": "cand_031",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@cyberwoven",
+    "input": {
+      "title": "Cyberwoven | Digital Marketing Agency (@cyberwoven) • Threads, Say more",
+      "snippet": "We just named our new CEO. Her name: Chakisse Newton. Her resume: 25+ years of strategy + leadership experience. Richland County Council member. Founder of Cardinal Consulting. We didn't find a great CEO. We brought one home. Welcome back, Chakisse. 'Weave missed you. 🧡 🔗: cyberwoven.com/news cyberwoven Now Hiring 04/01/26 🚨 We’re hiring a Digital Marketing Specialist Think full funnel: paid, automation, analytics, performance. If you like making marketing actually work, this one’s for you. 👉 [...] one’s for you. 👉 Apply: cyberwoven.com/caree… 10 2 2 5 cyberwoven Now Hiring 03/31/26 We’re hiring a Digital Account Strategist 👀 Strategy, client relationships, and digital marketing, all in one role. If you like connecting the dots and making things actually work, this one’s for you. 👉 Apply here: cyberwoven.com/caree… Log in to see more from cyberwoven. Log in Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username instead [...] Home New thread Search Messages Activity Profile Insights Log in More cyberwoven Cyberwoven | Digital Marketing Agency cyberwoven Web + Brand + Marketing Human-centered digital experiences Driven by results. Built for people. Ready to see what we can do for you? ⬇️ linkin.bio/cyberwoven 105 followers Follow Mention Threads Replies Media Reposts cyberwoven 5d The main deliverable today was a side dish 🍽️ #Thanksgiving #Cyberwoven #Digitalmarketing cyberwoven Agency Life 07/08/26 We just named our"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "positive",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_032",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@themydeveloper",
+    "input": {
+      "title": "Digital Marketing Agency (@themydeveloper) • Threads, Say more",
+      "snippet": "से आज ही संपर्क करें। #WhatsAppAPI #BusinessAutomation #DigitalMarketing #TheMyDeveloper #WhatsAppBusiness LeadGeneration Translate 1 themydeveloper 07/02/26 🚀 Business ko online grow karna hai? The My Developer ke saath paaiye: ✅ Professional Website Development ✅ SEO Services ✅ Google Ads Management ✅ Social Media Marketing Aaj hi free consultation ke liye contact karein aur apne business ko digital duniya mein ek nayi pehchaan dijiye. 📞 Call Now REDACTED 🌐 themydeveloper.com [...] Home New thread Search Messages Activity Profile Insights Log in More themydeveloper Digital Marketing Agency themydeveloper 𝐎𝐔𝐑 𝐒𝐄𝐑𝐕𝐈𝐂𝐄𝐒: 🌏 Digital marketing 💻 Web development 📞 Promotional services 📈 SEO & PPC 🎤 Influencer Marketing 💸 Lead Generation themydeveloper.com 70 followers Follow Mention Threads Replies Media Reposts themydeveloper 08/24/26 🚀 Business ko online grow karna hai? Sirf website hona kaafi nahi… right digital strategy bhi zaroori hai! 💻📈 The My Developer ke saath apne [...] ke saath apne business ko digital growth ki taraf le jaiye. 🔥 🌐 Website Development 📱 App Development 📈 SEO 🎯 Google Ads 📲 Social Media Marketing 🎨 Branding Solutions 💡 Your Business. Our Digital Expertise. 📍 Laxmi Nagar, Delhi 📩 DM us today for your digital growth! #TheMyDeveloper #DigitalMarketing #webdevelopmentcompany themydeveloper 07/16/26 🚀 Business ko online grow karna hai? Professional Website + SEO + Digital Marketing ke liye contact karein. 📱 DM \"WEBSITE\" for Free Consultation"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "The My Developer",
+      "interest": "Digital Marketing",
+      "location": "ny"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency / corporate social page, not an individual person."
+    }
+  },
+  {
+    "example_id": "cand_033",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@shirudigi",
+    "input": {
+      "title": "ShiruDigi | Quality Digital Marketing Agency (@shirudigi) • Threads, Say more",
+      "snippet": "email marketing, video, and more. The key is to repurpose smarter, maximize every asset, and build brand authority across channels without constantly starting from scratch. Want to learn how? We break down a practical 30-day content repurposing strategy in our latest article. 1 1 shirudigi Marketing 11/02/26 Read more: shirudigi.com/conte… #ContentMarketing #DigitalMarketing #SEO #ContentStrategy #MarketingTips #ShiruDigi shirudigi.com How to Turn a Research Report into 30 Days of Content 1 [...] Home New thread Search Messages Activity Profile Insights Log in More shirudigi ShiruDigi | Quality Digital Marketing Agency shirudigi Get: 💼 Quality Digital Marketing Services 💼 Latest Digital Marketing Trends 💼 Tried & Tested Digital Marketing Tips 💼 All of the above from experts! shirudigi.com 224 followers Follow Mention Threads Replies Media Reposts shirudigi Marketing 11/11/26 Scaling your startup’s digital marketing doesn’t have to mean stretching your budget. 🚀 Discover how to build a [...] Days of Content 1 shirudigi 10/28/26 Learn how to identify the right time to scale ad spend without compromising ROI. #PPC #GoogleAds #DigitalMarketing #ShiruDigi shirudigi.com How to Know When It's Time to Increase Your PPC Budget | ShiruDigi 2 shirudigi 10/26/26 \\\\Will AI replace SEO? 🔍\\ Short answer: no. But the way people find businesses online is changing fast, and your brand can now show up in AI-generated answers without anyone clicking a link. So what should marketers do differently? We"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": "ny"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_034",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@acuitydigitalagency",
+    "input": {
+      "title": "Acuity Digital Agency | Marketing with Clarity (@acuitydigitalagency) • Threads, Say more",
+      "snippet": "Home New thread Search Messages Activity Profile Insights Log in More acuitydigitalagency Acuity Digital Agency | Marketing with Clarity acuitydigitalagency 👨🏻💻 Specialized in⤵️ 👉🏽 Digital Marketing | Social Media Marketing | Graphic Design| Website Development| Application Development| 2D Animation. 328 followers · 13 threads Follow Mention Threads Replies Media Reposts acuitydigitalagency 08/10/23 Delighted to receive such positive feedback from our valued client! 🌟"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "positive",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_035",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@creative.co.inc",
+    "input": {
+      "title": "Creative Collective Inc. | A Creative Marketing Agency (@creative.co.inc) • Threads, Say more",
+      "snippet": "in our drafts for a few months now and it felt like a good time to finally hit post! Meet GEO: Generative Engine Optimization. Because search is no longer just human… it’s AI. 🤯 Welcome to the future of search! #CreativeCollectiveNC #SEO #GEO #DigitalMarketing creative.co.inc 01/02/26 Key word: CHALLENGING 🔥 2025 wasted no time testing me. Shout out to the girls at @goodgirlsnacks for this idea - cause we’re kicking things off by talking about my biggest failures of 2025! Now it’s your turn! [...] Now it’s your turn! Let’s learn from each other. Share one challenge or “failure” 2025 threw your way (or just drop some advice, I’m listening)! 😅🫶🏽 Until next time, Marley #BuildingABusiness #BrandBuilding #EntrepreneurJourney #SmallBusinessOwner #ContentCreation creative.co.inc 01/01/26 Day 1. No turning back! ✨ I’m building my creative marketing agency OUT LOUD this year and choosing progress over perfection. Just showing up and doing the work. If you’re building something and waiting to [...] Home New thread Search Messages Activity Profile Insights Log in More creative.co.inc Creative Collective Inc. | A Creative Marketing Agency creative.co.inc Digital Marketing Experts dedicated to SMM & encouraging other growing entrepreneurs! SMM • Photo • Video • Ads • Email • Website 👋🏽 Wilmington, NC linktr.ee/creative\\_collective\\_inc 1,310 followers Follow Mention Threads Replies Media Reposts creative.co.inc 01/12/26 Day 7 | Real-Time Problem Solving What I thought was a “big failure” last"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "positive",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_036",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=nGtjAcYJFZU",
+    "input": {
+      "title": "How To Start A Digital Marketing Agency in 10 Mins [2026]",
+      "snippet": "[1:49] with Facebook ads in my opinion it is the most  profitable service that you can offer as a new   start agency owner and it's going to bring you in  as much revenue as possible so the most amount of  \n[1:57] Revenue in the shortest amount of time so start  with Facebook ads if you don't really know where   to start because when you get good you're going to  get businesses paying invoices that look something [...] [2:05] like these cool so what kind of businesses need  Facebook ads where should we start now I would   always recommend any new stock agency owner  starting local okay the niche or Niche which  \n[2:15] is a term that you may have heard online is vastly  irrelevant when you're first starting out people   put a lot of attention on picking their Niche  that doesn't really matter when you're first [...] How to get your first SMMA client, how to get paid and how to outsource work, all in one quick-fire video! 🔥\n________________________________________________\n📹 My Main Channel:    / jordanplatten  \n📹 My SMMA Channel:    / jordanplattenextra  \n________________________________________________\nFREE Agency Owners Community: \n________________________________________________\nFollow me on other platforms:\n\nIG, FB & TikTok: @jordanplatten\n\n☆ Time Stamps ☆"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": "ny"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_037",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=mQshUQ28UM4",
+    "input": {
+      "title": "Hunter Digital Marketing Agency in New York, NY | 10001",
+      "snippet": "Other Links\n\ndigital marketing new york city : \nsearch marketing : \nsocial media marketing : \npaid media marketing : \n\nOther Service We Provide: \n\nSocial Media Marketing Ad Agency\nPaid Search Marketing\nGoogle Shopping Agency\nPerformance TV (CTV)\nAmazon Seller Marketing Agency\nConversion Rate Optimization\nDigital STRATEGY Experts\n\nFollow Us On\n\nTwitter: \nPinterest: \nLinkedin: \nInstagram : \n\n- Author: Hunter Digital Marketing Agency\n- Channel: \n- Published: 2025-04-01\n- View count: 11 views [...] #digitalmarketingagency, #digitalmarketingcompany, #digitalmarketingexpert, #digitalmarketingservices, #searchmarketingagency, #searchenginemarketing, #socialmediamarketing, #paidsocialagency, #FacebookAdsAgency, #InstagramAdsAgency, #paidmediamarketingagency\n\nHunter Digital Marketing Agency\n137 W 25th St 11th floor, New York, NY 10001\nREDACTED\n\nOfficial Website: \nGoogle Plus Listing: \n\nOther Links [...] # Hunter Digital Marketing Agency in New York, NY | 10001\n\nAt Hunter Digital Marketing Agency, we believe every brand has a story to tell. As a top digital marketing agency New York, we help businesses craft compelling narratives through innovative digital strategies. From social media management to search engine optimization, our solutions are designed to connect with your audience and deliver results that matter."
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": "New York"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_038",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=JmbzdbnUKJk",
+    "input": {
+      "title": "Digital Marketing Agency Owner: A Day in My Life 2025",
+      "snippet": "# Digital Marketing Agency Owner: A Day in My Life 2025\n\nWant to know what a day in the life of a digital agency owner looks like in 2025? My name is Koby, and I'm one of the founders here at AGENCY NEXT. In this video, I'm giving you a raw, honest look at the grind, the hustle, and the rewards of running my own company. [...] You'll see exactly how I spend my time, from tackling high-priority tasks to making sure my team is set up for success. If you're an aspiring entrepreneur or just curious about the digital marketing world, hit play!\n\nMy Website - kobyluedtke.com\nMy Company Site - agencynext.com\n\n- Author: Koby\n- Channel: \n- Published: 2025-10-15\n- View count: 38 views\n\n## Related\n\n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n- \n-"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": "ny"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_039",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=iPB_cOSvONA",
+    "input": {
+      "title": "Day In The Life of a Digital Marketing Agency Owner",
+      "snippet": "Hi, Jennifer Sargeant here, local business digital marketing expert. I am the founder of Digital Sargeant, a local business digital marketing agency, and the creator of Freelance & Financial Freedom, a coaching program for freelancers who want to become agency owners. \n\n✅✅✅If you’re looking for a coach to GUIDE you through the freelancing trenches then look no further. Check out Freelance + Financial Freedom Blueprint by going here:  ✅✅✅\n\n✅ Get Freelance Clients webinar replay here: [...] See how I manage a 4 day work week as an agency owner and new mom! in this video, I give you a behind-the-scenes look at how I manage a 4 day work week as a digital marketing agency owner. Implementing a 4 day work week has been a dream of mine and I am in the process of making that. dream a reality. It's not easy and every second counts - but it can be done. In this video, you'll get a behind-the-scenes of what my day-to-day work life looks like as a digital marketing agency owner and as a new [...] #JenniferSargeant #Freelancing #SocialMediaMarketing\n\n### Chapters\n[0:00] Introduction\n[0:58] How my days begin and how my days end as an agency owner and a new mom\n[1:36] Monday end of day summary\n[3:47] Tuesday end of day summary\n[6:03] Wednesday end of day summary\n[7:58] Thursday end of day summary"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_040",
+    "split": "test",
+    "source_fixture": "digital_marketing_owners_new_york",
+    "source_query": "Digital marketing agency owners in New York USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=UeiCrBbr2_w",
+    "input": {
+      "title": "Day In The Life Of A Digital Marketing Agency Owner",
+      "snippet": "[3:45] itself because i think the last time we  recorded one i just started building a team   and i was still micromanaging everything all  the elements inside the team but now we have  \n[3:53] joe who's the director of the agency my business  partner and also tom who's a full-time media buyer   or advertiser they literally manage absolutely  all of service delivery which leaves me to do [...] [19:04] tom yeah thomas media he came to us um he actually  was somebody went through the academy and actually   reached out to joe and said hey look i've actually  realised i don't actually want to own my own  \n[19:13] agency but i want to be part of something i've got  i've got a passion for the actual marketing side   of things let me work for you guys on that i love  that and that's wicked and you don't want to hire [...] [4:02] the things that i actually really enjoy doing in  the agency uh which is specifically strategy so   when we sign up new clients i'll work on the high  level strategy stuff and tom and joe will then go  \n[4:11] and execute that so i'm actually going to do  some strategy stuff later on so itinerary we   have a meeting at 2 p.m with joe and tom so both  the agency team members i want to run through some"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "negative",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Digital Marketing",
+      "location": ""
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Agency listing directory, generic how-to video, or corporate website."
+    }
+  },
+  {
+    "example_id": "cand_049",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Facebook",
+    "url": "https://www.facebook.com/Commanders",
+    "input": {
+      "title": "Washington Commanders | Ashburn VA - Facebook",
+      "snippet": "Welcome to the official Facebook page of the Washington Commanders Sports team 21300 Coach Gibbs Dr., Ashburn, VA, United States, 20147"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Washington Commanders",
+      "interest": "Commanders",
+      "location": "Washington"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Official sports team or club organization, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_050",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/washprodigy",
+    "input": {
+      "title": "Washington Prodigy Football 🏈 (@washprodigy)",
+      "snippet": "# Washington Prodigy Football 🏈 (@washprodigy)\n\nDC-based Women's Full-Contact Football Team in the Women’s National Football Conference. 2025 Eastern Conference Champs. 🏆501(c)(3)\n\n- Account: @washprodigy (Washington Prodigy Football 🏈)\n- Verified: yes\n- Website: \n- Link: 11.7.26 - Tryout Registration\n- Link: Got Her Back Girls Camp 2026\n- Followers: 8929\n- Following: 1648\n\n## Posts\n\n### @washprodigy\n\nFor everyone who’s been putting in work when nobody was watching… now they’re watching. [...] The Washington Prodigy is hosting our FINAL TRYOUT, and we’re looking for the next generation of DAWGS ready to put in WORK! 🐺💪🏾\n\n📅 Saturday, November 7\n⏰ 12 PM\n📍 Sidwell Friends School\n3825 Wisconsin Ave NW, Washington, DC\n\n🏈 Ages 18+\n🔥 All positions welcome\n🔗 REGISTER NOW: WashingtonProdigy.com\n\nNo more excuses. No more waiting. Your opportunity is HERE!\n\nONE TEAM. ONE MISSION. ARE YOU PRODIGY BUILT? 🔴🔵⚪\n\n#WashingtonProdigy #ProdigyBuilt #WNFC #WomensTackleFootball #LastTryout [...] Women’s football is on the rise, and we’re just getting started. \n\nSee y’all on ESPN2 📺🏈🔥\n#dc #WNFC #washingtonprodigy #womeninfootball\n\n[Image: Photo by Washington Prodigy Football 🏈 on June 01, 2026.]\n\n- Author: @washprodigy\n- Type: feed\n- Hashtags: #dc #wnfc #washingtonprodigy #womeninfootball\n\n### @wnfcfootball\n\nMeet your 2026 WNFC Division Champions 🏆\n\n#HerGame #FootballLooksLikeThis #WomensFootball #WNFC\n\n[Image: Photo by WNFC on May 18, 2026.]"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Washington Prodigy Football",
+      "interest": "Football",
+      "location": "Washington"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Official sports team or club organization, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_051",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/dcgaels",
+    "input": {
+      "title": "Washington DC Gaels GAA (@dcgaels)",
+      "snippet": "[Image: Video by DC Gaels Ladies Football on October 01, 2026. May be an image of monument and text.]\n\n- Author: @gaelsladiesfootball\n- Type: clips\n- Hashtags: #washingtondc #gaa\n\n### @gaelspubleague\n\nBlue skies mean we are BACK in action today. See you down in DC!\n\n[Image: Photo by @gaelspubleague on September 30, 2026.]\n\n- Author: @gaelspubleague\n- Type: carousel_container\n\n### @gaelspubleague\n\nWhole bunch of DAWGS out there this week.\n\nFinal scores:\nBlack 4 - 1 Blue\nMaroon 5 - 2 Green [...] - Author: @gaelsladiesfootball\n- Type: clips\n- Hashtags: #gaa\n\n### @gaelspubleague\n\nHard to believe but it’s the LAST WEEK of the regular season. Gotta make it count, so we’ll see you out there this afternoon!\n\n[Image: Photo by @gaelspubleague on October 07, 2026.]\n\n- Author: @gaelspubleague\n- Type: carousel_container\n\n### @gaelsladiesfootball\n\nyour Tuesdays could look like👀👀👀👀👀👀 #washingtondc #gaa [...] ### @dcgaels\n\nFast. Physical. Fun. Hurling & Gaelic Football are here! Ready to challenge yourself with a high-energy, fast-paced sport that blends soccer, rugby, and lacrosse? No experience? No problem! Our Men’s team is recruiting new players for the season—whether you’re a seasoned athlete or just looking to stay active, now’s your chance to get involved! 🏐🏑🇮🇪🇺🇸 -\nSign up via the links in our Linktree. #DCGaels #GaelicFootball #hurling"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Washington DC Gaels",
+      "interest": "Football",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Community group, sports league organization, or fan media page."
+    }
+  },
+  {
+    "example_id": "cand_052",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/scandalultimate",
+    "input": {
+      "title": "WASHINGTON DC SCANDAL (@scandalultimate)",
+      "snippet": "The women’s division final is up next as @boston_brutesquad looks for back-to-back titles while @scandalultimate looks to become the first women’s team to complete the Triple Crown! It’s all on @ultiworld in 15 minutes 🔗\n\n#USAUNats | #USAUltimate\n\n[Image: Photo by USA Ultimate on October 25, 2026. May be an image of soccer, football, banner, poster, magazine and text.] [...] What a grab!\n.\n.\n.\n.\n.\n#frisbee #ultimatefrisbee #layout #sports #fortnite\n\n[Image: Video by Garrett Bush on October 30, 2026. May be an image of football, soccer, frisbee and text.]\n\n- Author: @garrettbushproductions\n- Type: clips\n- Hashtags: #frisbee #ultimatefrisbee #layout #sports #fortnite\n\n### @usaultimate\n\nYour 2026 Team Spirit Award Winner in the women's division...Washington Scandal! 🏆 [...] - Author: @kevinleclairephoto\n- Type: carousel_container\n- Mentions: @ultiphotos, @scandalultimate, @briancanniff, @usaultimate\n\n### @be.ultimate\n\nAll gas. No brakes. 🏃‍♀️ #betterthanever⁠\n...⁠\n⁠\n📹: @jray810\n\n[Image: Video by BE Ultimate Apparel on November 02, 2026. May be an image of football, stadium and text.]\n\n- Author: @be.ultimate\n- Type: clips\n- Mentions: @jray810\n- Hashtags: #betterthanever\n\n### @garrettbushproductions"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "WASHINGTON DC SCANDAL",
+      "interest": "football",
+      "location": "WASHINGTON DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Community group, sports league organization, or fan media page."
+    }
+  },
+  {
+    "example_id": "cand_053",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Web",
+    "url": "https://x.com/gcfootball/status/1989667774009049234",
+    "input": {
+      "title": "GC Football on X: \"GAMEDAY | WCAC SEMIS 🆚 Gonzaga 📅 Saturday, November 15, 2025 ⏰ 2:00pm 🏟 Buchanan Field 📍Washington, …\"",
+      "snippet": "# GC Football on X: \"GAMEDAY | WCAC SEMIS 🆚 Gonzaga 📅 Saturday, November 15, 2025 ⏰ 2:00pm 🏟 Buchanan Field 📍Washington, …\"\n\nGAMEDAY | WCAC SEMIS\n\n🆚 Gonzaga\n📅 Saturday, November 15, 2025\n⏰ 2:00pm\n🏟 Buchanan Field\n📍Washington, DC\n🎟️ \n📺 \n\n#WeAreGC \n#DontLookBack \n\n@WCACSports\n\n[Image 1] [...] [Image 1]\n\n- Author: @gcfootball (GC Football)\n- Posted: 2025-11-15T12:12:18+00:00\n- Views: 1925\n- Likes: 12\n- Reposts: 8\n- Replies: 3\n- Quotes: 0\n- Bookmarks: 0\n- Hashtags: #WeAreGC #DontLookBack\n- Mentions: @WCACSports (Washington Catholic Athletic Conference)\n- Links: , \n\n## People\n\n- @gcfootball (GC Football) — Home of the 09, 10, 11, 12, 19 & 23 WCAC Champs #DBHIGH #LBHIGH #WeAreGC"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Football",
+      "location": "Washington"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Media article, Wikipedia entry, team stats page, or non-profile web link."
+    }
+  },
+  {
+    "example_id": "cand_054",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Web",
+    "url": "https://x.com/CelticFC/status/1770097470959210956",
+    "input": {
+      "title": "Celtic Football Club on X: \"   The line up for our 2024 USA Tour is ...",
+      "snippet": "The line up for our 2024 USA Tour is complete! DC United @ Washington, DC Man City @ Chapel Hill, NC Chelsea @ South Bend,"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Football",
+      "location": "Washington"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Official sports team or club organization, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_055",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Web",
+    "url": "https://x.com/CelticFC/status/1771914879252791535",
+    "input": {
+      "title": "Celtic Football Club on X: \"   We're coming to the USA this summer ...",
+      "snippet": "We're coming to the USA this summer! DC United @ Washington, DC Man City @ Chapel Hill, NC Chelsea @ South Bend, IN Visit the USA Tour hub below"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Football",
+      "location": "Washington"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Official sports team or club organization, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_056",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Web",
+    "url": "https://x.com/ANI/status/2079019098718306730",
+    "input": {
+      "title": "ANI on X: \"#WATCH | Washington DC, USA: A supporter of the ...",
+      "snippet": "#WATCH | Washington DC, USA: Supporters of the Spanish National football team celebrate as Spain lifts the FIFA World Cup 2026."
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "football",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Media article, Wikipedia entry, team stats page, or non-profile web link."
+    }
+  },
+  {
+    "example_id": "cand_057",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=94D4U1rwdO4",
+    "input": {
+      "title": "Washington | Washington DC football team rebrands as the Commanders",
+      "snippet": "# Washington | Washington DC football team rebrands as the Commanders\n\nWashington, DC's American football team has a new name, the Commanders. It comes 18 months after dropping its longtime nickname, the Redskins, which had been criticised for being derogatory toward Native Americans.\n\nKate Fisher reports from the capital.\n\nFor more news, visit sabcnews.com and also #SABCNews #Coronavirus #COVID19News #Covid-19Vaccination #Vaccine on Social Media. [...] after an extensive search for a new name washington's national football league team has settled on the commanders in a tribute to the city's military ties its previous moniker has drawn criticism and protests since the early 1970s but the much anticipated announcement closes the team's 87-year chapter as the redskins the team hopes that commanders resonates with fans and reflects the makeup of the washington area which is of course home to the pentagon and bases for every branch of the military [...] of the military owner daniel snyder had vowed that he would never drop the original name but that changed in 2020 with the murder of george floyd which sparked protests worldwide and led to a national reckoning over racial equality in the us the club's top sponsors including fedex pepsi and nike vowed to pull out of their agreements and the team currently plays at a site in maryland and elected officials in washington dc warned that they would never be able to return to the district and build a"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "football",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Official sports team or club organization, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_058",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=KyMbOjs7nBc",
+    "input": {
+      "title": "LIVE: USA vs Paraguay World Cup 2026 | Fans Gather at Washington DC National Mall 🇺🇸 | AD1Z",
+      "snippet": "Insider by DRM\n38500 subscribers\n30 likes\n5293 views\n13 Jun 2026\nSoccer fans gather in huge numbers at the National Mall in Washington, D.C. as excitement builds for the United States Men's National Team’s opening match in the FIFA World Cup 2026 against Paraguay.\n\n📍 Location: Washington, D.C., United States\n⚽ Match: USA vs Paraguay\n🏆 Event: FIFA World Cup 2026 – Group D\n\nSupporters come together in a massive fan zone atmosphere, celebrating and watching the big match as the tournament kicks off for the USA.\n\nStay tuned for more World Cup 2026 fan reactions, stadium atmospheres, and global football coverage.\n\n👍 Like, Share & Subscribe for more World Cup content!\n\n#USA #WorldCup2026 #USMNT #Paraguay #FIFAWorldCup #SoccerFans #WashingtonDC #NationalMall #Football #WorldCup\n\nUSA vs Paraguay, USMNT, World Cup 2026, FIFA World Cup, Washington DC, National Mall, soccer fans, football fans, USA soccer, Paraguay football, fan zone, match atmosphere, World Cup opening, Group D, FIFA 2026, sports news, live fans, stadium atmosphere, football highlights\n\n"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "football",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Media article, Wikipedia entry, team stats page, or non-profile web link."
+    }
+  },
+  {
+    "example_id": "cand_059",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=B3b0Q3M4dhc",
+    "input": {
+      "title": "What Is A Football Match Like In Washington DC?",
+      "snippet": "______________\nWashington D.C. is best known around the world as the home of US politics, often the centrepiece of global conversations, but the capital of America is also a thriving sports destination too.\n\nD.C. United, the city's MLS team - and one of the founding members of the league back in 1996 - is one of the city's best sporting attractions. [...] The team, who have won the MLS Cup four times play their home games at Audi Field, a 20,000 capacity stadium in the south of the city. Having relocated from the RFK Stadium, this area of Washington is now seeing speedy gentrification with new apartment buildings, restaurants and bars all being built around the stadium. It takes around 20 minutes on the bus or metro from Downtown to reach Audi Field. [...] is a city that is synonymous with us politics a city that has many divided opinions but this city is also a thriving sporting city too and the city's mls team dc united is as passionate as they come audi field is the team's home ground having relocated from the rfk stadium it has a capacity of 20 000 and is reachable from downtown dc by boss and metro and if you are visiting the city head to the game a little early and visit the screaming eagle supporters group for the perfect pre-match"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "D.C. United",
+      "interest": "Football",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Official sports team or club organization, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_060",
+    "split": "test",
+    "source_fixture": "football_lovers_washington_dc",
+    "source_query": "Football lovers in Washington DC in USA",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=pNcU80gGmsA",
+    "input": {
+      "title": "USA Fans EXPLODE After First Goal vs Paraguay | Incredible World Cup Scenes in Washington DC | AD1Z",
+      "snippet": "# USA Fans EXPLODE After First Goal vs Paraguay | Incredible World Cup Scenes in Washington DC | AD1Z\n\nThousands of soccer fans gathered on Washington DC's National Mall to watch the United States Men's National Team begin their FIFA World Cup 2026 campaign against Paraguay.\n\nThe crowd erupted into massive celebrations when Team USA scored the opening goal, creating unforgettable scenes of excitement, chanting, flag-waving, and pure football passion in the heart of the nation's capital. [...] Watch the incredible fan reactions, emotional moments, and electric atmosphere as supporters came together to back the USMNT during one of the biggest sporting events in the world.\n\n⚽ USA vs Paraguay\n🏆 FIFA World Cup 2026\n🇺🇸 USMNT Opening Match\n🎉 Insane First Goal Reaction\n📍 National Mall, Washington DC [...] Subscribe for more World Cup fan reactions, football highlights, soccer news, and tournament coverage.\n#USMNT #USA #WorldCup2026 #USAvsParaguay #FIFAWorldCup #WashingtonDC #NationalMall #FanReaction #GoalReaction #SoccerFans #FootballFans #USAFootball #WorldCupFans #USSoccer #Paraguay"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "football",
+      "location": "Washington DC"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Media article, Wikipedia entry, team stats page, or non-profile web link."
+    }
+  },
+  {
+    "example_id": "cand_068",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/rarefounders",
+    "input": {
+      "title": "Rare Founders (@rarefounders)",
+      "snippet": "### @rarefounders\n\nIt's back 🎄 The Legendary Startup Christmas Party.\nTue 8 Dec, 6pm to midnight, The Ministry, Borough.\nFounder DJs, Secret Santa and a room full of London's founders. Last year sold out, so register early.\nLink in bio or scan the QR.\n\n#startupparty #londonstartups #founders #christmasparty #rarefounders\n\n[Image: Photo by Rare Founders on November 07, 2026. May be an image of text.] [...] With foundermatcha. Entry is by approval, so register early. Scan the QR on the last slide, tap the link in bio, or comment MATCH and we'll DM you the link.\n\n#startups #founders #engineers #cofounder #London\n\n[Image: Photo by Rare Founders on November 11, 2026. May be an image of text.]\n\n- Author: @rarefounders\n- Type: carousel_container\n- Hashtags: #startups #founders #engineers #cofounder #london\n\n### @rarefounders [...] - Author: @rarefounders\n- Type: carousel_container\n- Hashtags: #startups #founders #london #christmasparty\n\n### @rarefounders\n\nGreat partnerships rarely start with a cold message. They start with a conversation. 👀\n\nTue 24 Nov, 6pm to 10pm, The Ministry, Borough.\nFounders with a business: 60 seconds on what you're building and who you're looking for.\nEngineers, from students to tech leads: 60 seconds on what you do and what you want to build.\nGo over time? Meet the water guns. 💦"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Rare Founders",
+      "interest": "Startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Venture fund, event brand, or publication page, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_069",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@thenashvilleblondie",
+    "input": {
+      "title": "Tally Bevis • The Nashville Blondie (@thenashvilleblondie) • Threads, Say more",
+      "snippet": "Home New thread Search Messages Activity Profile Insights Log in More thenashvilleblondie Tally Bevis • The Nashville Blondie thenashvilleblondie ☆ Nashville & London startup founder ☆ MSc Entrepreneurship, UCL ☆ owner of Electrofy marketing agency instagram.com/electrofyagency.com +1 922 followers Follow Mention Threads Replies Media Reposts thenashvilleblondie 09/17/26 Heritage Ball supporting williamsonheritage ✨ With @charlottefleming24 💌 1 thenashvilleblondie 08/12/26 In a season of just [...] In a season of just saying yes Yes to good people Yes to new opportunities Yes to trying new things Yes to being a novice so I can become an expert Yes to the startup I’ve been dreaming up for 18 months Yes to the agency clients I’m excited about Yes to liiiiife 🤍 In the most annoying founder bro voice you can conjure: WaTcH tHiS sPaCe 😂😮💨 1 thenashvilleblondie 06/03/26 London, my muse, my moon, my love! 🌙 This chapter has been the best yet. UCL School of Management MSc Entrepreneurship with"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "ambiguous",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Resource article, jobs board, meetup directory, or company website."
+    }
+  },
+  {
+    "example_id": "cand_070",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@mikebutcher",
+    "input": {
+      "title": "Mike Butcher (@mikebutcher) • Threads, Say more",
+      "snippet": "and meet founders! mikebutcher 10/29/26 1 mikebutcher 10/28/26 London-based startup Nous, led by Greg Marsh has raised $17m to expand internationally, as nearly 250,000 UK households now use its AI agent to manage bills, switch providers and automate household admin. Listen or watch more on the @pathfounders podcast pathfounders.com/podca… Log in to see more from mikebutcher. Log in Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username [...] Home New thread Search Messages Activity Profile Insights Log in More mikebutcher Mike Butcher mikebutcher Founder & Editor, @pathfounders | Formerly @techcrunch | REDACTED | Signal: mikebutcher.04 | Pathfounders.com pathfounders.com 3,395 followers Follow Mention Threads Replies Media Reposts mikebutcher 4d Some big news breaking tomorrow around startups+europe. Watch this space. 43 7 1 mikebutcher 10/31/26 Good to to Vienna to hang with Sigma Squared Society and meet founders!"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "ambiguous"
+    },
+    "evidence": {
+      "name": "Mike Butcher",
+      "interest": "startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Tech journalist / editor-at-large; actively writes about London startups."
+    }
+  },
+  {
+    "example_id": "cand_071",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@actmembers?hl=af",
+    "input": {
+      "title": "Association for Competitive Technology (@actmembers) • Threads, Sê meer",
+      "snippet": "the DevelopedUKTour took us from Belfast to Glasgow, Manchester, London, Milton Keynes, Leeds, Durham, and Newcastle 🚀 📍 along the way, we met with members, founders, investors, developers, policymakers, and ecosystem leaders to talk about what it takes to build and grow a tech company in the UK today. tysm to every partner, speaker, member, founder, and community leader who welcomed us along the way! Meld aan om meer van actmemberste sien. Meld aan Meld aan by of teken in op Threads Sien [...] Jr., and Dylan McKee join ACT founder Mike Sax at the WSIS forum for a panel on competition policy and fair opportunities for small developers. proud to spotlight these three incredible businesses for MemberMonday ❇️ register or tune in virtually: loom.ly/oGihd… actmembers Tech Policy 2026/06/29 ⚖️ the 28th regime could be the biggest win for european smes in years. act member company rize is exactly the kind of company fair competition policy is built for: small team, sharp product, no room [...] Tuisblad Nuwe stroom Soek Boodskappe Aktiwiteit Profiel Insigte Meld aan Meer actmembers Association for Competitive Technology actmembers Amplifying the voice and needs of small-medium size tech companies in the U.S., EU, and UK 📱 🗣 lnk.bio/Ctko 75 volgers Volg Noem Strome Antwoorde Media Herplasings actmembers Member Monday 2026/07/06 🌍 platform rules are being rewritten right now, and small tech needs to be in the room. tomorrow, on july 7, ACT members Jason Culloty, Musa Hakim Jr., and Dylan"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "founder",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Venture fund, event brand, or publication page, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_072",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@beingmeshweta?hl=bn",
+    "input": {
+      "title": "Dr. Shweta Singh (@beingmeshweta) • Threads, Say more",
+      "snippet": "Home New thread Search Messages Activity Profile Insights Log in More beingmeshweta Dr. Shweta Singh beingmeshweta Founder @ennoble\\_ip @sherealtherealshe Recipient of Times 40Under40 & Exceptional Women of Excellence by WEF II Economic Time women leader award 2022 ipjagruti.com 7,151 followers Follow Mention Threads Replies Media Reposts beingmeshweta 07/26/26 POV: Every few seconds… a new London story and a new memory. 🇬🇧✨ One city. Endless vibes. 📍London, you made every frame worth it. ( [...] ✨🇬🇧 POV: You’re living your Bollywood moment in London. 🇬🇧🎬❤️ (London travel reel, Bollywood vibes, London aesthetic, UK tourism) #LondonDiaries #LondonVibes #TravelReel #SRKVoice #IndianInLondon beingmeshweta 04/27/26 Koi baat nahi… hum ‘gande’ bache hi theek hain 😌 Kyuki yehi gande bache bade hoke entrepreneur bante hain 💼🔥 ( entrepreneur mindset, startup motivation, risk taking mindset, business journey, hustle life, founder story, success mindset, indian startup, growth mindset, leadership, [...] leadership, dream big, breaking rules, self made) #EntrepreneurMindset #StartupLife #FounderLife #reels #trending Log in to see more from beingmeshweta. Log in Log in or sign up for Threads See what people are talking about and join the conversation. Log in with username instead"
+    },
+    "ground_truth": {
+      "is_individual_person": "positive",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "positive"
+    },
+    "evidence": {
+      "name": "Dr. Shweta Singh",
+      "interest": "startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Individual AI founder and academic in London."
+    }
+  },
+  {
+    "example_id": "cand_073",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Threads",
+    "url": "https://www.threads.net/@startupsmagazine",
+    "input": {
+      "title": "Startups Magazine (@startupsmagazine) • Threads, Say more",
+      "snippet": "growth, as a judge for the #HustleAwards 2026🎉 She designs and delivers high-impact startup and scaleup programmes, mentoring and innovation initiatives, supporting founders to build resilient, investable businesses. 🏆 Find out more here: lnkd.in/e9dME… startupsmagazine 03/13/26 🚨 JUDGE ANNOUNCEMENT 🚨 We're excited to have Paulette Watson MBE, Founder and CEO of Academy Achievers and the global #BeMeDigitalInclusion initiative, as a judge for the #HustleAwards 2026🎉 She advocates for greater [...] a mission to stop startups failing because of poor communication and is frustrated to see so many founders struggle to raise the capital they need because they’re unable to convince investors their business is the one to back. 🏆 Find out more here: thehustleawards.co.uk/judgi… startupsmagazine 03/13/26 🚨 JUDGE ANNOUNCEMENT 🚨 We're excited to have Samantha Harland, Innovation & Entrepreneurship Consultant specialising in early-stage businesses, startup ecosystems and founder-led growth, as a [...] Home New thread Search Messages Activity Profile Insights Log in More startupsmagazine Startups Magazine startupsmagazine A magazine helping tech startups connect the dots on their entrepreneurial journeys ⚡️ feedlink.io/startupsmagazine 2,211 followers Follow Mention Threads Replies Media Reposts startupsmagazine 03/13/26 🚨 SPONSOR ANNOUNCED 🚨 We're happy to announce London Venture Capital Network as our Game-Changing Investor category sponsor for the Hustle Awards 2026🤩 LVCN brings together"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Startups Magazine",
+      "interest": "Startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Venture fund, event brand, or publication page, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_074",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Web",
+    "url": "https://x.com/NickyScanz/status/2121676611259076617",
+    "input": {
+      "title": "NickyScanz on X: \"Oh oh oh before I forget: @SolanaEvents is hosting Solana breakpoint in London as we speak! Thousand…\"",
+      "snippet": "# NickyScanz on X: \"Oh oh oh before I forget: @SolanaEvents is hosting Solana breakpoint in London as we speak! Thousand…\"\n\nOh oh oh before I forget:\n\n@SolanaEvents is hosting Solana breakpoint in London as we speak! \n\nThousands of engineers and founders in London, together.\n\nIf you are a startup founder building in AI or blockchain reach out to our UK-based startup accelerator @SuperteamUK via dm. [...] - Author: @NickyScanz (NickyScanz)\n- Posted: 2026-11-14T18:48:17+00:00\n- In reply to: post by @NickyScanz\n- Views: 11431\n- Likes: 20\n- Reposts: 0\n- Replies: 0\n- Quotes: 1\n- Bookmarks: 2\n- Mentions: @SolanaEvents (Solana Events), @SuperteamUK (Superteam UK)\n\n## People\n\n- @NickyScanz (NickyScanz) — Lead l @SuperteamUSA"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Resource article, jobs board, meetup directory, or company website."
+    }
+  },
+  {
+    "example_id": "cand_075",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=8kCRdndrw4o",
+    "input": {
+      "title": "What being a female startup founder in UK is like | London vs SF, Fundraising, Imposter Syndrome",
+      "snippet": "I spent an hour in a London cafe with two female founders who are both in their early 20s and both building things I couldn't have built. Myah is building rebeauty.app, a resale marketplace for unopened beauty products. Victoria is building Ventureship.co.uk, which replaces CV screening with real project work. We ended up talking less about their products and more about the part nobody films: raising in the UK when investors want conviction and proof at the same time, getting told no, finding [...] Here's what we cover:\nHow UK and US investors evaluate the exact same pitch differently\nWhy the UK female founder ecosystem is growing faster than its funding\nHow both of them found their first customers by physically going outside and talking to strangers\nThe headache problem vs migraine problem test for whether your idea is worth building\nInvestor horror stories, including one that made me put my coffee down [...] [10:43] Are you two both hiring right now? Since we're talking about like the job market not being so well and we're we're all founders, so we solve our own employment\n[10:51] problems. in terms of just growing the company, growing the business itself.\n[10:55] How you thinking about expanding your own team, especially growing the company here in the UK in London?"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Resource article, jobs board, meetup directory, or company website."
+    }
+  },
+  {
+    "example_id": "cand_076",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=UNjo8y_pmCA",
+    "input": {
+      "title": "Day in the Life of a Startup Founder in London",
+      "snippet": "He started when he was 14 years old. Let's get some noise for [cheering] [applause] you. Always highlighting the rising ballers in the game. He started at late Norian. Obviously, we're going to go into your your journey, but yeah, he's a real figurehead in this space. And then we've got Connor Malcolm, the founder and CEO of Dream Fruit. If you've not seen his stuff, then you need to see stuff. He's one of the people that makes fruit look the most desirable that I've I've ever seen. You make [...] And I I was trying to find the most exotic fruits from from the hardest to reach destinations. Was really a passion. So, it wasn't really intended to be a business, but um people started asking for the stuff that me and my brother Tyler uh were eating and we said, \"You know what? Let's make some money out of this.\" At what point for all of you did it feel real like for you dream when was it like, \"Okay, wow, we're actually establishing this.\" Um I'd say there's two significant points. The first [...] I was at work like pretty much I was working like 16 hours a day. Um it was then when I quit my job and I was like you know what like I'm going to go like fulltime doing content but I didn't have the money to do that at all. Um I had no money to do that but I was just like this is what I know I want to do. I was like, \"Okay, this is getting real, but I'm going to actually have to put my 120% into this.\" And then second time probably be like my first actual gig, like brand new gig, which was"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Resource article, jobs board, meetup directory, or company website."
+    }
+  },
+  {
+    "example_id": "cand_077",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=t6cFsZdGeQc",
+    "input": {
+      "title": "The London Startup Conference 2022",
+      "snippet": "and startup founder before becoming a VC um I I run a Innovation unit with innovate UK the British government's uh Innovation agency before joining uh Venture Capital I've worked at various funds um around the UK previously at octopus Ventures we actually led the rounded to Christina's company small world and then most recently had IQ Capital as I mentioned um really great to meet you all and looking forward to it is Yep this seems to work just fine I'm Travis toyna I'm the founder and CEO of [...] online and it's all over Europe you can submit your application there will be a review process but what a founder or the startup company gets out of this program is amazing and I'm talking as somebody who spent 15 years as a startup guy and spent 15 years 16 17 years in the corporate world and I have to admit I'm the first to raise my hand as a entrepreneurial founder dealing with a giant big company and getting in there and finding the past through an organization with business units and what [...] all Sam I have one I hope you can hear me yes my name is Sam I'm a principal of open ocean open ocean was founded by the creators of MySQL and Maria DB so there's a lot of Founders in here I'm sure some of you are technical it's probably the first database that anybody uses MySQL so we have a very prestigious background in open source and data infrastructure and things like that I should say that we are based in Finland actually so I'm in the UK obviously we have a partner over here but our"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Resource article, jobs board, meetup directory, or company website."
+    }
+  },
+  {
+    "example_id": "cand_078",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Web",
+    "url": "https://m.youtube.com/watch?v=bzIUyfVmwbg&pp=0gcJCTkLAYcqIYzv",
+    "input": {
+      "title": "Simone Martinelli Startup Meetup with Rare Founders London and Startup Pitch",
+      "snippet": "my friends, that I created Founder UK. Founder UK is a platform that um essentially gives you all of the processes, all of the ideas, all of the analyzation, and what kind of help that you need for your business plans to lift up your startup and your business. It's something that I wish I have myself like, you know, for um a last couple of years ago. I probably would have been a millionaire by now if I had it to be honest. Um, but my mission is simple. I want future entrepreneurs to be [...] # Simone Martinelli Startup Meetup with Rare Founders London and Startup Pitch\n\nRare Founders is a local London Startup Community very similar to Hi!Founders.\n\nOn November 12th, our builder Simone Martinelli co-organized an event with them and briefly introduced the Italian Startup Ecosystem.\n\nTune in to hear London early stage founders' pitches!\n\n- Author: Hi!Founders\n- Channel: \n- Published: 2025-11-13\n- View count: 46 views\n\n## Transcript [...] Um so um well uh hi everyone. It was very nice to meet you. If you see a lot of Italians tonight is my fault but we are start founders and then teams nothing else. And u I build a community in Italy with similar numbers than rare founders. Been running for three years and we I was doing an event tonight because I'm in London for a few things. I work for a business school that has a campus here in London as well. And uh I saw the event of rare founders. I get in touch with prior in Brazil and I"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "positive",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "Rare Founders",
+      "interest": "Startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Venture fund, event brand, or publication page, not an individual."
+    }
+  },
+  {
+    "example_id": "cand_079",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Web",
+    "url": "https://www.youtube.com/watch?v=AD7K7AYoXBY",
+    "input": {
+      "title": "UK Startup Visa 2026: How to Get Innovator Founder Visa & Move to the UK",
+      "snippet": "# UK Startup Visa 2026: How to Get Innovator Founder Visa & Move to the UK\n\nIn this video, we break down everything you need to know about the UK Innovator Founder Visa (Startup Visa) — one of the best immigration pathways for startup founders, entrepreneurs, and tech professionals who want to build and scale a business in the United Kingdom.\n\nYou can sign up for a consultation by WhatsApp number or write to us in Telegram: \n\n🔻 Our website — \n🔻 Instagram —   / relocode.agency [...] - Chapters: Why the UK is one of the best countries to grow a startup, What is the Innovator Founder (Startup) Visa, How this visa leads to permanent residence and citizenship, Startup ecosystem and investment opportunities in the UK, Tech focus: AI, fintech, machine learning, Why the UK supports global founders, Types of startup visas: Innovator Founder & Scale-up, Endorsing bodies: who approves applications, Core requirements overview, Innovation requirement: what qualifies, Scalability [...] this is the best program for people to use if you want to uh grow your startup in the probably most technologically advanced country. uh what you have to do to get this visa and how you can use this visa to first get the settlement in the United Kingdom and then become a national of the United Kingdom. Let's begin. So if you seeking for opportunities to grow your startup, uh United Kingdom has always seen and has always been seen as a country with a lot of opportunities for founders to have the"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Startup",
+      "location": "UK"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Resource article, jobs board, meetup directory, or company website."
+    }
+  },
+  {
+    "example_id": "cand_080",
+    "split": "test",
+    "source_fixture": "startup_founders_london",
+    "source_query": "Startup founders in London UK",
+    "platform": "Web",
+    "url": "https://uk.linkedin.com/jobs/startup-founder-jobs-london",
+    "input": {
+      "title": "Startup Founder Jobs in London (4,000+ Open Roles) | LinkedIn",
+      "snippet": "HartleyCo\n- Commercial Co-Founder - Healthcare AI (London) \n  \n  ### Commercial Co-Founder - Healthcare AI (London)\n  \n  Nayara.ai\n- Co-founder in Residence, Next generation insecticides and pest control \n  \n  ### Co-founder in Residence, Next generation insecticides and pest control\n  \n  Deep Science Ventures\n- Special Projects \n  \n  ### Special Projects\n  \n  Stealth Startup\n- Technical Co-Founder & CTO \n  \n  ### Technical Co-Founder & CTO\n  \n  FabricNano\n- Founder in Residence [...] Specsavers\n- Founding Product Lead at VC backed Enterprise AI startup (£60-80k) \n  \n  ### Founding Product Lead at VC backed Enterprise AI startup (£60-80k)\n  \n  Jumpstart\n- Founding GTM \n  \n  ### Founding GTM\n  \n  cinnamon.io\n- Founding Engineer - Ambient Care Startup \n  \n  ### Founding Engineer - Ambient Care Startup\n  \n  Founders Factory\n- Founding GTM \n  \n  ### Founding GTM\n  \n  Searchability®\n- General Manager (UK) \n  \n  ### General Manager (UK)\n  \n  Fresha\n- Founding Engineer [...] TYTEN\n- Founding AI Engineer | Well-Funded FinTech AI Start-Up | London | Up to £170k + Equity \n  \n  ### Founding AI Engineer | Well-Funded FinTech AI Start-Up | London | Up to £170k + Equity\n  \n  Few&Far\n- Founding Engineer (YC) \n  \n  ### Founding Engineer (YC)\n  \n  Arrows\n- Founding BDR/AE Lead at well-funded Hospitality AI startup (£50-75k) \n  \n  ### Founding BDR/AE Lead at well-funded Hospitality AI startup (£50-75k)\n  \n  Jumpstart\n- Audiology Partner \n  \n  ### Audiology Partner"
+    },
+    "ground_truth": {
+      "is_individual_person": "negative",
+      "name_supported": "negative",
+      "interest_supported": "positive",
+      "location_supported": "positive",
+      "overall_acceptability": "negative"
+    },
+    "evidence": {
+      "name": "",
+      "interest": "Startup",
+      "location": "London"
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Resource article, jobs board, meetup directory, or company website."
+    }
+  }
+]

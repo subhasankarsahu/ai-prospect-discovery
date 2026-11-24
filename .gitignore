@@ -51,6 +51,9 @@ coverage.xml
 *.cover
 *.py,cover
 
+# Evaluation reports (generated JSON artifacts)
+evaluation/reports/eval_report_*.json
+
 # IDE and Editor files
 .vscode/
 .idea/

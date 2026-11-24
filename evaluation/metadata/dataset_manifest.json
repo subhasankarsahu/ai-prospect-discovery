@@ -1,0 +1,65 @@
+{
+  "dataset_name": "ai-prospect-discovery-eval-v1",
+  "version": "1.0.0",
+  "created_at": "2026-11-24",
+  "description": "Offline benchmark dataset for evaluating Query Intent Extraction and Prospect Candidate Classification.",
+  "api_expenditure_usd": 0.0,
+  "source_fixtures": [
+    "cricket_lovers_ahmedabad.json",
+    "digital_marketing_owners_new_york.json",
+    "football_lovers_washington_dc.json",
+    "startup_founders_london.json"
+  ],
+  "excluded_fixtures": [
+    "restaurant_owners_dubai.json (empty fixture - 0 search calls, 0 candidates)"
+  ],
+  "raw_candidates_inspected": 140,
+  "raw_candidates_selected": 80,
+  "intent_queries_prepared": 30,
+  "splits": {
+    "intents": {
+      "development_count": 10,
+      "test_count": 20,
+      "total": 30
+    },
+    "candidates": {
+      "development_count": 30,
+      "test_count": 50,
+      "total": 80
+    }
+  },
+  "candidate_distribution_by_fixture": {
+    "cricket_lovers_ahmedabad": 20,
+    "digital_marketing_owners_new_york": 20,
+    "football_lovers_washington_dc": 20,
+    "startup_founders_london": 20
+  },
+  "candidate_label_summary": {
+    "overall_positive": 14,
+    "overall_negative": 65,
+    "overall_ambiguous": 1,
+    "annotation_status": {
+      "needs_human_review": 80,
+      "reviewed": 0,
+      "rejected": 0
+    }
+  },
+  "intent_label_summary": {
+    "prospect_queries": 24,
+    "non_prospect_queries": 6,
+    "annotation_status": {
+      "needs_human_review": 30,
+      "reviewed": 0,
+      "rejected": 0
+    }
+  },
+  "privacy_verification": {
+    "status": "passed",
+    "checks": [
+      "No raw unredacted personal email addresses",
+      "No raw unredacted telephone or WhatsApp mobile numbers",
+      "No API keys, auth tokens, or secrets",
+      "Preserved original public profile identifiers where appropriate"
+    ]
+  }
+}

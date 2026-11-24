@@ -1,0 +1,468 @@
+[
+  {
+    "example_id": "intent_001",
+    "split": "development",
+    "input_query": "Startup founders in London UK",
+    "ground_truth": {
+      "is_prospect_query": true,
+      "interest": "startup",
+      "audience": "founders",
+      "location": {
+        "city": "London",
+        "state": null,
+        "country": "UK"
+      },
+      "target_type": "founder"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "startup",
+        "startups",
+        "tech startup",
+        "entrepreneurship"
+      ],
+      "audience": [
+        "founders",
+        "founder",
+        "startup founders",
+        "entrepreneurs"
+      ],
+      "location": {
+        "city": [
+          "London"
+        ],
+        "country": [
+          "UK",
+          "United Kingdom",
+          "Great Britain",
+          "England"
+        ]
+      },
+      "target_type": [
+        "founder",
+        "individual",
+        "entrepreneur"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Canonical prospect query from startup_founders_london fixture."
+    }
+  },
+  {
+    "example_id": "intent_002",
+    "split": "development",
+    "input_query": "Digital marketing agency owners in New York USA",
+    "ground_truth": {
+      "is_prospect_query": true,
+      "interest": "digital marketing",
+      "audience": "agency owners",
+      "location": {
+        "city": "New York",
+        "state": "NY",
+        "country": "USA"
+      },
+      "target_type": "agency owner"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "digital marketing",
+        "online marketing",
+        "digital advertising"
+      ],
+      "audience": [
+        "agency owners",
+        "business owners",
+        "marketing agency owners"
+      ],
+      "location": {
+        "city": [
+          "New York",
+          "New York City",
+          "NYC"
+        ],
+        "state": [
+          "NY",
+          "New York",
+          "New York State"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "agency owner",
+        "owner",
+        "founder",
+        "individual"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Canonical query from digital_marketing_owners_new_york. Note Gemini previously hallucinated verbose reasoning into state."
+    }
+  },
+  {
+    "example_id": "intent_003",
+    "split": "development",
+    "input_query": "Football lovers in Washington DC in USA",
+    "ground_truth": {
+      "is_prospect_query": true,
+      "interest": "Football",
+      "audience": null,
+      "location": {
+        "city": "Washington DC",
+        "state": null,
+        "country": "USA"
+      },
+      "target_type": "individual"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "Football",
+        "American football",
+        "soccer"
+      ],
+      "audience": [
+        "football lovers",
+        "fans",
+        null
+      ],
+      "location": {
+        "city": [
+          "Washington DC",
+          "Washington D.C.",
+          "Washington"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "individual",
+        "fan",
+        "person"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Canonical query from football_lovers_washington_dc fixture."
+    }
+  },
+  {
+    "example_id": "intent_004",
+    "split": "development",
+    "input_query": "Cricket lovers in Ahmedabad India",
+    "ground_truth": {
+      "is_prospect_query": true,
+      "interest": "Cricket",
+      "audience": null,
+      "location": {
+        "city": "Ahmedabad",
+        "state": null,
+        "country": "India"
+      },
+      "target_type": "individual"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "Cricket",
+        "cricket sport"
+      ],
+      "audience": [
+        "cricket lovers",
+        "fans",
+        null
+      ],
+      "location": {
+        "city": [
+          "Ahmedabad"
+        ],
+        "country": [
+          "India"
+        ]
+      },
+      "target_type": [
+        "individual",
+        "fan",
+        "person"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Canonical query from cricket_lovers_ahmedabad fixture."
+    }
+  },
+  {
+    "example_id": "intent_005",
+    "split": "development",
+    "input_query": "Python backend engineers in Berlin Germany",
+    "ground_truth": {
+      "is_prospect_query": true,
+      "interest": "Python backend engineering",
+      "audience": "software engineers",
+      "location": {
+        "city": "Berlin",
+        "state": null,
+        "country": "Germany"
+      },
+      "target_type": "engineer"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "Python backend engineering",
+        "Python",
+        "backend engineering",
+        "Python development"
+      ],
+      "audience": [
+        "software engineers",
+        "backend engineers",
+        "developers"
+      ],
+      "location": {
+        "city": [
+          "Berlin"
+        ],
+        "country": [
+          "Germany",
+          "DE"
+        ]
+      },
+      "target_type": [
+        "engineer",
+        "developer",
+        "individual"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Standard tech engineering recruitment query."
+    }
+  },
+  {
+    "example_id": "intent_006",
+    "split": "development",
+    "input_query": "Graphic designers specializing in brand identity",
+    "ground_truth": {
+      "is_prospect_query": true,
+      "interest": "brand identity design",
+      "audience": "graphic designers",
+      "location": null,
+      "target_type": "designer"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "brand identity design",
+        "graphic design",
+        "branding",
+        "identity design"
+      ],
+      "audience": [
+        "graphic designers",
+        "designers",
+        "freelancers"
+      ],
+      "location": [
+        null
+      ],
+      "target_type": [
+        "designer",
+        "individual",
+        "creator"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Location-free query. Model must return null location rather than hallucinating a city."
+    }
+  },
+  {
+    "example_id": "intent_007",
+    "split": "development",
+    "input_query": "Venture capital investors in San Francisco CA",
+    "ground_truth": {
+      "is_prospect_query": true,
+      "interest": "venture capital",
+      "audience": "investors",
+      "location": {
+        "city": "San Francisco",
+        "state": "CA",
+        "country": "USA"
+      },
+      "target_type": "investor"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "venture capital",
+        "VC",
+        "venture investing"
+      ],
+      "audience": [
+        "investors",
+        "VCs",
+        "venture capitalists"
+      ],
+      "location": {
+        "city": [
+          "San Francisco",
+          "SF"
+        ],
+        "state": [
+          "CA",
+          "California"
+        ],
+        "country": [
+          "USA",
+          "United States",
+          "US"
+        ]
+      },
+      "target_type": [
+        "investor",
+        "individual"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Finance and investment domain query with standard US city and state abbreviation."
+    }
+  },
+  {
+    "example_id": "intent_008",
+    "split": "development",
+    "input_query": "Commercial real estate brokers in Toronto",
+    "ground_truth": {
+      "is_prospect_query": true,
+      "interest": "commercial real estate",
+      "audience": "brokers",
+      "location": {
+        "city": "Toronto",
+        "state": "Ontario",
+        "country": "Canada"
+      },
+      "target_type": "broker"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "commercial real estate",
+        "real estate",
+        "CRE"
+      ],
+      "audience": [
+        "brokers",
+        "agents",
+        "real estate brokers"
+      ],
+      "location": {
+        "city": [
+          "Toronto"
+        ],
+        "state": [
+          "Ontario",
+          "ON",
+          null
+        ],
+        "country": [
+          "Canada",
+          "CA"
+        ]
+      },
+      "target_type": [
+        "broker",
+        "agent",
+        "individual"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Real estate domain with Canadian city where country or province is implied."
+    }
+  },
+  {
+    "example_id": "intent_009",
+    "split": "development",
+    "input_query": "What is the capital of France?",
+    "ground_truth": {
+      "is_prospect_query": false,
+      "interest": "geography",
+      "audience": null,
+      "location": {
+        "city": "Paris",
+        "state": null,
+        "country": "France"
+      },
+      "target_type": "other"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "geography",
+        "factual query",
+        "capital of France",
+        "general knowledge"
+      ],
+      "target_type": [
+        "other",
+        "none",
+        "location"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Negative test: non-prospect factual question. is_prospect_query must be false."
+    }
+  },
+  {
+    "example_id": "intent_010",
+    "split": "development",
+    "input_query": "How to configure FastAPI with async HTTPX?",
+    "ground_truth": {
+      "is_prospect_query": false,
+      "interest": "software development",
+      "audience": null,
+      "location": null,
+      "target_type": "other"
+    },
+    "acceptable_variants": {
+      "interest": [
+        "software development",
+        "FastAPI",
+        "HTTPX",
+        "programming"
+      ],
+      "target_type": [
+        "other",
+        "none",
+        "technical"
+      ]
+    },
+    "annotation": {
+      "status": "needs_human_review",
+      "labeler": null,
+      "reviewed_at": null,
+      "notes": "Negative test: technical programming query. is_prospect_query must be false."
+    }
+  }
+]

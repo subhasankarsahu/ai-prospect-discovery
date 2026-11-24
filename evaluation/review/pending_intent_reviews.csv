@@ -1,0 +1,31 @@
+example_id,split,input_query,suggested_is_prospect,suggested_interest,suggested_audience,suggested_city,suggested_state,suggested_country,suggested_target_type,decision_status (needs_human_review/reviewed/rejected),reviewer_name,review_notes
+intent_001,development,Startup founders in London UK,True,startup,founders,London,,UK,founder,needs_human_review,,Canonical prospect query from startup_founders_london fixture.
+intent_002,development,Digital marketing agency owners in New York USA,True,digital marketing,agency owners,New York,NY,USA,agency owner,needs_human_review,,Canonical query from digital_marketing_owners_new_york. Note Gemini previously hallucinated verbose reasoning into state.
+intent_003,development,Football lovers in Washington DC in USA,True,Football,,Washington DC,,USA,individual,needs_human_review,,Canonical query from football_lovers_washington_dc fixture.
+intent_004,development,Cricket lovers in Ahmedabad India,True,Cricket,,Ahmedabad,,India,individual,needs_human_review,,Canonical query from cricket_lovers_ahmedabad fixture.
+intent_005,development,Python backend engineers in Berlin Germany,True,Python backend engineering,software engineers,Berlin,,Germany,engineer,needs_human_review,,Standard tech engineering recruitment query.
+intent_006,development,Graphic designers specializing in brand identity,True,brand identity design,graphic designers,,,,designer,needs_human_review,,Location-free query. Model must return null location rather than hallucinating a city.
+intent_007,development,Venture capital investors in San Francisco CA,True,venture capital,investors,San Francisco,CA,USA,investor,needs_human_review,,Finance and investment domain query with standard US city and state abbreviation.
+intent_008,development,Commercial real estate brokers in Toronto,True,commercial real estate,brokers,Toronto,Ontario,Canada,broker,needs_human_review,,Real estate domain with Canadian city where country or province is implied.
+intent_009,development,What is the capital of France?,False,geography,,Paris,,France,other,needs_human_review,,Negative test: non-prospect factual question. is_prospect_query must be false.
+intent_010,development,How to configure FastAPI with async HTTPX?,False,software development,,,,,other,needs_human_review,,Negative test: technical programming query. is_prospect_query must be false.
+intent_011,test,AI research scientists in Cambridge UK,True,AI research,research scientists,Cambridge,,UK,scientist,needs_human_review,,Academic / deep tech prospect query in UK.
+intent_012,test,Pediatric cardiologists in Chicago Illinois,True,pediatric cardiology,doctors,Chicago,Illinois,USA,doctor,needs_human_review,,Healthcare specialist query with explicit city and state spelled out.
+intent_013,test,B2B SaaS account executives in Austin Texas,True,B2B SaaS sales,account executives,Austin,Texas,USA,sales,needs_human_review,,Enterprise tech sales recruiting query.
+intent_014,test,Restaurant owners in Dubai UAE,True,Restaurant,,Dubai,,UAE,owner,needs_human_review,,Hospitality business query matching restaurant_owners_dubai fixture query.
+intent_015,test,Cybersecurity consultants in Singapore,True,cybersecurity,consultants,Singapore,,Singapore,consultant,needs_human_review,,City-state geographic entity test (Singapore city & country).
+intent_016,test,Fashion photographers in Paris France,True,fashion photography,photographers,Paris,,France,photographer,needs_human_review,,Creative arts domain query with international European location.
+intent_017,test,Biotech CEOs in Boston Massachusetts,True,biotechnology,CEOs,Boston,Massachusetts,USA,executive,needs_human_review,,Executive search query in major US biotechnology hub.
+intent_018,test,Civil litigation attorneys in Los Angeles,True,civil litigation,attorneys,Los Angeles,CA,USA,lawyer,needs_human_review,,Legal profession query where state and country are implied by Los Angeles.
+intent_019,test,E-commerce store owners in Germany,True,e-commerce,store owners,,,Germany,owner,needs_human_review,,Country-level geographic constraint with no city specified.
+intent_020,test,Looking for renewable energy project managers in Oslo Norway,True,renewable energy,project managers,Oslo,,Norway,project manager,needs_human_review,,Conversational phrasing prefix ('Looking for ...') test.
+intent_021,test,Freelance UX UI designers,True,UX UI design,freelancers,,,,designer,needs_human_review,,Completely location-free prospect query test.
+intent_022,test,Angel investors in Seattle Washington,True,angel investing,angel investors,Seattle,Washington,USA,investor,needs_human_review,,Angel investor query with state spelled out.
+intent_023,test,Data scientists in NYC,True,data science,data scientists,New York,NY,USA,data scientist,needs_human_review,,Colloquial acronym location ('NYC') canonicalization test.
+intent_024,test,Supply chain logistics directors in Tokyo Japan,True,supply chain logistics,directors,Tokyo,,Japan,director,needs_human_review,,Asia-Pacific enterprise corporate leadership query.
+intent_025,test,Fitness coaches in Sydney Australia,True,fitness coaching,coaches,Sydney,NSW,Australia,coach,needs_human_review,,Sports / fitness service provider query in Australia.
+intent_026,test,Software engineering companies in Dublin,True,software engineering,companies,Dublin,,Ireland,company,needs_human_review,,Explicit organization target type ('company') test.
+intent_027,test,Best pizza restaurants near Central Park,False,food dining,,New York,NY,USA,other,needs_human_review,,"Negative test: consumer recommendation query, not people prospect discovery."
+intent_028,test,Weather forecast for Seattle this weekend,False,weather forecast,,Seattle,WA,USA,other,needs_human_review,,Negative test: utility weather request. is_prospect_query must be false.
+intent_029,test,Latest stock price of Apple AAPL,False,financial market data,,,,,other,needs_human_review,,Negative test: financial stock data query. is_prospect_query must be false.
+intent_030,test,History of the Olympic games,False,history sports,,,,,other,needs_human_review,,Negative test: educational history query. is_prospect_query must be false.
