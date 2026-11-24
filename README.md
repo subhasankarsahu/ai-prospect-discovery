@@ -76,6 +76,9 @@ ruff check .
 pytest -v
 ```
 
+### Testing Notes
+The test suite utilizes `httpx.AsyncClient` with `httpx.ASGITransport(app=app)` rather than Starlette's synchronous `TestClient`. In modern Starlette releases, importing `starlette.testclient` without `httpx2` triggers an import-time `StarletteDeprecationWarning`. Testing natively with `httpx.AsyncClient` eliminates this deprecation warning, avoids unnecessary third-party shim dependencies, and accurately exercises FastAPI's asynchronous ASGI interface.
+
 ---
 
 ## Architecture
