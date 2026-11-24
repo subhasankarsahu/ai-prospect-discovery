@@ -24,7 +24,7 @@ def mock_settings() -> Settings:
     return Settings(
         llm_provider="gemini",
         gemini_api_key="test-gemini-key",
-        gemini_model="gemini-2.5-flash",
+        gemini_model="gemini-3.5-flash-lite",
         request_timeout_seconds=5,
     )
 

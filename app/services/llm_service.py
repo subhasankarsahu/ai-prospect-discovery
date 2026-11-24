@@ -356,7 +356,7 @@ class GeminiLLMService:
                 backoff_seconds *= 2.0
 
     async def extract_query_intent(self, query: str) -> QueryIntent:
-        """Extract structured query intent using Gemini 2.5 Flash.
+        """Extract structured query intent using configured Gemini model.
 
         Args:
             query: The user's natural language search query.

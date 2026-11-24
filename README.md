@@ -44,7 +44,7 @@ FastAPI-powered backend service for intelligent prospect discovery. The service 
    Update `.env` with your API keys:
    - `LLM_PROVIDER`: Selected LLM provider (default: `gemini`).
    - `GEMINI_API_KEY`: Google Gemini API key.
-   - `GEMINI_MODEL`: Gemini model identifier (default: `gemini-2.5-flash`).
+   - `GEMINI_MODEL`: Gemini model identifier (default: `gemini-3.5-flash-lite`).
    - `TAVILY_API_KEY`: Tavily search engine API key.
    - `REQUEST_TIMEOUT_SECONDS`: Outgoing HTTP timeout in seconds (default: `30`).
 
