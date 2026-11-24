@@ -255,7 +255,7 @@ class GeminiLLMService:
         url: str,
         headers: dict[str, str],
         payload: dict[str, Any],
-        max_retries: int = 2,
+        max_retries: int = 4,
     ) -> httpx.Response:
         """Execute HTTP request with exponential backoff for 429 and transient errors.
 
