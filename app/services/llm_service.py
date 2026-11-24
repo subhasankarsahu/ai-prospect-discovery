@@ -16,6 +16,7 @@ from app.schemas_internal import CandidateClassification, RawCandidate
 logger = logging.getLogger(__name__)
 
 GEMINI_API_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
+FALLBACK_MODEL = "gemini-flash-lite-latest"
 
 GEMINI_QUERY_INTENT_SCHEMA: dict[str, Any] = {
     "type": "OBJECT",
@@ -192,6 +193,23 @@ class GeminiLLMService:
         self.settings = settings or get_settings()
         self._external_client = client
 
+    @property
+    def active_model(self) -> str:
+        """Resolve model name, normalizing non-existent or overloaded models to high-availability endpoints."""
+        model = self.settings.gemini_model.strip()
+        if not model or model in (
+            "gemini-3.5-flash-lite",
+            "gemini-3.5-flash-latest",
+            "gemini-1.5-flash",
+            "gemini-2.0-flash",
+            "gemini-2.5-flash",
+            "gemini-2.5-flash-lite",
+        ):
+            return FALLBACK_MODEL
+        if "3.5" in model:
+            return FALLBACK_MODEL
+        return model
+
     def _build_payload(self, query: str) -> dict[str, Any]:
         """Construct the Gemini generateContent JSON request body.
 
@@ -288,6 +306,17 @@ class GeminiLLMService:
 
                 if response.status_code == 200:
                     return response
+
+                # Model not found (404) or overloaded/capacity spike (503): failover to FALLBACK_MODEL
+                if response.status_code in (404, 503) and FALLBACK_MODEL not in url:
+                    logger.warning(
+                        "Gemini endpoint returned HTTP %d for %s; failing over to %s",
+                        response.status_code,
+                        url,
+                        FALLBACK_MODEL,
+                    )
+                    url = f"{GEMINI_API_BASE_URL}/{FALLBACK_MODEL}:generateContent"
+                    continue
 
                 if response.status_code == 429:
                     attempt += 1
@@ -392,7 +421,7 @@ class GeminiLLMService:
         if not api_key:
             raise LLMConfigurationError("GEMINI_API_KEY is not configured in settings")
 
-        url = f"{GEMINI_API_BASE_URL}/{self.settings.gemini_model}:generateContent"
+        url = f"{GEMINI_API_BASE_URL}/{self.active_model}:generateContent"
         headers = {
             "x-goog-api-key": api_key,
             "Content-Type": "application/json",
@@ -543,7 +572,7 @@ class GeminiLLMService:
         if not api_key:
             raise LLMConfigurationError("GEMINI_API_KEY is not configured in settings")
 
-        url = f"{GEMINI_API_BASE_URL}/{self.settings.gemini_model}:generateContent"
+        url = f"{GEMINI_API_BASE_URL}/{self.active_model}:generateContent"
         headers = {
             "x-goog-api-key": api_key,
             "Content-Type": "application/json",

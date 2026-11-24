@@ -374,3 +374,56 @@ async def test_classify_candidates_malformed_json_raises_parsing_error(
 
         with pytest.raises(LLMResponseParsingError, match="malformed"):
             await service.classify_candidates(intent, [cand])
+
+
+def test_active_model_normalization() -> None:
+    """Verify active_model property normalizes overloaded or non-existent models."""
+    from app.services.llm_service import FALLBACK_MODEL
+
+    s1 = Settings(gemini_model="gemini-3.5-flash-lite")
+    assert GeminiLLMService(settings=s1).active_model == FALLBACK_MODEL
+
+    s2 = Settings(gemini_model="gemini-3.5-flash-latest")
+    assert GeminiLLMService(settings=s2).active_model == FALLBACK_MODEL
+
+    s3 = Settings(gemini_model="gemini-flash-latest")
+    assert GeminiLLMService(settings=s3).active_model == "gemini-flash-latest"
+
+
+@pytest.mark.asyncio
+async def test_execute_with_retry_503_failover(mock_settings: Settings) -> None:
+    """Verify 503 triggers failover to FALLBACK_MODEL."""
+    from app.services.llm_service import FALLBACK_MODEL
+
+    intent_data = {
+        "is_prospect_query": True,
+        "interest": "Tech",
+        "target_type": "founder",
+    }
+    payload_200 = build_gemini_candidate_payload(json.dumps(intent_data))
+
+    resp_503 = httpx.Response(
+        status_code=503,
+        json={"error": {"message": "High demand"}},
+        request=httpx.Request("POST", "https://generativelanguage.googleapis.com/v1beta/models/custom-model:generateContent"),
+    )
+    resp_200 = httpx.Response(
+        status_code=200,
+        json=payload_200,
+        request=httpx.Request("POST", f"https://generativelanguage.googleapis.com/v1beta/models/{FALLBACK_MODEL}:generateContent"),
+    )
+
+    async with httpx.AsyncClient() as client:
+        service = GeminiLLMService(settings=mock_settings)
+        with patch.object(client, "post", side_effect=[resp_503, resp_200]) as mock_post:
+            resp = await service._execute_with_retry(
+                client=client,
+                url="https://generativelanguage.googleapis.com/v1beta/models/custom-model:generateContent",
+                headers={},
+                payload={},
+            )
+            assert resp.status_code == 200
+            assert mock_post.call_count == 2
+            # Second call used fallback model
+            assert FALLBACK_MODEL in mock_post.call_args_list[1].args[0]
+
