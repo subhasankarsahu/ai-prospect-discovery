@@ -205,3 +205,125 @@ def test_deterministic_merge_regardless_of_order() -> None:
         prospects_order_1[0].verified_candidates[0].canonical_url
         == prospects_order_2[0].verified_candidates[0].canonical_url
     )
+
+
+def test_reject_transitive_merge_conflicting_locations() -> None:
+    """CRITICAL: Transitive chain A-B-C with conflicting locations must not merge A and C."""
+    # Cand A: Boston, LinkedIn
+    c_a = _make_candidate(
+        platform="LinkedIn",
+        url="https://linkedin.com/in/alice-smith",
+        name="Alice Smith",
+        location="Boston, MA",
+        snippet="Alice Smith tech lead. Check my Twitter: https://x.com/alicesmith",
+    )
+    # Cand B: No location, X (links to A and also mentions C's URL)
+    c_b = _make_candidate(
+        platform="X",
+        url="https://x.com/alicesmith",
+        name="Alice Smith",
+        location=None,
+        snippet="Alice Smith profile. Check my YouTube: https://youtube.com/@alicesmith_la",
+    )
+    # Cand C: Los Angeles, YouTube
+    c_c = _make_candidate(
+        platform="YouTube",
+        url="https://youtube.com/@alicesmith_la",
+        name="Alice Smith",
+        location="Los Angeles, CA",
+        snippet="Alice Smith in Los Angeles. Video creator.",
+    )
+
+    # A and B can merge (Boston + None), but uniting {A, B} with C would introduce conflicting locations!
+    prospects = deduplicate_candidates([c_a, c_b, c_c])
+
+    # Must produce 2 separate prospects, not 1!
+    assert len(prospects) == 2
+
+    # Group 1: Alice Smith in Boston (contains A and B)
+    boston_prospect = next(p for p in prospects if p.location == "Boston, MA")
+    assert len(boston_prospect.verified_candidates) == 2
+    boston_platforms = {c.source_platform for c in boston_prospect.verified_candidates}
+    assert boston_platforms == {"LinkedIn", "X"}
+
+    # Group 2: Alice Smith in Los Angeles (contains C)
+    la_prospect = next(p for p in prospects if p.location == "Los Angeles, CA")
+    assert len(la_prospect.verified_candidates) == 1
+    assert la_prospect.verified_candidates[0].source_platform == "YouTube"
+
+
+def test_reject_transitive_merge_conflicting_names() -> None:
+    """CRITICAL: A link from person A to person B must never merge two different people."""
+    c_a = _make_candidate(
+        platform="LinkedIn",
+        url="https://linkedin.com/in/alice-smith",
+        name="Alice Smith",
+        location="Boston, MA",
+        snippet="Alice Smith in Boston. Great collaboration with https://x.com/bobjones_sf",
+    )
+    c_b = _make_candidate(
+        platform="X",
+        url="https://x.com/bobjones_sf",
+        name="Bob Jones",
+        location="Boston, MA",
+        snippet="Bob Jones tech insights.",
+    )
+
+    prospects = deduplicate_candidates([c_a, c_b])
+    # Alice and Bob must remain separate prospects!
+    assert len(prospects) == 2
+    names = {p.primary_name for p in prospects}
+    assert names == {"Alice Smith", "Bob Jones"}
+
+
+def test_reject_merge_duplicate_platform_with_different_urls() -> None:
+    """CRITICAL: An individual cannot have multiple different canonical URLs on the same platform."""
+    c_li_1 = _make_candidate(
+        platform="LinkedIn",
+        url="https://linkedin.com/in/alice-primary",
+        name="Alice Smith",
+        location="Boston, MA",
+        snippet="Alice Smith. Also on https://x.com/alicesmith",
+    )
+    c_x = _make_candidate(
+        platform="X",
+        url="https://x.com/alicesmith",
+        name="Alice Smith",
+        location="Boston, MA",
+        snippet="Alice Smith. Secondary page: https://linkedin.com/in/alice-secondary",
+    )
+    c_li_2 = _make_candidate(
+        platform="LinkedIn",
+        url="https://linkedin.com/in/alice-secondary",
+        name="Alice Smith",
+        location="Boston, MA",
+    )
+
+    prospects = deduplicate_candidates([c_li_1, c_x, c_li_2])
+    # {c_li_1, c_x} merge, but c_li_2 cannot merge into the same prospect because LinkedIn is already taken by c_li_1
+    assert len(prospects) == 2
+
+
+def test_avoid_url_substring_collision() -> None:
+    """Verify that a URL that is a prefix/substring of another URL does not cause a false merge."""
+    # Cand A links to https://x.com/alicesmith123 (a different person)
+    c_a = _make_candidate(
+        platform="LinkedIn",
+        url="https://linkedin.com/in/alice-smith",
+        name="Alice Smith",
+        location="Boston, MA",
+        snippet="Connect on https://x.com/alicesmith123",
+    )
+    # Cand B has handle "alicesmith", NOT "alicesmith123"
+    c_b = _make_candidate(
+        platform="X",
+        url="https://x.com/alicesmith",
+        name="Alice Smith",
+        location="Boston, MA",
+        snippet="Alice Smith on X.",
+    )
+
+    prospects = deduplicate_candidates([c_a, c_b])
+    # Must NOT merge because the URL in evidence is alicesmith123, not alicesmith!
+    assert len(prospects) == 2
+
