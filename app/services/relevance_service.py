@@ -52,8 +52,33 @@ def _extract_verbatim_display_name(name_as_written: str, title: str, snippet: st
     return None
 
 
+def _find_verbatim_fragment(fragment: str | None, title: str, snippet: str) -> str | None:
+    """Extract a fragment verbatim with exact casing as it appears in title or snippet."""
+    if not fragment or not isinstance(fragment, str):
+        return None
+    frag_clean = fragment.strip()
+    if not frag_clean:
+        return None
+
+    frag_lower = frag_clean.lower()
+    # Check title first
+    pos = title.lower().find(frag_lower)
+    if pos != -1:
+        return title[pos : pos + len(frag_clean)]
+
+    # Check snippet
+    pos = snippet.lower().find(frag_lower)
+    if pos != -1:
+        return snippet[pos : pos + len(frag_clean)]
+
+    return None
+
+
 def _extract_verified_location(intent: QueryIntent, title: str, snippet: str) -> str | None:
     """Verify that location components appear in the candidate title or snippet.
+
+    Extracts verbatim evidence text from the candidate, ensuring no location is
+    inferred without direct evidence in the snippet or title.
 
     Args:
         intent: Query intent containing optional geographic constraints.
@@ -66,15 +91,22 @@ def _extract_verified_location(intent: QueryIntent, title: str, snippet: str) ->
     if not intent.location:
         return None
 
-    combined_text = f"{title} {snippet}".lower()
     loc_parts: list[str] = []
 
-    if intent.location.city and intent.location.city.lower() in combined_text:
-        loc_parts.append(intent.location.city.strip())
-    if intent.location.state and intent.location.state.lower() in combined_text:
-        loc_parts.append(intent.location.state.strip())
-    if intent.location.country and intent.location.country.lower() in combined_text:
-        loc_parts.append(intent.location.country.strip())
+    if intent.location.city:
+        matched_city = _find_verbatim_fragment(intent.location.city, title, snippet)
+        if matched_city:
+            loc_parts.append(matched_city)
+
+    if intent.location.state:
+        matched_state = _find_verbatim_fragment(intent.location.state, title, snippet)
+        if matched_state:
+            loc_parts.append(matched_state)
+
+    if intent.location.country:
+        matched_country = _find_verbatim_fragment(intent.location.country, title, snippet)
+        if matched_country:
+            loc_parts.append(matched_country)
 
     return ", ".join(loc_parts) if loc_parts else None
 

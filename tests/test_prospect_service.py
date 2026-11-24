@@ -1,5 +1,7 @@
 """Unit tests for prospect assembly service and public schema validation."""
 
+import json
+
 from app.schemas import DiscoveryResponse, SocialLink
 from app.schemas_internal import DeduplicatedProspect, RawCandidate, VerifiedCandidate
 from app.services.prospect_service import assemble_discovery_response
@@ -195,3 +197,53 @@ def test_assemble_public_schema_cleanliness_no_leaks() -> None:
     assert "candidate_index" not in json_str
     assert "raw_candidate" not in json_str
     assert "snippet" not in json_str
+
+
+def test_assemble_json_serialization_exact_schema() -> None:
+    """Verify JSON deserialization conforms strictly to DiscoveryResponse contract."""
+    cand = _make_candidate(
+        platform="LinkedIn",
+        name="Elena Rostova",
+        url="https://linkedin.com/in/elena-rostova",
+        location="Zurich",
+        contacts=[SocialLink(platform="Email", link="mailto:elena@ethz.ch")],
+    )
+    group = DeduplicatedProspect(
+        primary_name="Elena Rostova",
+        location="Zurich",
+        verified_candidates=[cand],
+    )
+
+    response = assemble_discovery_response("robotics researchers", [group])
+    json_bytes = response.model_dump_json()
+    parsed_json = json.loads(json_bytes)
+
+    assert set(parsed_json.keys()) == {"success", "query", "total_prospects", "prospects"}
+    assert parsed_json["success"] is True
+    assert parsed_json["total_prospects"] == 1
+    assert isinstance(parsed_json["prospects"], list)
+    assert len(parsed_json["prospects"]) == 1
+
+    prospect_obj = parsed_json["prospects"][0]
+    assert set(prospect_obj.keys()) == {"name", "location", "social_link"}
+    assert prospect_obj["name"] == "Elena Rostova"
+    assert prospect_obj["location"] == "Zurich"
+
+    assert isinstance(prospect_obj["social_link"], list)
+    assert len(prospect_obj["social_link"]) == 2
+    for link_obj in prospect_obj["social_link"]:
+        assert set(link_obj.keys()) == {"platform", "link"}
+
+
+def test_assemble_empty_response_json_serialization() -> None:
+    """Verify empty prospect result serializes cleanly to JSON."""
+    response = assemble_discovery_response("no match query", [])
+    parsed_json = json.loads(response.model_dump_json())
+
+    assert parsed_json == {
+        "success": True,
+        "query": "no match query",
+        "total_prospects": 0,
+        "prospects": [],
+    }
+

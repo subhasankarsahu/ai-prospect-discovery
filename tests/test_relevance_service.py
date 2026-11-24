@@ -319,3 +319,59 @@ async def test_relevance_all_batches_fail_raises_error(sample_intent: QueryInten
 
     with pytest.raises(LLMRateLimitError):
         await classify_and_verify_candidates(sample_intent, [cand], mock_llm)
+
+
+@pytest.mark.asyncio
+async def test_relevance_location_not_accepted_without_text_evidence(sample_intent: QueryIntent) -> None:
+    """Verify that location is rejected if not in candidate text, even if LLM claimed location_supported=True."""
+    # Candidate text does NOT mention Seattle or USA
+    cand = _make_candidate(
+        1,
+        title="Alice Smith - ML Lead",
+        snippet="Alice Smith is leading machine learning research.",
+    )
+    mock_llm = AsyncMock(spec=BaseLLMService)
+    mock_llm.classify_candidates.return_value = [
+        CandidateClassification(
+            candidate_index=0,
+            is_individual_person=True,
+            name_as_written="Alice Smith",
+            interest_supported=True,
+            location_supported=True,  # LLM erroneously claims location is supported
+            confidence="high",
+            reason="Location assumed from query.",
+        )
+    ]
+
+    verified = await classify_and_verify_candidates(sample_intent, [cand], mock_llm)
+    assert len(verified) == 1
+    # Location must be None because it does not appear in candidate evidence!
+    assert verified[0].location is None
+
+
+@pytest.mark.asyncio
+async def test_relevance_location_verbatim_evidence_preserved(sample_intent: QueryIntent) -> None:
+    """Verify that location casing and text are sliced verbatim from candidate evidence."""
+    cand = _make_candidate(
+        1,
+        title="Alice Smith - ML Lead",
+        snippet="Alice Smith is leading ML research in SEATTLE, USA.",
+    )
+    mock_llm = AsyncMock(spec=BaseLLMService)
+    mock_llm.classify_candidates.return_value = [
+        CandidateClassification(
+            candidate_index=0,
+            is_individual_person=True,
+            name_as_written="Alice Smith",
+            interest_supported=True,
+            location_supported=True,
+            confidence="high",
+            reason="Verified profile.",
+        )
+    ]
+
+    verified = await classify_and_verify_candidates(sample_intent, [cand], mock_llm)
+    assert len(verified) == 1
+    # Preserves verbatim casing from candidate evidence snippet
+    assert verified[0].location == "SEATTLE, USA"
+
