@@ -25,8 +25,32 @@ from app.utils.normalizers import canonical_url, extract_handle, normalize_name
             "https://facebook.com/profile.php?id=100012345",
         ),
         (
+            "https://m.facebook.com/profile.php?id=100012345&fbclid=abc&ref=bookmarks",
+            "https://facebook.com/profile.php?id=100012345",
+        ),
+        (
+            "https://facebook.com/Profile.php?ID=100012345&utm_medium=cpc",
+            "https://facebook.com/profile.php?id=100012345",
+        ),
+        (
+            "https://facebook.com/profile.php?id=67890&utm_campaign=spring",
+            "https://facebook.com/profile.php?id=67890",
+        ),
+        (
             "https://facebook.com/zuck?fbclid=123",
             "https://facebook.com/zuck",
+        ),
+        (
+            "https://m.facebook.com/zuck?fbclid=xyz",
+            "https://facebook.com/zuck",
+        ),
+        (
+            "https://mobile.twitter.com/jack?s=20",
+            "https://x.com/jack",
+        ),
+        (
+            "https://m.youtube.com/@mkbhd",
+            "https://youtube.com/@mkbhd",
         ),
     ],
 )
@@ -64,6 +88,8 @@ def test_normalize_name(raw_name: str, expected: str) -> None:
         ("https://threads.net/@zuck", "Threads", "zuck"),
         ("https://threads.net/zuck", "Threads", "zuck"),
         ("https://facebook.com/profile.php?id=100012345", "Facebook", "id:100012345"),
+        ("https://m.facebook.com/profile.php?id=100012345", "Facebook", "id:100012345"),
+        ("https://facebook.com/Profile.php?ID=100012345", "Facebook", "id:100012345"),
         ("https://facebook.com/zuck", "Facebook", "zuck"),
     ],
 )
@@ -92,3 +118,24 @@ def test_extract_handle_valid(url: str, platform: str, expected_handle: str) -> 
 def test_extract_handle_invalid_and_reserved_paths(url: str, platform: str) -> None:
     """Verify that reserved paths, media URLs, and untrusted hosts return None."""
     assert extract_handle(url, platform) is None
+
+
+def test_facebook_canonical_url_identity_differentiation() -> None:
+    """CRITICAL REGRESSION TEST: Verify Facebook identity query parameters are preserved and distinct."""
+    fb_user_1_a = "https://www.facebook.com/profile.php?id=12345&utm_source=newsfeed&fbclid=abc"
+    fb_user_1_b = "https://m.facebook.com/Profile.php?ID=12345&ref=bookmarks"
+    fb_user_2 = "https://www.facebook.com/profile.php?id=67890&utm_medium=email"
+
+    canon_1_a = canonical_url(fb_user_1_a)
+    canon_1_b = canonical_url(fb_user_1_b)
+    canon_2 = canonical_url(fb_user_2)
+
+    # Same identity with different tracking parameters produces identical canonical URL
+    assert canon_1_a == "https://facebook.com/profile.php?id=12345"
+    assert canon_1_b == "https://facebook.com/profile.php?id=12345"
+    assert canon_1_a == canon_1_b
+
+    # Different identities produce strictly different canonical URLs
+    assert canon_2 == "https://facebook.com/profile.php?id=67890"
+    assert canon_1_a != canon_2
+

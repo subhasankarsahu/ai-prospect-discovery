@@ -145,9 +145,9 @@ def extract_handle(url: str, platform: str) -> str | None:
         return None
 
     if plat == "facebook":
-        if path == "/profile.php":
-            query_params = dict(parse_qsl(parsed.query))
-            id_val = query_params.get("id", "")
+        if path.lower() == "/profile.php":
+            query_params = {k.lower(): v for k, v in parse_qsl(parsed.query)}
+            id_val = query_params.get("id", "").strip().rstrip("/")
             return f"id:{id_val}" if id_val.isdigit() and len(id_val) >= 4 else None
 
         clean_path = path.strip("/")
