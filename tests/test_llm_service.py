@@ -7,6 +7,8 @@ import httpx
 import pytest
 
 from app.config import Settings
+from app.schemas import QueryIntent
+from app.schemas_internal import RawCandidate
 from app.services.llm_service import (
     GeminiLLMService,
     LLMConfigurationError,
@@ -226,3 +228,96 @@ async def test_extract_query_intent_rate_limit_retry_success(mock_settings: Sett
         assert intent.is_prospect_query is True
         assert intent.interest == "FinTech founders"
         assert mock_post.await_count == 2
+
+
+@pytest.mark.asyncio
+async def test_classify_candidates_success(mock_settings: Settings) -> None:
+    """Verify GeminiLLMService.classify_candidates formats request and parses response."""
+    classification_data = [
+        {
+            "candidate_index": 0,
+            "is_individual_person": True,
+            "name_as_written": "Alice Smith",
+            "interest_supported": True,
+            "location_supported": True,
+            "confidence": "high",
+            "reason": "Alice is an ML researcher.",
+        }
+    ]
+    mock_200 = httpx.Response(
+        status_code=200,
+        json=build_gemini_candidate_payload(json.dumps(classification_data)),
+        request=httpx.Request("POST", "https://test"),
+    )
+
+    with patch("httpx.AsyncClient.post", new_callable=AsyncMock) as mock_post:
+        mock_post.return_value = mock_200
+        service = GeminiLLMService(settings=mock_settings)
+
+        intent = QueryIntent(interest="Machine Learning", target_type="researcher")
+        cand = RawCandidate(
+            source_platform="LinkedIn",
+            canonical_url="https://linkedin.com/in/alice",
+            title="Alice Smith - Researcher",
+            snippet="Bio",
+            search_query="q",
+        )
+
+        results = await service.classify_candidates(intent, [cand])
+        assert len(results) == 1
+        assert results[0].candidate_index == 0
+        assert results[0].name_as_written == "Alice Smith"
+        assert results[0].confidence == "high"
+
+        # Verify header sends API key without exposing in URL
+        assert mock_post.call_args.kwargs["headers"]["x-goog-api-key"] == "test-gemini-key"
+        assert "key=" not in str(mock_post.call_args.args[0])
+
+
+@pytest.mark.asyncio
+async def test_classify_candidates_exceeds_batch_limit_raises_value_error(
+    mock_settings: Settings,
+) -> None:
+    """Verify ValueError is raised if candidate batch size exceeds 20."""
+    service = GeminiLLMService(settings=mock_settings)
+    intent = QueryIntent(interest="AI", target_type="researcher")
+    candidates = [
+        RawCandidate(
+            source_platform="LinkedIn",
+            canonical_url=f"https://linkedin.com/in/{i}",
+            title="Title",
+            snippet="Snippet",
+            search_query="q",
+        )
+        for i in range(21)
+    ]
+
+    with pytest.raises(ValueError, match="exceeds maximum allowed of 20"):
+        await service.classify_candidates(intent, candidates)
+
+
+@pytest.mark.asyncio
+async def test_classify_candidates_malformed_json_raises_parsing_error(
+    mock_settings: Settings,
+) -> None:
+    """Verify LLMResponseParsingError is raised on malformed classification JSON."""
+    mock_200 = httpx.Response(
+        status_code=200,
+        json=build_gemini_candidate_payload("NOT VALID JSON"),
+        request=httpx.Request("POST", "https://test"),
+    )
+
+    with patch("httpx.AsyncClient.post", new_callable=AsyncMock) as mock_post:
+        mock_post.return_value = mock_200
+        service = GeminiLLMService(settings=mock_settings)
+        intent = QueryIntent(interest="AI", target_type="researcher")
+        cand = RawCandidate(
+            source_platform="LinkedIn",
+            canonical_url="https://linkedin.com/in/1",
+            title="Title",
+            snippet="Snippet",
+            search_query="q",
+        )
+
+        with pytest.raises(LLMResponseParsingError, match="malformed"):
+            await service.classify_candidates(intent, [cand])

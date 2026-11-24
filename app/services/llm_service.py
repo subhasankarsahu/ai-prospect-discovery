@@ -3,6 +3,7 @@
 import asyncio
 import json
 import logging
+from collections.abc import Sequence
 from typing import Any, Protocol
 
 import httpx
@@ -10,6 +11,7 @@ from pydantic import ValidationError
 
 from app.config import Settings, get_settings
 from app.schemas import QueryIntent
+from app.schemas_internal import CandidateClassification, RawCandidate
 
 logger = logging.getLogger(__name__)
 
@@ -55,6 +57,68 @@ SYSTEM_INSTRUCTION = (
     "Set is_prospect_query to false if the query is unrelated to discovering people or organizations."
 )
 
+GEMINI_CLASSIFICATION_SCHEMA: dict[str, Any] = {
+    "type": "ARRAY",
+    "description": "List of candidate relevance classifications",
+    "items": {
+        "type": "OBJECT",
+        "properties": {
+            "candidate_index": {
+                "type": "INTEGER",
+                "description": "Zero-based index of candidate within the batch",
+            },
+            "is_individual_person": {
+                "type": "BOOLEAN",
+                "description": "Whether the search result represents an individual human",
+            },
+            "name_as_written": {
+                "type": "STRING",
+                "description": "Person name as written verbatim in the candidate text",
+            },
+            "interest_supported": {
+                "type": "BOOLEAN",
+                "description": "Whether the candidate supports the requested interest",
+            },
+            "location_supported": {
+                "type": "BOOLEAN",
+                "description": "Whether candidate supports the requested location",
+            },
+            "confidence": {
+                "type": "STRING",
+                "enum": ["low", "medium", "high"],
+                "description": "Confidence level in classification",
+            },
+            "reason": {
+                "type": "STRING",
+                "description": "One sentence explaining the classification",
+            },
+        },
+        "required": [
+            "candidate_index",
+            "is_individual_person",
+            "name_as_written",
+            "interest_supported",
+            "location_supported",
+            "confidence",
+            "reason",
+        ],
+    },
+}
+
+CLASSIFICATION_SYSTEM_INSTRUCTION = (
+    "You are a relevance classification engine for a prospect discovery API. "
+    "Determine whether each candidate search result represents an individual person "
+    "relevant to the user's requested interest and domain.\n\n"
+    "STRICT PROHIBITIONS:\n"
+    "- Do NOT invent names. The name_as_written must appear verbatim in the candidate title or snippet.\n"
+    "- Do NOT invent locations.\n"
+    "- Do NOT infer an interest without direct evidence in the snippet or title.\n"
+    "- Do NOT treat a company, organization, product, brand, or generic landing page as an individual.\n"
+    "- Do NOT return URLs or replace candidate URLs.\n"
+    "- Do NOT claim contact details that are not present in the supplied text.\n\n"
+    "Return JSON only conforming strictly to the response schema."
+)
+
 
 class LLMServiceError(Exception):
     """Base exception for all LLM service failures."""
@@ -90,6 +154,23 @@ class BaseLLMService(Protocol):
 
         Raises:
             LLMServiceError: If intent extraction or network communication fails.
+        """
+        ...
+
+    async def classify_candidates(
+        self, intent: QueryIntent, candidates: list[RawCandidate]
+    ) -> list[CandidateClassification]:
+        """Classify candidate relevance against query intent.
+
+        Args:
+            intent: The validated search query intent.
+            candidates: Batch of at most 20 raw candidate profiles.
+
+        Returns:
+            List of CandidateClassification objects from the LLM.
+
+        Raises:
+            LLMServiceError: If candidate classification fails.
         """
         ...
 
@@ -318,6 +399,157 @@ class GeminiLLMService:
                 payload=payload,
             )
             return self._parse_candidate_response(response.json())
+
+    def _build_classification_payload(
+        self, intent: QueryIntent, candidates: Sequence[RawCandidate]
+    ) -> dict[str, Any]:
+        """Construct the Gemini generateContent JSON request body for relevance classification.
+
+        Args:
+            intent: User query intent.
+            candidates: Batch of raw candidates to classify.
+
+        Returns:
+            Dictionary payload conforming to Gemini API schema.
+        """
+        loc_str = ""
+        if intent.location:
+            parts = [
+                p.strip()
+                for p in (intent.location.city, intent.location.state, intent.location.country)
+                if p and p.strip()
+            ]
+            loc_str = ", ".join(parts)
+
+        candidates_data = [
+            {
+                "candidate_index": idx,
+                "title": cand.title,
+                "snippet": cand.snippet,
+            }
+            for idx, cand in enumerate(candidates)
+        ]
+
+        user_content = (
+            f"Query Intent:\n"
+            f"- Interest: {intent.interest}\n"
+            f"- Target Type: {intent.target_type}\n"
+            f"- Location: {loc_str or 'None'}\n\n"
+            f"Candidates to Classify:\n{json.dumps(candidates_data, indent=2)}"
+        )
+
+        return {
+            "systemInstruction": {
+                "parts": [{"text": CLASSIFICATION_SYSTEM_INSTRUCTION}],
+            },
+            "contents": [
+                {
+                    "role": "user",
+                    "parts": [{"text": user_content}],
+                }
+            ],
+            "generationConfig": {
+                "responseMimeType": "application/json",
+                "responseSchema": GEMINI_CLASSIFICATION_SCHEMA,
+                "temperature": 0.1,
+            },
+        }
+
+    def _parse_classification_response(
+        self, response_data: dict[str, Any]
+    ) -> list[CandidateClassification]:
+        """Parse and validate JSON candidate classifications from Gemini response.
+
+        Args:
+            response_data: Parsed JSON payload returned by Gemini.
+
+        Returns:
+            List of validated CandidateClassification objects.
+
+        Raises:
+            LLMResponseParsingError: If classification response is missing or malformed.
+        """
+        try:
+            candidates = response_data.get("candidates", [])
+            if not candidates:
+                raise LLMResponseParsingError("Gemini response contained no candidates")
+
+            content = candidates[0].get("content", {})
+            parts = content.get("parts", [])
+            if not parts or "text" not in parts[0]:
+                raise LLMResponseParsingError("Gemini candidate contained no text parts")
+
+            raw_text = parts[0]["text"]
+            parsed_json = json.loads(raw_text)
+            if not isinstance(parsed_json, list):
+                raise LLMResponseParsingError("Gemini classification response is not a list")
+
+            return [CandidateClassification.model_validate(item) for item in parsed_json]
+        except (json.JSONDecodeError, ValidationError) as exc:
+            logger.error(
+                "Failed to parse Gemini candidate classification response: %s",
+                type(exc).__name__,
+            )
+            raise LLMResponseParsingError(
+                "Invalid or malformed candidate classification payload received from Gemini"
+            ) from exc
+
+    async def classify_candidates(
+        self, intent: QueryIntent, candidates: list[RawCandidate]
+    ) -> list[CandidateClassification]:
+        """Classify a batch of candidate profiles against query intent using Gemini.
+
+        Args:
+            intent: The validated search query intent.
+            candidates: Batch of at most 20 raw candidate profiles.
+
+        Returns:
+            List of CandidateClassification objects.
+
+        Raises:
+            ValueError: If candidate batch size exceeds 20.
+            LLMConfigurationError: If GEMINI_API_KEY is missing.
+            LLMTimeoutError: If Gemini request times out.
+            LLMRateLimitError: If Gemini 429 rate limit is reached.
+            LLMResponseParsingError: If Gemini response is invalid or malformed.
+            LLMServiceError: For other API or network communication failures.
+        """
+        if not candidates:
+            return []
+
+        if len(candidates) > 20:
+            raise ValueError(
+                f"Candidate batch size {len(candidates)} exceeds maximum allowed of 20"
+            )
+
+        api_key = self.settings.gemini_api_key.strip()
+        if not api_key:
+            raise LLMConfigurationError("GEMINI_API_KEY is not configured in settings")
+
+        url = f"{GEMINI_API_BASE_URL}/{self.settings.gemini_model}:generateContent"
+        headers = {
+            "x-goog-api-key": api_key,
+            "Content-Type": "application/json",
+        }
+        payload = self._build_classification_payload(intent, candidates)
+
+        if self._external_client is not None:
+            response = await self._execute_with_retry(
+                client=self._external_client,
+                url=url,
+                headers=headers,
+                payload=payload,
+            )
+            return self._parse_classification_response(response.json())
+
+        async with httpx.AsyncClient() as client:
+            response = await self._execute_with_retry(
+                client=client,
+                url=url,
+                headers=headers,
+                payload=payload,
+            )
+            return self._parse_classification_response(response.json())
 
 
 def get_llm_service(settings: Settings | None = None) -> BaseLLMService:
