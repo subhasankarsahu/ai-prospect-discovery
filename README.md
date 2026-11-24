@@ -449,14 +449,20 @@ See [evaluation/README.md](file:///c:/Users/subha/Downloads/ai-prospect-discover
 
 ## Cloud Deployment (Render)
 
-The application is fully prepared for zero-configuration cloud deployment on **[Render](https://render.com)** as a Python Web Service.
+The application is deployed live in production on **[Render](https://render.com)** as a Python Web Service.
+
+### Live Production Endpoints
+- **Primary Service URL:** [https://ai-prospect-discovery-zb7m.onrender.com](https://ai-prospect-discovery-zb7m.onrender.com)
+- **Live Interactive Docs (Swagger UI):** [https://ai-prospect-discovery-zb7m.onrender.com/docs](https://ai-prospect-discovery-zb7m.onrender.com/docs)
+- **Live Health Check Endpoint:** [https://ai-prospect-discovery-zb7m.onrender.com/health](https://ai-prospect-discovery-zb7m.onrender.com/health)
 
 ### Deployment Specifications
 - **Service Type:** Web Service
+- **Plan:** Free ($0 / month)
 - **Environment:** Python 3.11+ (declared in `.python-version` and `render.yaml`)
 - **Build Command:** `pip install -r requirements.txt`
 - **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
-- **Health Check Path:** `/health`
+- **Health Check Path:** `/health` (and `/healthz`)
 - **Port:** Uses Render's dynamic `$PORT` environment variable (never hardcoded)
 
 ---
@@ -500,12 +506,12 @@ If configuring manually without Blueprints:
 ---
 
 ### Deployment Verification Checklist
-Once deployed on Render, verify your live deployment:
-1. **Health Check:** `curl https://<your-render-subdomain>.onrender.com/health` returns `{"status": "healthy"}`.
-2. **Interactive Docs:** Visit `https://<your-render-subdomain>.onrender.com/docs` to inspect Swagger UI.
+Verified live in production on Render:
+1. **Health Check:** `curl https://ai-prospect-discovery-zb7m.onrender.com/health` returns `{"status": "healthy"}`.
+2. **Interactive Docs:** Visit [https://ai-prospect-discovery-zb7m.onrender.com/docs](https://ai-prospect-discovery-zb7m.onrender.com/docs) to inspect live Swagger UI.
 3. **Live Discovery Query:**
    ```bash
-   curl -X POST "https://<your-render-subdomain>.onrender.com/prospect-discovery" \
+   curl -X POST "https://ai-prospect-discovery-zb7m.onrender.com/prospect-discovery" \
         -H "Content-Type: application/json" \
         -d '{"query": "Digital marketing agency owners in New York"}'
    ```
