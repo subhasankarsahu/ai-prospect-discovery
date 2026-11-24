@@ -4,3 +4,4 @@ pydantic==2.14.4
 pydantic-settings==2.15.0
 httpx==0.28.1
 beautifulsoup4==4.15.0
+phonenumbers==9.0.44
