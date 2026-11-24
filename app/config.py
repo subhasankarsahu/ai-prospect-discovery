@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     )
     gemini_api_key: str = Field(
         default="",
+        repr=False,
         description="Google Gemini API key for discovery and extraction",
     )
     gemini_model: str = Field(
@@ -29,6 +30,7 @@ class Settings(BaseSettings):
     )
     tavily_api_key: str = Field(
         default="",
+        repr=False,
         description="Tavily API key for search engine querying",
     )
     request_timeout_seconds: int = Field(

@@ -39,31 +39,31 @@ async def discover_prospects(
     try:
         intent = await service.extract_query_intent(request.query)
     except LLMRateLimitError as exc:
-        logger.warning("LLM rate limit error during query discovery: %s", exc)
+        logger.warning("LLM rate limit encountered during query discovery")
         raise HTTPException(
             status_code=status.HTTP_429_TOO_MANY_REQUESTS,
             detail="LLM provider rate limit exceeded",
         ) from exc
     except LLMTimeoutError as exc:
-        logger.error("LLM timeout during query discovery: %s", exc)
+        logger.error("LLM timeout encountered during query discovery")
         raise HTTPException(
             status_code=status.HTTP_504_GATEWAY_TIMEOUT,
             detail="LLM provider request timed out",
         ) from exc
     except LLMResponseParsingError as exc:
-        logger.error("LLM response parsing error: %s", exc)
+        logger.error("LLM response parsing failed during query discovery")
         raise HTTPException(
             status_code=status.HTTP_502_BAD_GATEWAY,
             detail="Failed to parse LLM intent response",
         ) from exc
     except LLMConfigurationError as exc:
-        logger.error("LLM configuration error: %s", exc)
+        logger.error("LLM service is not properly configured")
         raise HTTPException(
             status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
             detail="LLM provider service is not properly configured",
         ) from exc
     except LLMServiceError as exc:
-        logger.error("General LLM service error: %s", exc)
+        logger.error("Upstream LLM service error: %s", type(exc).__name__)
         raise HTTPException(
             status_code=status.HTTP_502_BAD_GATEWAY,
             detail="Upstream LLM provider error",

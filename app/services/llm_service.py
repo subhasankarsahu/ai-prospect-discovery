@@ -163,9 +163,9 @@ class GeminiLLMService:
             parsed_json = json.loads(raw_text)
             return QueryIntent.model_validate(parsed_json)
         except (json.JSONDecodeError, ValidationError) as exc:
-            logger.error("Failed to parse Gemini intent extraction response: %s", exc)
+            logger.error("Failed to parse Gemini intent extraction response due to %s", type(exc).__name__)
             raise LLMResponseParsingError(
-                f"Invalid or malformed intent payload from Gemini: {exc}"
+                "Invalid or malformed intent payload received from Gemini"
             ) from exc
 
     async def _execute_with_retry(
@@ -268,9 +268,9 @@ class GeminiLLMService:
             except httpx.RequestError as exc:
                 attempt += 1
                 if attempt > max_retries:
-                    logger.error("Gemini network connection error after retries: %s", exc)
-                    raise LLMServiceError(f"Gemini network error: {exc}") from exc
-                logger.info("Transient network error; retrying in %.2fs: %s", backoff_seconds, exc)
+                    logger.error("Gemini network connection error after retries: %s", type(exc).__name__)
+                    raise LLMServiceError(f"Gemini network error: {type(exc).__name__}") from exc
+                logger.info("Transient network error (%s); retrying in %.2fs", type(exc).__name__, backoff_seconds)
                 await asyncio.sleep(backoff_seconds)
                 backoff_seconds *= 2.0
 
