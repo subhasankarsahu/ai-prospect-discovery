@@ -28,7 +28,7 @@ async def test_health_route() -> None:
 
 @pytest.mark.asyncio
 async def test_prospect_discovery_route_success() -> None:
-    """Verify POST /prospect-discovery returns 200 with valid discovery intent."""
+    """Verify POST /prospect-discovery returns 200 with valid discovery intent and discovery search."""
     mock_intent = QueryIntent(
         is_prospect_query=True,
         interest="AI Engineering",
@@ -38,8 +38,12 @@ async def test_prospect_discovery_route_success() -> None:
     with patch(
         "app.services.llm_service.GeminiLLMService.extract_query_intent",
         new_callable=AsyncMock,
-    ) as mock_extract:
+    ) as mock_extract, patch(
+        "app.services.discovery_service.discover_raw_candidates",
+        new_callable=AsyncMock,
+    ) as mock_raw:
         mock_extract.return_value = mock_intent
+        mock_raw.return_value = []
 
         async with httpx.AsyncClient(
             transport=httpx.ASGITransport(app=app), base_url="http://test"
@@ -168,3 +172,60 @@ async def test_prospect_discovery_unconfigured_503() -> None:
             response = await client.post("/prospect-discovery", json={"query": "FinTech leaders"})
             assert response.status_code == 503
             assert "not properly configured" in response.json()["detail"].lower()
+
+
+@pytest.mark.asyncio
+async def test_prospect_discovery_route_search_rate_limit_429() -> None:
+    """Verify route returns 429 when all search platforms are rate-limited."""
+    mock_intent = QueryIntent(
+        is_prospect_query=True,
+        interest="Crypto",
+        target_type="individual",
+    )
+    from fastapi import HTTPException
+
+    with patch(
+        "app.services.llm_service.GeminiLLMService.extract_query_intent",
+        new_callable=AsyncMock,
+    ) as mock_extract, patch(
+        "app.services.discovery_service.discover_raw_candidates",
+        new_callable=AsyncMock,
+    ) as mock_raw:
+        mock_extract.return_value = mock_intent
+        mock_raw.side_effect = HTTPException(status_code=429, detail="Search provider rate limit exceeded")
+
+        async with httpx.AsyncClient(
+            transport=httpx.ASGITransport(app=app), base_url="http://test"
+        ) as client:
+            response = await client.post("/prospect-discovery", json={"query": "Crypto founders"})
+            assert response.status_code == 429
+            assert "rate limit exceeded" in response.json()["detail"].lower()
+
+
+@pytest.mark.asyncio
+async def test_prospect_discovery_route_search_timeout_504() -> None:
+    """Verify route returns 504 when search platforms time out."""
+    mock_intent = QueryIntent(
+        is_prospect_query=True,
+        interest="Cloud",
+        target_type="individual",
+    )
+    from fastapi import HTTPException
+
+    with patch(
+        "app.services.llm_service.GeminiLLMService.extract_query_intent",
+        new_callable=AsyncMock,
+    ) as mock_extract, patch(
+        "app.services.discovery_service.discover_raw_candidates",
+        new_callable=AsyncMock,
+    ) as mock_raw:
+        mock_extract.return_value = mock_intent
+        mock_raw.side_effect = HTTPException(status_code=504, detail="Search provider request timed out")
+
+        async with httpx.AsyncClient(
+            transport=httpx.ASGITransport(app=app), base_url="http://test"
+        ) as client:
+            response = await client.post("/prospect-discovery", json={"query": "Cloud engineers"})
+            assert response.status_code == 504
+            assert "timed out" in response.json()["detail"].lower()
+

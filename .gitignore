@@ -40,6 +40,7 @@ env/
 # Testing and Coverage
 .pytest_cache/
 .ruff_cache/
+.cache/
 .coverage
 .coverage.*
 htmlcov/

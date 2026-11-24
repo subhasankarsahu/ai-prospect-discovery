@@ -37,6 +37,14 @@ class Settings(BaseSettings):
         default=30,
         description="Default timeout in seconds for outgoing HTTP requests",
     )
+    search_cache_enabled: bool = Field(
+        default=True,
+        description="Enable local disk caching for search responses",
+    )
+    search_cache_dir: str = Field(
+        default=".cache/search",
+        description="Directory path for local search cache storage",
+    )
 
 
 @lru_cache
