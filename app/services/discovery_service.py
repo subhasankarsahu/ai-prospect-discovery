@@ -107,10 +107,112 @@ async def _execute_platform_search(
         )
 
 
+def _build_google_discovery_query(intent: QueryIntent) -> str:
+    """Build dynamic query for unrestricted Google discovery search from intent fields."""
+    terms: list[str] = [f'"{intent.interest.strip()}"']
+
+    if intent.target_type and intent.target_type.lower() not in ("individual", "other", "any", ""):
+        terms.append(intent.target_type.strip())
+
+    if intent.audience and intent.audience.strip():
+        terms.append(intent.audience.strip())
+
+    if intent.location:
+        loc_parts = [
+            part.strip()
+            for part in (intent.location.city, intent.location.state, intent.location.country)
+            if part and part.strip()
+        ]
+        if loc_parts:
+            terms.append(" ".join(loc_parts))
+
+    return " ".join(terms)
+
+
+async def _execute_google_discovery(
+    intent: QueryIntent,
+    classifiers: Sequence[PlatformSource],
+    search_service: TavilySearchService,
+    semaphore: asyncio.Semaphore,
+) -> PlatformOutcome:
+    """Execute unrestricted discovery search and classify candidate URLs across supported platforms."""
+    try:
+        query = _build_google_discovery_query(intent)
+        async with semaphore:
+            results = await search_service.search(
+                query=query,
+                include_domains=None,
+            )
+
+        candidates: list[RawCandidate] = []
+        for r in results:
+            for platform in classifiers:
+                if platform.is_profile_url(r.url):
+                    candidates.append(
+                        RawCandidate(
+                            source_platform=platform.name,
+                            canonical_url=platform.extract_canonical_url(r.url),
+                            title=r.title,
+                            snippet=r.snippet,
+                            search_query=query,
+                        )
+                    )
+                    break
+
+        return PlatformOutcome(
+            platform_name="Google",
+            success=True,
+            candidates=candidates,
+        )
+    except asyncio.CancelledError:
+        raise
+    except SearchRateLimitError as exc:
+        logger.warning("Google discovery rate limit exceeded")
+        return PlatformOutcome(
+            platform_name="Google",
+            success=False,
+            error_type="SearchRateLimitError",
+            error_message=str(exc),
+        )
+    except SearchTimeoutError as exc:
+        logger.warning("Google discovery request timed out")
+        return PlatformOutcome(
+            platform_name="Google",
+            success=False,
+            error_type="SearchTimeoutError",
+            error_message=str(exc),
+        )
+    except SearchConfigurationError as exc:
+        logger.error("Google discovery configuration error")
+        return PlatformOutcome(
+            platform_name="Google",
+            success=False,
+            error_type="SearchConfigurationError",
+            error_message=str(exc),
+        )
+    except SearchServiceError as exc:
+        logger.warning("Google discovery search service error")
+        return PlatformOutcome(
+            platform_name="Google",
+            success=False,
+            error_type="SearchServiceError",
+            error_message=str(exc),
+        )
+    except (KeyError, ValueError, TypeError, AttributeError, RuntimeError) as exc:
+        logger.error("Google discovery unexpected error: %s", type(exc).__name__)
+        return PlatformOutcome(
+            platform_name="Google",
+            success=False,
+            error_type="UnexpectedError",
+            error_message=type(exc).__name__,
+        )
+
+
 async def discover_raw_candidates(
     intent: QueryIntent,
     search_service: TavilySearchService | None = None,
     platforms: Sequence[PlatformSource] | None = None,
+    include_google_discovery: bool = True,
 ) -> list[RawCandidate]:
     """Execute concurrent discovery across all configured platforms and return deduplicated raw candidates.
 
@@ -118,6 +220,7 @@ async def discover_raw_candidates(
         intent: Validated query intent.
         search_service: Optional Tavily search service instance.
         platforms: Optional list of platform sources (defaults to all supported platforms).
+        include_google_discovery: Whether to include unrestricted Google discovery search.
 
     Returns:
         Deduplicated list of RawCandidate objects.
@@ -128,7 +231,7 @@ async def discover_raw_candidates(
     service = search_service or TavilySearchService()
     platform_list = list(platforms) if platforms is not None else get_all_platform_sources()
 
-    if not platform_list:
+    if not platform_list and not include_google_discovery:
         return []
 
     semaphore = asyncio.Semaphore(CONCURRENT_PLATFORM_SEARCH_LIMIT)
@@ -137,34 +240,65 @@ async def discover_raw_candidates(
         for platform in platform_list
     ]
 
+    if include_google_discovery:
+        classifiers = platform_list if platforms is not None else get_all_platform_sources()
+        tasks.append(_execute_google_discovery(intent, classifiers, service, semaphore))
+
     outcomes: list[PlatformOutcome] = await asyncio.gather(*tasks)
 
     successful_outcomes = [o for o in outcomes if o.success]
     failed_outcomes = [o for o in outcomes if not o.success]
 
-    # Total platform failure
+    # Total failure: all sources failed
     if not successful_outcomes:
+        total_failures = len(failed_outcomes)
+        if total_failures == 0:
+            return []
+
         error_types = [o.error_type for o in failed_outcomes]
+
+        # 1. Any SearchConfigurationError takes precedence -> 503
         if any(t == "SearchConfigurationError" for t in error_types):
-            logger.error("All platform searches failed due to search service configuration error")
+            logger.error("All discovery searches failed due to search service configuration error")
             raise HTTPException(
                 status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
                 detail="Search provider service is not properly configured",
             )
-        if any(t == "SearchRateLimitError" for t in error_types):
-            logger.warning("All platform searches failed due to rate limits")
+
+        # 2. Strict majority rule (>50% of failed outcomes)
+        rate_limit_count = sum(1 for t in error_types if t == "SearchRateLimitError")
+        timeout_count = sum(1 for t in error_types if t == "SearchTimeoutError")
+        majority_threshold = total_failures / 2.0
+
+        if rate_limit_count > majority_threshold:
+            logger.warning(
+                "All discovery searches failed; rate limit dominant (%d/%d)",
+                rate_limit_count,
+                total_failures,
+            )
             raise HTTPException(
                 status_code=status.HTTP_429_TOO_MANY_REQUESTS,
                 detail="Search provider rate limit exceeded",
             )
-        if any(t == "SearchTimeoutError" for t in error_types):
-            logger.error("All platform searches timed out")
+
+        if timeout_count > majority_threshold:
+            logger.error(
+                "All discovery searches timed out; timeout dominant (%d/%d)",
+                timeout_count,
+                total_failures,
+            )
             raise HTTPException(
                 status_code=status.HTTP_504_GATEWAY_TIMEOUT,
                 detail="Search provider request timed out",
             )
 
-        logger.error("All platform searches failed due to upstream search provider error")
+        # 3. Otherwise: ties, mixed failures, or generic errors without strict majority -> 502
+        logger.error(
+            "All discovery searches failed without a clear rate-limit or timeout majority (%d failures: %d rate limits, %d timeouts)",
+            total_failures,
+            rate_limit_count,
+            timeout_count,
+        )
         raise HTTPException(
             status_code=status.HTTP_502_BAD_GATEWAY,
             detail="Upstream search provider error",

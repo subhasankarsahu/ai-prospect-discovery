@@ -67,6 +67,25 @@ async def test_search_successful_bearer_auth(test_settings: Settings) -> None:
 
 
 @pytest.mark.asyncio
+async def test_search_without_include_domains_omits_field_from_payload(test_settings: Settings) -> None:
+    """Verify unrestricted search omits include_domains from Tavily payload."""
+    captured_body: dict = {}
+
+    async def mock_handler(request: httpx.Request) -> httpx.Response:
+        nonlocal captured_body
+        captured_body = json.loads(request.read())
+        return httpx.Response(200, json={"results": []})
+
+    transport = httpx.MockTransport(mock_handler)
+    async with httpx.AsyncClient(transport=transport) as client:
+        service = TavilySearchService(settings=test_settings, client=client)
+        await service.search("unrestricted query", include_domains=None)
+
+        assert "include_domains" not in captured_body
+        assert captured_body["query"] == "unrestricted query"
+
+
+@pytest.mark.asyncio
 async def test_search_rate_limit_retry_success(test_settings: Settings) -> None:
     """Verify recovery on 429 when retry succeeds within 5s budget."""
     call_count = 0

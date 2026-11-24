@@ -199,12 +199,13 @@ class TavilySearchService:
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
         }
-        payload = {
+        payload: dict[str, Any] = {
             "query": query,
             "search_depth": "basic",
             "max_results": 5,
-            "include_domains": domains_list,
         }
+        if include_domains:
+            payload["include_domains"] = list(include_domains)
 
         if self._external_client is not None:
             response = await self._execute_with_retry(self._external_client, payload, headers)
