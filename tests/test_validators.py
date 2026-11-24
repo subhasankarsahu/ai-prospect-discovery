@@ -58,6 +58,9 @@ def test_validate_email_invalid_and_placeholders(invalid_email: str) -> None:
         ("+44 20 7946 0991", "GB", "+442079460991"),
         ("020 7946 0991", "GB", "+442079460991"),
         ("+49 30 123456", "DE", "+4930123456"),
+        ("+91 98765 43210", "IN", "+919876543210"),
+        ("9876543210", "IN", "+919876543210"),
+        ("09876543210", "IN", "+919876543210"),
     ],
 )
 def test_validate_phone_valid(phone_input: str, region: str, expected_e164: str) -> None:
@@ -80,6 +83,13 @@ def test_validate_phone_valid(phone_input: str, region: str, expected_e164: str)
 def test_validate_phone_invalid(invalid_phone: str, region: str) -> None:
     """Verify invalid phone numbers return None without throwing exceptions."""
     assert validate_phone(invalid_phone, default_region=region) is None
+
+
+def test_validate_phone_uses_configured_default_region() -> None:
+    """Verify validate_phone defaults to configured phone_default_region when omitted."""
+    # When default_region is None, defaults to configured region (US)
+    assert validate_phone("415-555-2671") == "+14155552671"
+
 
 
 @pytest.mark.parametrize(

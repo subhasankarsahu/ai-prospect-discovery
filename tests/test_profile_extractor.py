@@ -167,3 +167,55 @@ def test_reject_invalid_standalone_phone() -> None:
     )
     contacts = extract_page_scoped_contacts(cand)
     assert not any(c.platform == "Phone" for c in contacts)
+
+
+def test_extract_indian_phone_with_configured_region() -> None:
+    """Verify national Indian phone numbers parse to E.164 with default_region='IN'."""
+    cand = _make_verified_candidate(
+        1,
+        title="Bangalore Tech Lead",
+        snippet="Reach me at 9876543210.",
+    )
+    contacts = extract_page_scoped_contacts(cand, default_region="IN")
+    phone_contacts = [c for c in contacts if c.platform == "Phone"]
+    assert len(phone_contacts) == 1
+    assert phone_contacts[0].link == "tel:+919876543210"
+
+
+def test_digits_in_url_and_email_not_extracted_as_phone() -> None:
+    """Verify numeric strings embedded in URLs and emails are never extracted as phone numbers."""
+    cand = _make_verified_candidate(
+        1,
+        title="Software Engineer",
+        snippet="See profile at https://example.com/items/14155552671 or email dev14155552671@startup.io.",
+    )
+    contacts = extract_page_scoped_contacts(cand)
+    assert not any(c.platform == "Phone" for c in contacts)
+
+
+def test_reject_invalid_whatsapp_number() -> None:
+    """Verify WhatsApp URLs with invalid number structures are rejected."""
+    cand = _make_verified_candidate(
+        1,
+        title="Fake Profile",
+        snippet="Chat on WhatsApp at https://wa.me/0000000 or api.whatsapp.com/send?phone=123.",
+    )
+    contacts = extract_page_scoped_contacts(cand)
+    assert not any(c.platform == "WhatsApp" for c in contacts)
+
+
+def test_standalone_phone_and_independent_whatsapp_both_extracted() -> None:
+    """Verify that when a page provides BOTH a standalone phone and a WhatsApp link, both are extracted."""
+    cand = _make_verified_candidate(
+        1,
+        title="Consultant Profile",
+        snippet="Office Phone: 415-555-2671. WhatsApp chat: https://wa.me/14155552671.",
+    )
+    contacts = extract_page_scoped_contacts(cand)
+    platforms = {c.platform for c in contacts}
+    assert platforms == {"Phone", "WhatsApp"}
+    phone_link = next(c.link for c in contacts if c.platform == "Phone")
+    wa_link = next(c.link for c in contacts if c.platform == "WhatsApp")
+    assert phone_link == "tel:+14155552671"
+    assert wa_link == "https://wa.me/14155552671"
+

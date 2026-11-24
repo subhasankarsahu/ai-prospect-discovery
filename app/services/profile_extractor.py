@@ -87,29 +87,33 @@ def _extract_valid_whatsapp_links(text: str) -> list[str]:
 
         # Standard international phone number length between 7 and 15 digits
         if 7 <= len(digits) <= 15:
-            canonical_wa = f"https://wa.me/{digits}"
-            if canonical_wa not in seen:
-                seen.add(canonical_wa)
-                valid_links.append(canonical_wa)
+            # Validate international phone structure to reject dummy/invalid numbers (e.g. 0000000)
+            valid_phone = validate_phone(f"+{digits}")
+            if valid_phone:
+                clean_digits = valid_phone.lstrip("+")
+                canonical_wa = f"https://wa.me/{clean_digits}"
+                if canonical_wa not in seen:
+                    seen.add(canonical_wa)
+                    valid_links.append(canonical_wa)
 
     return valid_links
 
 
-def _extract_valid_phones(text: str, default_region: str = "US") -> list[str]:
+def _extract_valid_phones(text: str, default_region: str | None = None) -> list[str]:
     """Find, validate, and format standalone phone numbers in text.
 
     Excludes digits embedded within URLs or email addresses.
 
     Args:
         text: Raw text string (title and snippet).
-        default_region: Two-letter ISO region code to interpret national numbers.
+        default_region: Optional two-letter ISO region code to interpret national numbers.
 
     Returns:
         List of formatted E.164 phone numbers (e.g. '+14155552671').
     """
     # Strip URLs and emails so digits inside links (e.g. wa.me/14155552671) are not matched
     cleaned = WHATSAPP_URL_PATTERN.sub(" ", text)
-    cleaned = re.sub(r"https?://\S+", " ", cleaned)
+    cleaned = re.sub(r"(?:https?://|www\.)[^\s,;\"'<>]+", " ", cleaned)
     cleaned = EMAIL_PATTERN.sub(" ", cleaned)
 
     seen: set[str] = set()
@@ -124,7 +128,10 @@ def _extract_valid_phones(text: str, default_region: str = "US") -> list[str]:
     return valid_phones
 
 
-def extract_page_scoped_contacts(candidate: VerifiedCandidate) -> list[SocialLink]:
+def extract_page_scoped_contacts(
+    candidate: VerifiedCandidate,
+    default_region: str | None = None,
+) -> list[SocialLink]:
     """Extract validated contacts found strictly on this candidate's own page.
 
     Contacts found on page A belong exclusively to page A and are never transferred
@@ -132,6 +139,7 @@ def extract_page_scoped_contacts(candidate: VerifiedCandidate) -> list[SocialLin
 
     Args:
         candidate: VerifiedCandidate whose snippet and title are scanned.
+        default_region: Optional region code for national phone number parsing.
 
     Returns:
         List of SocialLink objects for email, WhatsApp, and standalone phone numbers.
@@ -156,7 +164,7 @@ def extract_page_scoped_contacts(candidate: VerifiedCandidate) -> list[SocialLin
             contacts.append(SocialLink(platform="WhatsApp", link=wa_url))
 
     # 3. Standalone phone numbers (formatted as tel:<E.164>)
-    for phone_e164 in _extract_valid_phones(evidence_text):
+    for phone_e164 in _extract_valid_phones(evidence_text, default_region=default_region):
         link = f"tel:{phone_e164}"
         key = ("Phone", link)
         if key not in seen_contacts:
@@ -166,7 +174,10 @@ def extract_page_scoped_contacts(candidate: VerifiedCandidate) -> list[SocialLin
     return contacts
 
 
-def enrich_candidate_contacts(candidates: list[VerifiedCandidate]) -> list[VerifiedCandidate]:
+def enrich_candidate_contacts(
+    candidates: list[VerifiedCandidate],
+    default_region: str | None = None,
+) -> list[VerifiedCandidate]:
     """Extract and attach page-scoped contacts to each verified candidate.
 
     Guarantees strict page ownership: contact details are attached only to the candidate
@@ -174,11 +185,12 @@ def enrich_candidate_contacts(candidates: list[VerifiedCandidate]) -> list[Verif
 
     Args:
         candidates: Sequence of VerifiedCandidate objects.
+        default_region: Optional region code for national phone parsing.
 
     Returns:
         Same sequence with candidate.contacts populated.
     """
     for cand in candidates:
-        cand.contacts = extract_page_scoped_contacts(cand)
+        cand.contacts = extract_page_scoped_contacts(cand, default_region=default_region)
 
     return candidates

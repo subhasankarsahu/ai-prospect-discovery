@@ -7,6 +7,8 @@ from urllib.parse import urlsplit
 
 import phonenumbers
 
+from app.config import get_settings
+
 logger = logging.getLogger(__name__)
 
 # RFC 5322 compliant practical email pattern
@@ -84,12 +86,13 @@ def validate_email(text: str) -> str | None:
     return clean
 
 
-def validate_phone(text: str, default_region: str = "US") -> str | None:
+def validate_phone(text: str, default_region: str | None = None) -> str | None:
     """Validate a phone number and return its standard E.164 representation.
 
     Args:
         text: Raw phone number string.
-        default_region: Two-letter ISO region code to interpret national numbers.
+        default_region: Two-letter ISO region code to interpret national numbers;
+            defaults to application configured phone_default_region.
 
     Returns:
         Formatted E.164 string (e.g. +14155552671) if valid; None otherwise.
@@ -101,8 +104,14 @@ def validate_phone(text: str, default_region: str = "US") -> str | None:
     if not stripped:
         return None
 
+    region = (
+        default_region
+        if default_region is not None
+        else get_settings().phone_default_region
+    ).strip().upper()
+
     try:
-        parsed_number = phonenumbers.parse(stripped, default_region.strip().upper())
+        parsed_number = phonenumbers.parse(stripped, region)
         if phonenumbers.is_valid_number(parsed_number):
             return phonenumbers.format_number(
                 parsed_number, phonenumbers.PhoneNumberFormat.E164

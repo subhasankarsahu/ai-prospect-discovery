@@ -45,6 +45,10 @@ class Settings(BaseSettings):
         default=".cache/search",
         description="Directory path for local search cache storage",
     )
+    phone_default_region: str = Field(
+        default="US",
+        description="Default two-letter ISO region code for national phone number parsing",
+    )
 
 
 @lru_cache
