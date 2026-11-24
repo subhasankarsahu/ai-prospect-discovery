@@ -1,6 +1,7 @@
 """FastAPI application entry point for AI Prospect Discovery API."""
 
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 
 from app.schemas import DiscoveryRequest, DiscoveryResponse, HealthResponse
 from app.services.discovery_service import discover_prospects
@@ -10,6 +11,16 @@ app = FastAPI(
     description="API for discovering relevant prospects across multiple platforms using AI",
     version="0.1.0",
 )
+
+
+@app.get(
+    "/",
+    include_in_schema=False,
+    summary="Redirect root to API documentation",
+)
+def root_redirect() -> RedirectResponse:
+    """Redirect root path to interactive Swagger documentation."""
+    return RedirectResponse(url="/docs")
 
 
 @app.get(

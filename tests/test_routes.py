@@ -16,6 +16,17 @@ from app.services.llm_service import (
 
 
 @pytest.mark.asyncio
+async def test_root_redirect() -> None:
+    """Verify GET / redirects to /docs with status 307."""
+    async with httpx.AsyncClient(
+        transport=httpx.ASGITransport(app=app), base_url="http://test"
+    ) as client:
+        response = await client.get("/", follow_redirects=False)
+        assert response.status_code == 307
+        assert response.headers["location"] == "/docs"
+
+
+@pytest.mark.asyncio
 async def test_health_route() -> None:
     """Verify GET /health returns 200 with status 'healthy'."""
     async with httpx.AsyncClient(
